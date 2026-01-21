@@ -1167,7 +1167,7 @@
   }
   
   .nav-mobile-sublink {
-    padding: var(--spacing-xs) var(--spacing-lg);
+    /* padding: var(--spacing-xs) var(--spacing-lg); */
     font-size: 0.8rem;
   }
   

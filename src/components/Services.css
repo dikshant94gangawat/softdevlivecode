@@ -497,6 +497,13 @@
   transform: translateX(3px);
 }
 
+/* Mobile: ensure Learn More text is black on Home services section */
+@media screen and (max-width: 768px) {
+  #services .service-cta {
+    color: #000000;
+  }
+}
+
 /* Stats Section */
 .services-stats {
   margin-bottom: var(--spacing-4xl);

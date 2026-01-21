@@ -52,6 +52,7 @@ import HelpCenterPage from './components/HelpCenterPage';
 import DocumentationPage from './components/DocumentationPage';
 import APIReferencePage from './components/APIReferencePage';
 import ContactSupportPage from './components/ContactSupportPage';
+import IndustriesPage from './components/IndustriesPage';
 import './styles/App.css';
 
 // Home Page Component
@@ -112,8 +113,9 @@ function App() {
           <Route path="/documentation" element={<DocumentationPage />} />
           <Route path="/api-reference" element={<APIReferencePage />} />
           <Route path="/contact-support" element={<ContactSupportPage />} />
-          <Route path="/about" element={<AboutPage />} />
+           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
            <Route path="/privacy" element={<PrivacyPage />} />
            <Route path="/terms" element={<TermsPage />} />
            <Route path="/demo" element={<BookDemo />} />

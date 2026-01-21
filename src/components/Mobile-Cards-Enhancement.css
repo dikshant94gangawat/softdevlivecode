@@ -277,6 +277,15 @@
     color: rgba(255, 255, 255, 0.95) !important;
     margin-bottom: var(--spacing-md) !important;
   }
+
+  /* Home Services: force Learn More button text to black on mobile */
+  #services .service-cta,
+  #services .service-cta span,
+  #services .service-cta .cta-icon {
+    color: #000000 !important;
+    fill: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
 }
 
 @media (max-width: 768px) {

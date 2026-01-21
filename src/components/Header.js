@@ -90,7 +90,7 @@ const Header = () => {
                 </div>
               </li>
               <li className="nav-item dropdown">
-                <Link to="/services" className="nav-link dropdown-toggle">
+                <Link to="/industries" className="nav-link dropdown-toggle">
                   Industries
                   <span className="dropdown-arrow">▼</span>
                 </Link>
