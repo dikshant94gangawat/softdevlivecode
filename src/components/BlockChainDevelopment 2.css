@@ -1,0 +1,1338 @@
+/* BlockChain Development Page Styles */
+.blockchain-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.blockchain-page .blockchain-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  overflow: hidden;
+}
+
+.blockchain-page .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.blockchain-page .hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(247, 147, 26, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(98, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .blockchain-hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blockchain-page .blockchain-hero-content {
+  text-align: left;
+}
+
+.blockchain-page .blockchain-hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockchain-page .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(247, 147, 26, 0.1);
+  border: 1px solid rgba(247, 147, 26, 0.3);
+  border-radius: 50px;
+  padding: 12px 24px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f7931a;
+  backdrop-filter: blur(10px);
+}
+
+.blockchain-page .badge-icon {
+  font-size: 16px;
+}
+
+.blockchain-page .blockchain-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #f7931a 0%, #627eea 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page .highlight {
+  background: linear-gradient(135deg, #f7931a 0%, #627eea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page .blockchain-hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.blockchain-page .hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.blockchain-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.blockchain-page .btn-primary {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.blockchain-page .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+}
+
+.blockchain-page .btn-outline {
+  background: transparent;
+  color: #f7931a;
+  border: 2px solid #f7931a;
+  backdrop-filter: blur(10px);
+}
+
+.blockchain-page .btn-outline:hover {
+  background: rgba(247, 147, 26, 0.1);
+  transform: translateY(-3px);
+}
+
+.blockchain-page .btn-icon {
+  font-size: 16px;
+}
+
+.blockchain-page .hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.blockchain-page .stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(247, 147, 26, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.blockchain-page .stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(247, 147, 26, 0.1);
+  border-color: rgba(247, 147, 26, 0.4);
+}
+
+.blockchain-page .stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f7931a 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.blockchain-page .stat-label {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+/* BlockChain Mockup Styling */
+.blockchain-page .blockchain-mockup-container {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.blockchain-page .blockchain-device {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.blockchain-page .blockchain-desktop {
+  width: 450px;
+  height: 280px;
+  background: linear-gradient(145deg, #2d2d3a, #1a1a24);
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 2px rgba(247, 147, 26, 0.1);
+  transform: perspective(1000px) rotateY(-5deg);
+  z-index: 2;
+}
+
+.blockchain-page .blockchain-mobile {
+  width: 180px;
+  height: 320px;
+  background: linear-gradient(145deg, #2d2d3a, #1a1a24);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 2px rgba(247, 147, 26, 0.1);
+  transform: perspective(1000px) rotateY(10deg) translateY(20px);
+  z-index: 1;
+}
+
+.blockchain-page .blockchain-device:hover {
+  transform: perspective(1000px) rotateY(0deg) translateY(0px) scale(1.02);
+  box-shadow: 
+    0 25px 80px rgba(247, 147, 26, 0.2),
+    0 0 0 2px rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .desktop-screen, .blockchain-page .mobile-screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blockchain-page .mobile-screen {
+  border-radius: 15px;
+}
+
+.blockchain-page .blockchain-interface, .blockchain-page .mobile-blockchain-interface {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.blockchain-page .blockchain-header {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(247, 147, 26, 0.1);
+}
+
+.blockchain-page .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blockchain-page .logo {
+  font-weight: bold;
+  color: #f7931a;
+  font-size: 14px;
+}
+
+.blockchain-page .nav-items {
+  display: flex;
+  gap: 15px;
+}
+
+.blockchain-page .nav-item {
+  color: #ffffff;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(247, 147, 26, 0.1);
+}
+
+.blockchain-page .blockchain-content {
+  flex: 1;
+  padding: 15px;
+}
+
+.blockchain-page .stats-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.blockchain-page .stat-card {
+  flex: 1;
+  background: rgba(247, 147, 26, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid rgba(247, 147, 26, 0.2);
+}
+
+.blockchain-page .stat-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 8px;
+  margin-bottom: 5px;
+}
+
+.blockchain-page .stat-value {
+  color: #f7931a;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.blockchain-page .stat-change {
+  color: #4ade80;
+  font-size: 8px;
+}
+
+.blockchain-page .crypto-section .section-title {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blockchain-page .crypto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blockchain-page .crypto-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.blockchain-page .crypto-icon {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #f7931a, #627eea);
+  border-radius: 50%;
+}
+
+.blockchain-page .crypto-info {
+  flex: 1;
+}
+
+.blockchain-page .crypto-name {
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.blockchain-page .crypto-symbol {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 8px;
+}
+
+.blockchain-page .crypto-value {
+  text-align: right;
+}
+
+.blockchain-page .value {
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.blockchain-page .change {
+  font-size: 7px;
+}
+
+.blockchain-page .change.positive {
+  color: #4ade80;
+}
+
+.blockchain-page .change.negative {
+  color: #ef4444;
+}
+
+/* Mobile Interface */
+.blockchain-page .mobile-header {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.blockchain-page .mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blockchain-page .menu-icon, .blockchain-page .notification-icon {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.blockchain-page .mobile-logo {
+  color: #f7931a;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.blockchain-page .mobile-content {
+  padding: 10px;
+}
+
+.blockchain-page .mobile-balance {
+  text-align: center;
+  margin-bottom: 15px;
+  background: rgba(247, 147, 26, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.blockchain-page .balance-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 8px;
+  margin-bottom: 5px;
+}
+
+.blockchain-page .balance-value {
+  color: #f7931a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.blockchain-page .mobile-actions {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.blockchain-page .action-btn {
+  flex: 1;
+  background: rgba(98, 126, 234, 0.2);
+  color: #627eea;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.blockchain-page .mobile-assets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.blockchain-page .mobile-asset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.blockchain-page .mobile-asset-icon {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #f7931a, #627eea);
+  border-radius: 50%;
+}
+
+.blockchain-page .mobile-asset-info {
+  flex: 1;
+}
+
+.blockchain-page .mobile-asset-symbol {
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.blockchain-page .mobile-asset-value {
+  color: #f7931a;
+  font-size: 8px;
+}
+
+.blockchain-page .blockchain-image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: blockchainGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes blockchainGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+/* Hero Stats and Actions Sections */
+.blockchain-page .hero-stats-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(22, 33, 62, 0.95) 0%, rgba(15, 15, 35, 0.98) 100%);
+  position: relative;
+}
+
+.blockchain-page .hero-stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(247, 147, 26, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(98, 126, 234, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.blockchain-page .hero-stats-section .hero-stats {
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  margin: 0;
+}
+
+.blockchain-page .hero-actions-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.98) 0%, rgba(22, 33, 62, 0.95) 100%);
+  text-align: center;
+  position: relative;
+}
+
+.blockchain-page .hero-actions-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 70% 30%, rgba(247, 147, 26, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.blockchain-page .hero-actions-section .hero-actions {
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Services Section */
+.blockchain-services, .blockchain-solutions {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.blockchain-page .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.blockchain-page .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page .section-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blockchain-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.blockchain-page .service-card {
+  background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.blockchain-page .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(247, 147, 26, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blockchain-page .service-card:hover::before {
+  opacity: 1;
+}
+
+.blockchain-page .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(247, 147, 26, 0.3);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .solution-category {
+  color: #f7931a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.blockchain-page .service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .service-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .service-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.blockchain-page .feature-icon {
+  color: #f7931a;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.blockchain-page .service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f7931a, #ffd700);
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.blockchain-page .service-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.blockchain-page .service-cta:hover::before {
+  left: 100%;
+}
+
+.blockchain-page .service-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .cta-icon {
+  transition: transform 0.3s ease;
+}
+
+.blockchain-page .service-cta:hover .cta-icon {
+  transform: translateX(3px);
+}
+
+/* Portfolio Section */
+.blockchain-portfolio {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+}
+
+.blockchain-page .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.blockchain-page .portfolio-card {
+  background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+}
+
+.blockchain-page .portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(247, 147, 26, 0.3);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .portfolio-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.blockchain-page .portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blockchain-page .portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.blockchain-page .portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(247, 147, 26, 0.8) 0%, rgba(98, 126, 234, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.blockchain-page .portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.blockchain-page .portfolio-stats {
+  display: flex;
+  gap: 30px;
+}
+
+.blockchain-page .portfolio-stat {
+  text-align: center;
+  color: white;
+}
+
+.blockchain-page .stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.blockchain-page .stat-key {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+.blockchain-page .portfolio-content {
+  padding: 30px;
+}
+
+.blockchain-page .portfolio-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.blockchain-page .portfolio-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blockchain-page .portfolio-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.blockchain-page .tech-tag {
+  background: rgba(247, 147, 26, 0.1);
+  color: #f7931a;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(247, 147, 26, 0.2);
+}
+
+.blockchain-page .portfolio-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.blockchain-page .portfolio-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.blockchain-page .feature-check {
+  color: #4ade80;
+  font-size: 0.8rem;
+}
+
+/* Technology Stack Section */
+.blockchain-page .tech-stack {
+  padding: 100px 0;
+  background: #1a1a2e;
+}
+
+.blockchain-page .tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.blockchain-page .tech-category {
+  background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blockchain-page .tech-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(247, 147, 26, 0.2);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #f7931a;
+  text-align: center;
+}
+
+.blockchain-page .tech-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.blockchain-page .tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+}
+
+.blockchain-page .tech-item:hover {
+  background: rgba(247, 147, 26, 0.1);
+  border-color: rgba(247, 147, 26, 0.3);
+  transform: translateY(-2px);
+}
+
+.blockchain-page .tech-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #f7931a;
+}
+
+.blockchain-page .tech-name {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Process Section */
+.blockchain-page .blockchain-process {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+}
+
+.blockchain-page .process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.blockchain-page .process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.blockchain-page .process-step:hover {
+  background: rgba(247, 147, 26, 0.05);
+  transform: translateY(-5px);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  top: -10px;
+}
+
+.blockchain-page .step-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.blockchain-page .process-step:hover .step-icon {
+  transform: scale(1.1);
+  background: rgba(247, 147, 26, 0.1);
+}
+
+.blockchain-page .step-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.blockchain-page .step-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.blockchain-page .blockchain-testimonials {
+  padding: 100px 0;
+  background: #1a1a2e;
+}
+
+.blockchain-page .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.blockchain-page .testimonial-card {
+  background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2e 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(247, 147, 26, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blockchain-page .testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(247, 147, 26, 0.2);
+  border-color: rgba(247, 147, 26, 0.3);
+}
+
+.blockchain-page .testimonial-content {
+  margin-bottom: 30px;
+}
+
+.blockchain-page .testimonial-stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.blockchain-page .star {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.blockchain-page .testimonial-text {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.blockchain-page .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blockchain-page .author-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #f7931a 0%, #ffd700 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.blockchain-page .author-info h4 {
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.blockchain-page .author-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+/* CTA Section */
+.blockchain-page .blockchain-cta {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blockchain-page .blockchain-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(247, 147, 26, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(98, 126, 234, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.blockchain-page .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.blockchain-page .cta-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #f7931a 0%, #627eea 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page .cta-description {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blockchain-page .cta-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blockchain-page .blockchain-hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .blockchain-page .blockchain-hero-content {
+    text-align: center;
+  }
+  
+  .blockchain-page .blockchain-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .blockchain-page .blockchain-mockup-container {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: visible;
+    display: flex !important;
+    padding: 2rem 0;
+    height: auto;
+    min-height: 300px;
+  }
+  
+  .blockchain-page .blockchain-desktop {
+    width: 350px;
+    height: 220px;
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0) !important;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  
+  .blockchain-page .blockchain-mobile {
+    width: 180px;
+    height: 280px;
+    transform: rotateY(0deg) rotateX(0deg) translateY(0px) translateX(0px) !important;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  
+  .blockchain-page .blockchain-device:hover {
+    transform: scale(1.02) !important;
+  }
+  
+  .blockchain-page .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blockchain-page .hero-stats {
+    gap: 20px;
+  }
+  
+  .blockchain-page .stat-number {
+    font-size: 2rem;
+  }
+  
+  .blockchain-page .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blockchain-page .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blockchain-page .tech-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .blockchain-page .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .blockchain-page .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blockchain-page .portfolio-stats {
+    gap: 15px;
+  }
+  
+  .blockchain-page .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .blockchain-page .blockchain-hero-title {
+    font-size: 2rem;
+  }
+  
+  .blockchain-page .section-title {
+    font-size: 2rem;
+  }
+  
+  .blockchain-page .cta-title {
+    font-size: 2rem;
+  }
+  
+  .blockchain-page .service-card,
+  .blockchain-page .portfolio-card,
+  .blockchain-page .tech-category,
+  .blockchain-page .testimonial-card {
+    padding: 30px 20px;
+  }
+  
+  .blockchain-page .blockchain-mockup-container {
+    gap: 1rem;
+    padding: 1rem 0;
+    width: 100%;
+    overflow: visible;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blockchain-page .blockchain-desktop {
+    width: 300px;
+    height: 190px;
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0) !important;
+    margin-bottom: 1rem;
+  }
+  
+  .blockchain-page .blockchain-mobile {
+    width: 160px;
+    height: 260px;
+    transform: rotateY(0deg) rotateX(0deg) translateY(0px) translateX(0px) !important;
+  }
+  
+  .blockchain-page .blockchain-device:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .blockchain-page .blockchain-mockup-container {
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  
+  .blockchain-page .blockchain-desktop {
+    width: 260px;
+    height: 160px;
+  }
+  
+  .blockchain-page .blockchain-mobile {
+    width: 140px;
+    height: 240px;
+  }
+}

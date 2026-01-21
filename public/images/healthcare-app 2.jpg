@@ -1,0 +1,35 @@
+<svg width="104" height="224" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="healthcareGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="104" height="224" fill="url(#healthcareGrad)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="104" height="40" fill="rgba(255,255,255,0.1)"/>
+  <text x="52" y="22" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">HealthCare</text>
+  
+  <!-- Profile Card -->
+  <rect x="8" y="50" width="88" height="60" rx="12" fill="white" opacity="0.95"/>
+  <circle cx="52" cy="75" r="15" fill="#667eea"/>
+  <text x="52" y="80" font-family="Arial" font-size="12" fill="white" text-anchor="middle">👤</text>
+  <text x="52" y="100" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Dr. Smith</text>
+  <text x="52" y="110" font-family="Arial" font-size="10" fill="#666" text-anchor="middle">Cardiologist</text>
+  
+  <!-- Appointments -->
+  <rect x="8" y="120" width="88" height="50" rx="8" fill="white" opacity="0.9"/>
+  <text x="12" y="135" font-family="Arial" font-size="12" font-weight="bold" fill="#333">Today's Appointments</text>
+  <rect x="12" y="140" width="80" height="20" rx="4" fill="#667eea" opacity="0.1"/>
+  <text x="16" y="153" font-family="Arial" font-size="9" fill="#667eea">10:00 AM - John Doe</text>
+  <text x="16" y="163" font-family="Arial" font-size="9" fill="#666">2:00 PM - Jane Smith</text>
+  
+  <!-- Quick Actions -->
+  <rect x="8" y="180" width="88" height="40" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="30" cy="200" r="10" fill="#667eea"/>
+  <text x="30" y="205" font-family="Arial" font-size="8" fill="white" text-anchor="middle">📅</text>
+  <circle cx="52" cy="200" r="10" fill="#f093fb"/>
+  <text x="52" y="205" font-family="Arial" font-size="8" fill="white" text-anchor="middle">💊</text>
+  <circle cx="74" cy="200" r="10" fill="#38ef7d"/>
+  <text x="74" y="205" font-family="Arial" font-size="8" fill="white" text-anchor="middle">📊</text>
+</svg>
