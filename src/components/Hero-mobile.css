@@ -1,0 +1,371 @@
+/* Critical Mobile Banner & Development Showcase Fixes */
+
+/* Base mobile fixes for all small screens */
+@media screen and (max-width: 1024px) {
+  /* Prevent any horizontal overflow */
+  .hero {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  
+  .hero * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Fix hero container */
+  .hero {
+    padding: var(--spacing-2xl) 0 !important;
+  }
+  
+  .hero .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 var(--spacing-lg) !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Fix hero content layout */
+  .hero-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-3xl) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-items: center !important;
+    padding: 0 !important;
+  }
+  
+  /* Fix hero text centering */
+  .hero-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    order: 1 !important;
+  }
+  
+  /* Fix hero visual container */
+  .hero-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 350px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: var(--spacing-2xl) auto 0 !important;
+    order: 2 !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  /* Fix development showcase breaking layout */
+  .development-showcase {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-xl) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: var(--spacing-lg) 0 !important;
+    box-sizing: border-box !important;
+    justify-items: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+  
+  /* Fix project previews from hiding */
+  .project-preview {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+  
+  /* Fix device frames for mobile */
+  .device-frame {
+    width: 140px !important;
+    height: 280px !important;
+    margin: 0 auto !important;
+    transform: scale(0.8) !important;
+  }
+  
+  .browser-frame {
+    width: 200px !important;
+    height: 140px !important;
+    margin: 0 auto !important;
+    transform: scale(0.8) !important;
+  }
+  
+  .mobile-mockup,
+  .code-snippet,
+  .design-preview {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    padding: var(--spacing-md) !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Center align all hero elements */
+  .hero-badge {
+    margin: 64px auto var(--spacing-xl) !important;
+    display: inline-flex !important;
+  }
+  .device-frame {
+    width: 224px !important;
+    height: 337px !important;
+  }
+  .hero-title {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto var(--spacing-xl) !important;
+    letter-spacing: 2px;
+    line-height: 43px;
+  }
+  span.app-title {
+    font-size: 10px;
+  }
+  .hero-description {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 90% !important;
+    margin: 0 auto var(--spacing-2xl) !important;
+  }
+  
+  .hero-stats {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: var(--spacing-2xl) auto !important;
+    gap: var(--spacing-lg) !important;
+  }
+  
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: var(--spacing-2xl) auto !important;
+    gap: var(--spacing-lg) !important;
+  }
+  .section-title {
+    color: linear-gradient(135deg, #1057bb 0%, #004cba 100%)!important;
+  }
+  .app-icon, .logo-icon {
+    width: 41px !important;
+    height: 28px !important;
+  }
+  .hero-features {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: var(--spacing-2xl) auto !important;
+    gap: var(--spacing-lg) !important;
+  }
+  
+  /* Fix buttons */
+  .btn-lg {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  /* Increase icon sizes for mobile */
+  /* .feature-icon {
+    font-size: 3rem !important;
+    margin-bottom: var(--spacing-md) !important;
+  } */
+  
+  .floating-element {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 1.8rem !important;
+  }
+  
+  /* Device frame icons */
+  
+  
+  /* Project preview icons */
+  .project-preview .feature-icon,
+  .development-showcase .feature-icon {
+    font-size: 2.2rem !important;
+  }
+  
+  /* Tech stack icons and other banner icons */
+  .tech-icon,
+  .hero-icon,
+  .showcase-icon {
+    font-size: 2rem !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  /* Code snippet and design preview icons */
+  .code-snippet .icon,
+  .design-preview .icon,
+  .mobile-mockup .icon {
+    font-size: 1.8rem !important;
+  }
+  
+  /* React icons and small icons */
+  .icon-sm {
+    font-size: 1.5rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  
+  /* App and logo icons */
+  .app-icon,
+  .logo-icon {
+    font-size: 2.5rem !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Extra small screens - more compact */
+  .hero {
+    padding: var(--spacing-xl) 0 !important;
+  }
+  
+  .hero .container {
+    padding: 0 var(--spacing-md) !important;
+  }
+  
+  .hero-content {
+    gap: var(--spacing-2xl) !important;
+    padding: 0 !important;
+  }
+  
+  .hero-visual {
+    height: 280px !important;
+    margin-top: var(--spacing-xl) !important;
+  }
+  
+  .development-showcase {
+    gap: var(--spacing-lg) !important;
+    padding: var(--spacing-md) 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .project-preview {
+    max-width: 250px !important;
+  }
+  
+  /* Smaller device frames for mobile */
+ 
+  .browser-frame {
+    width: 160px !important;
+    height: 100px !important;
+    transform: scale(0.7) !important;
+  }
+  
+  .mobile-mockup,
+  .code-snippet,
+  .design-preview {
+    max-width: 250px !important;
+    padding: var(--spacing-sm) !important;
+  }
+  
+  .hero-badge {
+    margin: 64px auto var(--spacing-lg) !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 8vw, 2rem) !important;
+    margin-bottom: var(--spacing-lg) !important;
+  }
+  
+  .hero-description {
+    font-size: clamp(0.9rem, 4vw, 1rem) !important;
+    max-width: 95% !important;
+    margin-bottom: var(--spacing-xl) !important;
+  }
+  
+  .btn-lg {
+    max-width: 260px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Enhanced icon sizes for small mobile */
+  /* .feature-icon {
+    font-size: 3.8rem !important;
+    margin-bottom: var(--spacing-md) !important;
+  } */
+  
+  .floating-element {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 1.6rem !important;
+  }
+  
+  /* Device frame for small mobile */
+  
+  /* Project preview icons for small mobile */
+  .project-preview .feature-icon,
+  .development-showcase .feature-icon {
+    font-size: 2rem !important;
+  }
+  .hero-features.slide-up {
+    margin: 10px 0 !important;
+  }
+  /* Tech stack icons and other banner icons for small mobile */
+  .tech-icon,
+  .hero-icon,
+  .showcase-icon {
+    font-size: 1.8rem !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  /* Code snippet and design preview icons for small mobile */
+  .code-snippet .icon,
+  .design-preview .icon,
+  .mobile-mockup .icon {
+    font-size: 1.6rem !important;
+  }
+  
+  /* React icons and small icons for small mobile */
+  .icon-sm {
+    font-size: 1.3rem !important;
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+  }
+  
+  /* App and logo icons for small mobile */
+  .app-icon,
+  .logo-icon {
+    font-size: 2.2rem !important;
+    width: 41px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+} 

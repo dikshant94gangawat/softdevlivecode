@@ -1,0 +1,39 @@
+<svg width="104" height="224" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="foodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffa726;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="104" height="224" fill="url(#foodGrad)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="104" height="40" fill="rgba(255,255,255,0.1)"/>
+  <text x="52" y="22" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">FoodDeliver</text>
+  
+  <!-- Restaurant Card -->
+  <rect x="8" y="50" width="88" height="80" rx="12" fill="white" opacity="0.95"/>
+  <rect x="12" y="54" width="80" height="40" rx="6" fill="#f0f0f0"/>
+  <text x="52" y="80" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">🍕 Pizza Palace</text>
+  <text x="12" y="105" font-family="Arial" font-size="9" fill="#666">⭐ 4.8 • 25 min • $2.99 delivery</text>
+  <rect x="12" y="110" width="30" height="15" rx="7" fill="#ff6b6b"/>
+  <text x="27" y="120" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Order Now</text>
+  
+  <!-- Food Items -->
+  <rect x="8" y="140" width="88" height="50" rx="8" fill="white" opacity="0.9"/>
+  <text x="12" y="155" font-family="Arial" font-size="10" font-weight="bold" fill="#333">Popular Items</text>
+  <rect x="12" y="160" width="20" height="20" rx="4" fill="#ffa726"/>
+  <text x="22" y="175" font-family="Arial" font-size="8" fill="white" text-anchor="middle">🍔</text>
+  <text x="36" y="170" font-family="Arial" font-size="9" fill="#333">Burger Combo</text>
+  <text x="36" y="180" font-family="Arial" font-size="8" fill="#666">$12.99</text>
+  
+  <rect x="60" y="160" width="20" height="20" rx="4" fill="#ff6b6b"/>
+  <text x="70" y="175" font-family="Arial" font-size="8" fill="white" text-anchor="middle">🍕</text>
+  <text x="84" y="170" font-family="Arial" font-size="9" fill="#333">Margherita</text>
+  <text x="84" y="180" font-family="Arial" font-size="8" fill="#666">$15.99</text>
+  
+  <!-- Bottom Navigation -->
+  <rect x="0" y="190" width="104" height="34" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="20" cy="207" r="6" fill="white" opacity="0.8"/>
+  <circle cx="52" cy="207" r="6" fill="white" opacity="0.5"/>
+  <circle cx="84" cy="207" r="6" fill="white" opacity="0.5"/>
+</svg>

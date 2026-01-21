@@ -1,0 +1,44 @@
+<svg width="104" height="224" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fitnessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="104" height="224" fill="url(#fitnessGrad)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="104" height="40" fill="rgba(255,255,255,0.1)"/>
+  <text x="52" y="22" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">FitTracker</text>
+  
+  <!-- Stats Card -->
+  <rect x="8" y="50" width="88" height="60" rx="12" fill="white" opacity="0.95"/>
+  <text x="52" y="70" font-family="Arial" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Today's Progress</text>
+  <circle cx="30" cy="90" r="12" fill="#667eea"/>
+  <text x="30" y="95" font-family="Arial" font-size="8" fill="white" text-anchor="middle">8.5k</text>
+  <text x="30" y="110" font-family="Arial" font-size="8" fill="#666" text-anchor="middle">Steps</text>
+  
+  <circle cx="52" cy="90" r="12" fill="#764ba2"/>
+  <text x="52" y="95" font-family="Arial" font-size="8" fill="white" text-anchor="middle">45</text>
+  <text x="52" y="110" font-family="Arial" font-size="8" fill="#666" text-anchor="middle">Min</text>
+  
+  <circle cx="74" cy="90" r="12" fill="#38ef7d"/>
+  <text x="74" y="95" font-family="Arial" font-size="8" fill="white" text-anchor="middle">320</text>
+  <text x="74" y="110" font-family="Arial" font-size="8" fill="#666" text-anchor="middle">Cal</text>
+  
+  <!-- Workout Plan -->
+  <rect x="8" y="120" width="88" height="70" rx="8" fill="white" opacity="0.9"/>
+  <text x="12" y="135" font-family="Arial" font-size="12" font-weight="bold" fill="#333">Today's Workout</text>
+  <rect x="12" y="140" width="80" height="20" rx="4" fill="#667eea" opacity="0.1"/>
+  <text x="16" y="153" font-family="Arial" font-size="9" fill="#667eea">💪 Upper Body Strength</text>
+  <text x="16" y="163" font-family="Arial" font-size="9" fill="#666">30 minutes • 5 exercises</text>
+  <text x="16" y="175" font-family="Arial" font-size="9" fill="#666">Next: Cardio Blast (2:00 PM)</text>
+  
+  <!-- Quick Actions -->
+  <rect x="8" y="200" width="88" height="20" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="30" cy="210" r="6" fill="#667eea"/>
+  <text x="30" y="214" font-family="Arial" font-size="6" fill="white" text-anchor="middle">🏃</text>
+  <circle cx="52" cy="210" r="6" fill="#764ba2"/>
+  <text x="52" y="214" font-family="Arial" font-size="6" fill="white" text-anchor="middle">💪</text>
+  <circle cx="74" cy="210" r="6" fill="#38ef7d"/>
+  <text x="74" y="214" font-family="Arial" font-size="6" fill="white" text-anchor="middle">📊</text>
+</svg>

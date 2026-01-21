@@ -1,0 +1,33 @@
+<svg width="104" height="224" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fintechGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="104" height="224" fill="url(#fintechGrad)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="104" height="40" fill="rgba(255,255,255,0.1)"/>
+  <text x="52" y="22" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">FinanceApp</text>
+  
+  <!-- Balance Card -->
+  <rect x="8" y="50" width="88" height="80" rx="12" fill="white" opacity="0.95"/>
+  <text x="52" y="75" font-family="Arial" font-size="12" fill="#666" text-anchor="middle">Total Balance</text>
+  <text x="52" y="95" font-family="Arial" font-size="20" font-weight="bold" fill="#11998e" text-anchor="middle">$12,450.00</text>
+  <rect x="20" y="105" width="64" height="20" rx="10" fill="#11998e"/>
+  <text x="52" y="118" font-family="Arial" font-size="10" fill="white" text-anchor="middle">View Details</text>
+  
+  <!-- Quick Actions -->
+  <rect x="8" y="140" width="88" height="40" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="30" cy="160" r="12" fill="#11998e"/>
+  <text x="30" y="165" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Send</text>
+  <circle cx="52" cy="160" r="12" fill="#38ef7d"/>
+  <text x="52" y="165" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Receive</text>
+  <circle cx="74" cy="160" r="12" fill="#ff6b6b"/>
+  <text x="74" y="165" font-family="Arial" font-size="8" fill="white" text-anchor="middle">Pay</text>
+  
+  <!-- Recent Transactions -->
+  <rect x="8" y="190" width="88" height="30" rx="8" fill="white" opacity="0.9"/>
+  <text x="12" y="205" font-family="Arial" font-size="10" fill="#333">Recent Transactions</text>
+  <text x="12" y="215" font-family="Arial" font-size="8" fill="#666">Coffee Shop - $4.50</text>
+</svg>
