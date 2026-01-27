@@ -849,6 +849,11 @@
   }
 }
 
+/* Carousel Controls - Hidden on Desktop */
+.carousel-controls {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .services-grid {
@@ -872,30 +877,124 @@
     padding: 0 var(--spacing-md);
   }
   
+  /* Carousel Layout for Mobile */
+  #services .services-main {
+    position: relative;
+    margin-bottom: var(--spacing-4xl);
+    overflow: visible;
+    min-height: 650px;
+    padding-bottom: var(--spacing-2xl);
+  }
+  
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: visible;
+    touch-action: pan-y;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    gap: 0 !important;
+    margin-bottom: var(--spacing-lg);
   }
   
   .service-card {
-    padding: var(--spacing-2xl) var(--spacing-xl);
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    width: calc(100% - var(--spacing-lg) * 2) !important;
+    max-width: 450px !important;
+    min-width: 280px !important;
+    height: 580px !important;
+    padding: var(--spacing-2xl) var(--spacing-xl) !important;
     border: 2px solid rgba(var(--service-color-rgb, 59, 130, 246), 0.3) !important;
     box-shadow: 
-      0 12px 30px rgba(0, 0, 0, 0.2),
-      0 4px 15px rgba(var(--service-color-rgb, 59, 130, 246), 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
-    margin-bottom: var(--spacing-lg);
+      0 20px 60px rgba(0, 0, 0, 0.3),
+      0 8px 30px rgba(var(--service-color-rgb, 59, 130, 246), 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    margin: 0 !important;
     background: linear-gradient(135deg, 
       rgba(var(--service-color-rgb, 37, 99, 235), 0.95) 0%, 
       rgba(var(--service-color-rgb, 59, 130, 246), 0.9) 50%, 
       rgba(var(--service-color-rgb, 139, 92, 246), 0.95) 100%) !important;
-    backdrop-filter: blur(20px);
-    transform: scale(1);
-    transition: all 0.3s ease;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 24px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    z-index: 1 !important;
+    will-change: transform, opacity !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  .service-card.carousel-active {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    pointer-events: all !important;
+    visibility: visible !important;
+    z-index: 10 !important;
+  }
+  
+  .service-card:not(.carousel-active) {
+    opacity: 0 !important;
+    transform: translate(-50%, -50%) scale(0.92) !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
   }
   
   .service-card:active {
-    transform: scale(0.98);
+    transform: translate(-50%, -50%) scale(0.98) !important;
+  }
+  
+  /* Carousel Controls */
+  .carousel-controls {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    padding: 0 var(--spacing-md);
+    pointer-events: none;
+    z-index: 20;
+  }
+  
+  .carousel-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem;
+    z-index: 21;
+  }
+  
+  .carousel-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-button:active {
+    transform: scale(0.95);
   }
   
   /* White text for all service card content on mobile */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCode, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub, FaArrowUp, FaUsers } from 'react-icons/fa';
+import { FaCode, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaFacebook, FaInstagram, FaArrowUp, FaUsers } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -56,14 +56,14 @@ const Footer = () => {
       url: 'https://linkedin.com/company/softdevsquad'
     },
     {
-      icon: <FaTwitter />,
-      name: 'Twitter',
-      url: 'https://twitter.com/softdevsquad'
+      icon: <FaFacebook />,
+      name: 'Facebook',
+      url: 'https://facebook.com/softdevsquad'
     },
     {
-      icon: <FaGithub />,
-      name: 'GitHub',
-      url: 'https://github.com/softdevsquad'
+      icon: <FaInstagram />,
+      name: 'Instagram',
+      url: 'https://instagram.com/softdevsquad'
     }
   ];
 

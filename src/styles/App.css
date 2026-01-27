@@ -314,4 +314,19 @@
     padding: var(--spacing-lg);
     width: 95%;
   }
+  #home.hero~section#services .services-main {
+    background: transparent;
+    padding-bottom: 0;
+}
+#home.hero~section#services .services-main .service-card {
+  text-align: left;
+  margin-bottom: 0;
+  width: 100%!important;
+}
+#home.hero~section#services .services-main .service-card .service-features {
+  justify-content: left!important;
+}
+#home.hero~section#services .services-cta{
+  padding: 0!important;
+}
 } 
