@@ -322,6 +322,7 @@
   text-align: left;
   margin-bottom: 0;
   width: 100%!important;
+  background: #18acb2 !important;
 }
 #home.hero~section#services .services-main .service-card .service-features {
   justify-content: left!important;

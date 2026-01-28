@@ -11,9 +11,7 @@ import {
   FaRocket,
   FaShieldAlt,
   FaChartLine,
-  FaHeadset,
-  FaChevronLeft,
-  FaChevronRight
+  FaHeadset
 } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import './Services.css';
@@ -23,10 +21,6 @@ const Services = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [animatedStats, setAnimatedStats] = useState({});
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
   const sectionRef = useRef(null);
   const navigate = useNavigate();
 
@@ -171,18 +165,6 @@ const Services = () => {
     }
   ];
 
-  // Check if mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   // Intersection Observer for animations
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -206,46 +188,6 @@ const Services = () => {
 
     return () => observer.disconnect();
   }, []);
-
-  // Carousel navigation functions
-  const goToNext = () => {
-    setCarouselIndex((prev) => (prev + 1) % services.length);
-  };
-
-  const goToPrevious = () => {
-    setCarouselIndex((prev) => (prev - 1 + services.length) % services.length);
-  };
-
-  const goToSlide = (index) => {
-    setCarouselIndex(index);
-  };
-
-  // Touch handlers for swipe
-  const minSwipeDistance = 50;
-
-  const onTouchStart = (e) => {
-    setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const onTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-
-    if (isLeftSwipe) {
-      goToNext();
-    }
-    if (isRightSwipe) {
-      goToPrevious();
-    }
-  };
 
   const animateNumber = (target, key) => {
     let current = 0;
@@ -292,23 +234,18 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="services-main">
-          <div 
-            className="services-grid"
-            onTouchStart={isMobile ? onTouchStart : undefined}
-            onTouchMove={isMobile ? onTouchMove : undefined}
-            onTouchEnd={isMobile ? onTouchEnd : undefined}
-          >
+          <div className="services-grid">
             {services.map((service, index) => (
               <div 
                 key={index}
-                className={`service-card ${activeService === index ? 'active' : ''} ${isVisible ? 'animate-in' : ''} ${isMobile && carouselIndex === index ? 'carousel-active' : ''}`}
+                className={`service-card ${activeService === index ? 'active' : ''} ${isVisible ? 'animate-in' : ''}`}
                 style={{ 
                   '--service-color': service.color,
                   '--service-color-rgb': service.colorRgb,
                   '--animation-delay': `${index * 0.1}s`
                 }}
-                onMouseEnter={() => !isMobile && setActiveService(index)}
-                onMouseLeave={() => !isMobile && setActiveService(0)}
+                onMouseEnter={() => setActiveService(index)}
+                onMouseLeave={() => setActiveService(0)}
               >
                 {service.badge && (
                   <div className="service-badge">
@@ -373,28 +310,6 @@ const Services = () => {
               </div>
             ))}
           </div>
-          
-          {/* Carousel Controls - Mobile Only */}
-          {isMobile && (
-            <>
-              <div className="carousel-controls">
-                <button 
-                  className="carousel-button carousel-button-prev"
-                  onClick={goToPrevious}
-                  aria-label="Previous card"
-                >
-                  <FaChevronLeft />
-                </button>
-                <button 
-                  className="carousel-button carousel-button-next"
-                  onClick={goToNext}
-                  aria-label="Next card"
-                >
-                  <FaChevronRight />
-                </button>
-              </div>
-            </>
-          )}
         </div>
 
         {/* Stats Section */}
