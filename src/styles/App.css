@@ -300,8 +300,16 @@
     padding: var(--spacing-3xl) 0;
   }
 }
-
+div#__EAAPS_PORTAL,div.eapps-widget{
+  display: none!important;
+}
 @media (max-width: 480px) {
+  .scroll-to-top{
+    bottom: 80px!important;
+  }
+  div#__EAAPS_PORTAL,div.eapps-widget{
+    display: block!important;
+  }
   .grid-4 {
     grid-template-columns: 1fr;
   }
