@@ -808,3 +808,14 @@
     padding: 30px 20px;
   }
 }
+.digital-transformation-page .cta-section .cta-content {
+    display: block;
+}
+
+.digital-transformation-page .cta-section .cta-content .cta-actions {
+    flex-direction: row;
+}
+.digital-platforms-cta .cta-content {
+    display: block;
+}
+

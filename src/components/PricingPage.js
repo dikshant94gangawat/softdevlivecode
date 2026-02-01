@@ -152,7 +152,7 @@ const PricingPage = () => {
           </div>
         </div>
       </div>
-
+{/* 
       <div className="services-pricing-section">
         <div className="container">
           <div className="section-header">
@@ -174,7 +174,7 @@ const PricingPage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="cta-section">
         <div className="container">

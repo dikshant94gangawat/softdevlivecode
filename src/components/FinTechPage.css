@@ -1498,3 +1498,10 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+.fintech-cta .cta-content {
+    display: block;
+}
+
+.fintech-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

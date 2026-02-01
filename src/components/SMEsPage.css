@@ -998,3 +998,10 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+.smes-cta .cta-content {
+    display: block;
+}
+
+.smes-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

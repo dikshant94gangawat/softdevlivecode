@@ -959,3 +959,10 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+.startups-cta .cta-content {
+    display: block;
+}
+
+.startups-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

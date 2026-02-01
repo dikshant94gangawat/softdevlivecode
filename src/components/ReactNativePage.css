@@ -406,3 +406,10 @@
   }
 }
 
+.react-native-page .cta-section .cta-content {
+    display: block;
+}
+
+.react-native-page .cta-section .cta-content .cta-actions {
+    flex-direction: row;
+}

@@ -406,3 +406,10 @@
   }
 }
 
+.it-consultation-page .cta-section .cta-content {
+    display: block;
+}
+
+.it-consultation-page .cta-section .cta-content .cta-actions {
+    flex-direction: row;
+}

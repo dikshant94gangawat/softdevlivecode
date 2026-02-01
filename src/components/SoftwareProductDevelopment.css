@@ -1307,6 +1307,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  display: block;
 }
 
 .software-product-page .cta-title {
@@ -1417,6 +1418,15 @@
 }
 
 @media (max-width: 480px) {
+  .software-product-page .hero-actions-section{
+    padding: 1rem 0;
+  }
+  .software-product-page .software-product-services, .software-product-page .product-solutions{
+    padding: 60px 0;
+  }
+  .software-product-portfolio{
+    padding: 60px 0;
+  }
   .software-product-page .container {
     padding: 0 15px;
   }

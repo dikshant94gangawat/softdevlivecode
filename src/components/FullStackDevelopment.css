@@ -1243,3 +1243,10 @@
     font-size: 1.2rem;
   }
 }
+.fullstack-cta .cta-content {
+    display: block;
+}
+
+.fullstack-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

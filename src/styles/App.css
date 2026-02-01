@@ -339,3 +339,20 @@ div#__EAAPS_PORTAL,div.eapps-widget{
   padding: 0!important;
 }
 } 
+
+#home.hero~section#services .services-stats {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#home.hero~section#services .services-benefits {
+    margin-bottom: 2rem;
+}
+.about-text .section-title {
+    text-align: left;
+}
+.about-text .section-title::after{
+    display:none;
+}
+.about-content .about-description p {
+    text-align: left;
+}

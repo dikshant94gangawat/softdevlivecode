@@ -806,3 +806,11 @@
     padding: 30px 20px;
   }
 }
+
+.custom-solutions-cta .cta-content {
+    display: block;
+}
+
+.custom-solutions-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

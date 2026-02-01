@@ -1336,3 +1336,10 @@
     height: 240px;
   }
 }
+.blockchain-cta .cta-content {
+    display: block;
+}
+
+.blockchain-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

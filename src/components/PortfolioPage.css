@@ -535,15 +535,15 @@
   color: #3b82f6;
 }
 
-.portfolio-overlay {
+/* .portfolio-overlay {
   position: absolute;
   top: 20px;
   left: 20px;
-}
+} */
 
 .portfolio-category {
-  background: rgba(59, 130, 246, 0.2);
-  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.4);
+  color: #ffffff;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 12px;

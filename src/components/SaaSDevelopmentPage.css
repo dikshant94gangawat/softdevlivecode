@@ -815,3 +815,11 @@
     padding: 30px 20px;
   }
 }
+
+.saas-development-cta .cta-content {
+    display: block;
+}
+
+.saas-development-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

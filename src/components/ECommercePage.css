@@ -1486,3 +1486,10 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+.ecommerce-cta .cta-content {
+    display: block;
+}
+
+.ecommerce-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

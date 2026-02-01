@@ -406,3 +406,11 @@
   }
 }
 
+
+.python-page .cta-section .cta-content {
+    display: block;
+}
+
+.python-page .cta-section .cta-content .cta-actions {
+    flex-direction: row;
+}

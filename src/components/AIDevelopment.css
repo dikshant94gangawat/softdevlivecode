@@ -1185,3 +1185,10 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+.ai-cta .cta-content {
+    display: block;
+}
+
+.ai-cta .cta-content .cta-actions {
+    flex-direction: row;
+}

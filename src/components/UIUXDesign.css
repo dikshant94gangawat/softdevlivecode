@@ -1418,6 +1418,12 @@
 }
 
 @media (max-width: 480px) {
+  .uiux-testimonials{
+    padding: 80px 0;
+  }
+  .uiux-cta{
+    padding: 60px 0;
+  }
   .container {
     padding: 0 15px;
   }
@@ -1581,4 +1587,7 @@
     width: 100px;
     height: 200px;
   }
+}
+.uiux-cta .cta-content {
+    display: block;
 }

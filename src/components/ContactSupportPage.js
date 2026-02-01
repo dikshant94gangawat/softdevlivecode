@@ -40,7 +40,8 @@ const ContactSupportPage = () => {
     {
       icon: FaEnvelope,
       title: 'Email Support',
-      contact: 'support@softdevsquad.com',
+      // contact: 'support@softdevsquad.com',
+      contact: 'softdevsquad@gmail.com',
       hours: '24/7',
       response: 'Within 4 hours'
     },
