@@ -304,9 +304,6 @@ div#__EAAPS_PORTAL,div.eapps-widget{
   display: none!important;
 }
 @media (max-width: 480px) {
-  .scroll-to-top{
-    bottom: 80px!important;
-  }
   div#__EAAPS_PORTAL,div.eapps-widget{
     display: block!important;
   }
