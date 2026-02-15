@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './SaaSDevelopmentPage.module.css';
 import Link from 'next/link';
 import {
   FaCloud, FaRocket, FaUsers, FaLightbulb, FaCode, FaDesktop,
@@ -251,33 +252,33 @@ const SaaSDevelopmentPage = () => {
   ];
 
   return (
-    <div className="saas-development-page">
+    <div className={styles['saas-development-page']}>
       {/* Hero Section */}
-      <div className="saas-development-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['saas-development-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="saas-development-hero-content">
-            <div className="hero-badge">
-              <FaCloud className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['saas-development-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaCloud className={styles['badge-icon']} />
               <span>SaaS Development Experts</span>
             </div>
-            <h1 className="saas-development-hero-title">
-              Build Scalable <span className="highlight">SaaS Products</span> That Users Love
+            <h1 className={styles['saas-development-hero-title']}>
+              Build Scalable <span className={styles.highlight}>SaaS Products</span> That Users Love
             </h1>
-            <p className="saas-development-hero-subtitle">
+            <p className={styles['saas-development-hero-subtitle']}>
               From MVP to enterprise-scale SaaS platforms, we deliver cloud-native solutions with multi-tenant architecture, robust security, and seamless user experiences.
             </p>
-            <div className="hero-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaRocket className="btn-icon" />Start Your SaaS Journey</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">View SaaS Portfolio</a></Link>
+            <div className={styles['hero-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaRocket className={styles['btn-icon']} />Start Your SaaS Journey</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View SaaS Portfolio</a></Link>
             </div>
-            <div className="hero-stats">
+            <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
-                <div key={index} className="stat-item">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
+                <div key={index} className={styles['stat-item']}>
+                  <div className={styles['stat-number']}>{stat.number}</div>
+                  <div className={styles['stat-label']}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -286,33 +287,33 @@ const SaaSDevelopmentPage = () => {
       </div>
 
       {/* Services Section */}
-      <section className="saas-development-services">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Comprehensive SaaS Development Services</h2>
-            <p className="section-subtitle">
+      <section className={styles['saas-development-services']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Comprehensive SaaS Development Services</h2>
+            <p className={styles['section-subtitle']}>
               End-to-end SaaS development services from concept to scale
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Get Started<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
@@ -320,18 +321,18 @@ const SaaSDevelopmentPage = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="saas-development-portfolio">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">SaaS Success Stories</h2>
-            <p className="section-subtitle">
+      <section className={styles['saas-development-portfolio']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>SaaS Success Stories</h2>
+            <p className={styles['section-subtitle']}>
               Successful SaaS platforms we've built for businesses worldwide
             </p>
           </div>
-          <div className="portfolio-grid">
+          <div className={styles['portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -340,25 +341,25 @@ const SaaSDevelopmentPage = () => {
                       e.target.nextSibling.style.display = 'flex';
                     }}
                   />
-                  <div className="portfolio-image-placeholder" style={{ display: 'none' }}>
+                  <div className={styles['portfolio-image-placeholder']} style={{ display: 'none' }}>
                     <FaCloud size={60} style={{ color: '#00ffff' }} />
                   </div>
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-category">{project.category}</div>
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-category']}>{project.category}</div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
-                  <div className="portfolio-results">
+                  <div className={styles['portfolio-results']}>
                     {project.results.map((result, idx) => (
-                      <div key={idx} className="result-item">
-                        <FaCheckCircle className="result-icon" />
+                      <div key={idx} className={styles['result-item']}>
+                        <FaCheckCircle className={styles['result-icon']} />
                         {result}
                       </div>
                     ))}
@@ -371,23 +372,23 @@ const SaaSDevelopmentPage = () => {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="saas-development-tech-stack">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">SaaS Technology Stack</h2>
-            <p className="section-subtitle">
+      <section className={styles['saas-development-tech-stack']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>SaaS Technology Stack</h2>
+            <p className={styles['section-subtitle']}>
               Modern technologies for building scalable and secure SaaS platforms
             </p>
           </div>
-          <div className="tech-categories">
+          <div className={styles['tech-categories']}>
             {techStack.map((category, index) => (
-              <div key={index} className="tech-category">
-                <h3 className="category-title">{category.category}</h3>
-                <div className="tech-items">
+              <div key={index} className={styles['tech-category']}>
+                <h3 className={styles['category-title']}>{category.category}</h3>
+                <div className={styles['tech-items']}>
                   {category.technologies.map((tech, idx) => (
-                    <div key={idx} className="tech-item">
-                      <tech.icon className="tech-icon" />
-                      <span className="tech-name">{tech.name}</span>
+                    <div key={idx} className={styles['tech-item']}>
+                      <tech.icon className={styles['tech-icon']} />
+                      <span className={styles['tech-name']}>{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -398,25 +399,25 @@ const SaaSDevelopmentPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="saas-development-process">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our SaaS Development Process</h2>
-            <p className="section-subtitle">
+      <section className={styles['saas-development-process']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our SaaS Development Process</h2>
+            <p className={styles['section-subtitle']}>
               Proven methodology for building successful SaaS products
             </p>
           </div>
-          <div className="process-steps">
+          <div className={styles['process-steps']}>
             {process.map((step, index) => (
-              <div key={index} className="process-step">
-                <div className="step-number" style={{ backgroundColor: step.color }}>
+              <div key={index} className={styles['process-step']}>
+                <div className={styles['step-number']} style={{ backgroundColor: step.color }}>
                   {step.step}
                 </div>
-                <div className="step-icon" style={{ color: step.color }}>
+                <div className={styles['step-icon']} style={{ color: step.color }}>
                   <step.icon />
                 </div>
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
+                <h3 className={styles['step-title']}>{step.title}</h3>
+                <p className={styles['step-description']}>{step.description}</p>
               </div>
             ))}
           </div>
@@ -424,26 +425,26 @@ const SaaSDevelopmentPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="saas-development-testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our SaaS Clients Say</h2>
-            <p className="section-subtitle">
+      <section className={styles['saas-development-testimonials']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our SaaS Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Success stories from SaaS entrepreneurs and businesses
             </p>
           </div>
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-content">"{testimonial.content}"</p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">{testimonial.avatar}</div>
-                  <div className="author-info">
+                <p className={styles['testimonial-content']}>"{testimonial.content}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>{testimonial.avatar}</div>
+                  <div className={styles['author-info']}>
                     <h4>{testimonial.name}</h4>
                     <p>{testimonial.company}</p>
                   </div>
@@ -455,16 +456,16 @@ const SaaSDevelopmentPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="saas-development-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Launch Your SaaS Product?</h2>
-            <p className="cta-subtitle">
+      <section className={styles['saas-development-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h2 className={styles['cta-title']}>Ready to Launch Your SaaS Product?</h2>
+            <p className={styles['cta-subtitle']}>
               Let's build a scalable SaaS platform that grows with your business and delights your users.
             </p>
-            <div className="cta-buttons">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaRocket className="btn-icon" />Start Building Now</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline"><FaUsers className="btn-icon" />Schedule Discovery Call</a></Link>
+            <div className={styles['cta-buttons']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaRocket className={styles['btn-icon']} />Start Building Now</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}><FaUsers className={styles['btn-icon']} />Schedule Discovery Call</a></Link>
             </div>
           </div>
         </div>

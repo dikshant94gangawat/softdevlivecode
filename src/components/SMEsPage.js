@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './SMEsPage.module.css';
 import Link from 'next/link';
 import {
   FaBuilding, FaChartLine, FaUsers, FaCogs, FaMobile, FaCloud,
@@ -201,33 +202,33 @@ const SMEsPage = () => {
   ];
 
   return (
-    <div className="smes-page">
+    <div className={styles['smes-page']}>
       {/* Hero Section */}
-      <div className="smes-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['smes-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="smes-hero-content">
-            <div className="hero-badge">
-              <FaBuilding className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['smes-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaBuilding className={styles['badge-icon']} />
               <span>Leading SME Technology Partner</span>
             </div>
-            <h1 className="smes-hero-title">
-              Empower Your <span className="highlight">SME Growth</span> with Smart Technology
+            <h1 className={styles['smes-hero-title']}>
+              Empower Your <span className={styles.highlight}>SME Growth</span> with Smart Technology
             </h1>
-            <p className="smes-hero-subtitle">
+            <p className={styles['smes-hero-subtitle']}>
               Transform your small to medium enterprise with tailored technology solutions that streamline operations, boost productivity, and drive sustainable growth.
             </p>
-            <div className="hero-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Transformation</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Case Studies</a></Link>
+            <div className={styles['hero-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Transformation</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Case Studies</a></Link>
             </div>
-            <div className="hero-stats">
+            <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
-                <div key={index} className="stat-item">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
+                <div key={index} className={styles['stat-item']}>
+                  <div className={styles['stat-number']}>{stat.number}</div>
+                  <div className={styles['stat-label']}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -236,34 +237,34 @@ const SMEsPage = () => {
       </div>
 
       {/* Business Solutions Section */}
-      <section className="business-solutions">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Why SMEs Choose Our Solutions</h2>
-            <p className="section-subtitle">
+      <section className={styles['business-solutions']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Why SMEs Choose Our Solutions</h2>
+            <p className={styles['section-subtitle']}>
               Proven strategies that help small and medium enterprises thrive in competitive markets
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {businessSolutions.map((solution, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: solution.color || '#00ffff' }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: solution.color || '#00ffff' }}>
                   <solution.icon />
                 </div>
-                <div className="solution-category">{solution.category}</div>
-                <h3 className="service-title">{solution.title}</h3>
-                <p className="service-description">{solution.description}</p>
+                <div className={styles['solution-category']}>{solution.category}</div>
+                <h3 className={styles['service-title']}>{solution.title}</h3>
+                <p className={styles['service-description']}>{solution.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {solution.benefits.map((benefit, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {benefit}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Get Started<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
@@ -271,35 +272,35 @@ const SMEsPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="smes-services">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">SME-Focused Development Services</h2>
-            <p className="section-subtitle">
+      <section className={styles['smes-services']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>SME-Focused Development Services</h2>
+            <p className={styles['section-subtitle']}>
               Comprehensive technology solutions designed for small and medium enterprises
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link to="/contact" className={styles['service-cta']}>
                   Get Started
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </Link>
               </div>
             ))}
@@ -308,37 +309,37 @@ const SMEsPage = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="smes-portfolio">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">SME Success Stories</h2>
-            <p className="section-subtitle">
+      <section className={styles['smes-portfolio']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>SME Success Stories</h2>
+            <p className={styles['section-subtitle']}>
               Real businesses we've helped transform and grow with technology
             </p>
           </div>
-          <div className="portfolio-grid">
+          <div className={styles['portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img src={project.image} alt={project.title} />
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-industry">{project.industry}</div>
-                    <div className="portfolio-metrics">
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-industry']}>{project.industry}</div>
+                    <div className={styles['portfolio-metrics']}>
                       {Object.entries(project.metrics).map(([key, value]) => (
-                        <div key={key} className="metric-item">
-                          <span className="metric-value">{value}</span>
-                          <span className="metric-label">{key.replace('_', ' ')}</span>
+                        <div key={key} className={styles['metric-item']}>
+                          <span className={styles['metric-value']}>{value}</span>
+                          <span className={styles['metric-label']}>{key.replace('_', ' ')}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
                 </div>
@@ -349,23 +350,23 @@ const SMEsPage = () => {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="tech-stack">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Enterprise-Grade Technology Stack</h2>
-            <p className="section-subtitle">
+      <section className={styles['tech-stack']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Enterprise-Grade Technology Stack</h2>
+            <p className={styles['section-subtitle']}>
               Robust, scalable technologies that power successful SME solutions
             </p>
           </div>
-          <div className="tech-categories">
+          <div className={styles['tech-categories']}>
             {techStack.map((category, index) => (
-              <div key={index} className="tech-category">
-                <h3 className="category-title">{category.category}</h3>
-                <div className="tech-items">
+              <div key={index} className={styles['tech-category']}>
+                <h3 className={styles['category-title']}>{category.category}</h3>
+                <div className={styles['tech-items']}>
                   {category.technologies.map((tech, idx) => (
-                    <div key={idx} className="tech-item">
-                      <tech.icon className="tech-icon" />
-                      <span className="tech-name">{tech.name}</span>
+                    <div key={idx} className={styles['tech-item']}>
+                      <tech.icon className={styles['tech-icon']} />
+                      <span className={styles['tech-name']}>{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -376,32 +377,32 @@ const SMEsPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="smes-testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What SME Leaders Say</h2>
-            <p className="section-subtitle">
+      <section className={styles['smes-testimonials']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What SME Leaders Say</h2>
+            <p className={styles['section-subtitle']}>
               Success stories from business owners who transformed their operations
             </p>
           </div>
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-content">
-                  <div className="testimonial-stars">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-content']}>
+                  <div className={styles['testimonial-stars']}>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <FaStar key={i} className="star" />
+                      <FaStar key={i} className={styles.star} />
                     ))}
                   </div>
-                  <p className="testimonial-text">"{testimonial.text}"</p>
+                  <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
                 </div>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>
                     <img src={testimonial.image} alt={testimonial.name} />
                   </div>
-                  <div className="author-info">
-                    <h4 className="author-name">{testimonial.name}</h4>
-                    <p className="author-company">{testimonial.company}</p>
+                  <div className={styles['author-info']}>
+                    <h4 className={styles['author-name']}>{testimonial.name}</h4>
+                    <p className={styles['author-company']}>{testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -411,16 +412,16 @@ const SMEsPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="smes-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Transform Your SME?</h2>
-            <p className="cta-description">
+      <section className={styles['smes-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h2 className={styles['cta-title']}>Ready to Transform Your SME?</h2>
+            <p className={styles['cta-description']}>
               Let's build technology solutions that streamline your operations, reduce costs, and accelerate your business growth.
             </p>
-            <div className="cta-buttons">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
+            <div className={styles['cta-buttons']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

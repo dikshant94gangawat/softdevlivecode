@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './AgenciesPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -202,38 +203,38 @@ const AgenciesPage = () => {
   ];
 
   return (
-    <div className="agencies-page">
+    <div className={styles['agencies-page']}>
       {/* Hero Section */}
-      <div className="agencies-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['agencies-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="agencies-hero-content">
-            <div className="hero-badge">
-              <FaHandshake className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['agencies-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaHandshake className={styles['badge-icon']} />
               <span>Trusted Agency Development Partner</span>
             </div>
-            <h1 className="agencies-hero-title">
-              Scale Your <span className="highlight">Agency Success</span> with Expert Development
+            <h1 className={styles['agencies-hero-title']}>
+              Scale Your <span className={styles.highlight}>Agency Success</span> with Expert Development
             </h1>
-            <p className="agencies-hero-subtitle">
+            <p className={styles['agencies-hero-subtitle']}>
               Partner with us to expand your service offerings, deliver exceptional client projects, and grow your agency with white label development solutions.
             </p>
-            <div className="hero-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['hero-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Become a Partner
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 View Partnership Models
               </a></Link>
             </div>
-            <div className="hero-stats">
+            <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
-                <div key={index} className="stat-item">
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
+                <div key={index} className={styles['stat-item']}>
+                  <div className={styles['stat-number']}>{stat.number}</div>
+                  <div className={styles['stat-label']}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -242,42 +243,42 @@ const AgenciesPage = () => {
       </div>
 
       {/* Partnership Models Section */}
-      <section className="partnership-models">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Partnership Models That Work</h2>
-            <p className="section-subtitle">
+      <section className={styles['partnership-models']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Partnership Models That Work</h2>
+            <p className={styles['section-subtitle']}>
               Flexible partnership options designed to fit your agency's needs and business model
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {partnershipModels.map((model, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: model.color || '#00ffff' }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: model.color || '#00ffff' }}>
                   <model.icon />
                 </div>
-                <h3 className="service-title">{model.title}</h3>
-                <p className="service-description">{model.description}</p>
+                <h3 className={styles['service-title']}>{model.title}</h3>
+                <p className={styles['service-description']}>{model.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {model.benefits.map((benefit, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {benefit}
                     </li>
                   ))}
                 </ul>
 
-                <div className="model-pricing-wrapper">
-                  <div className="model-pricing">
-                    <FaAward className="pricing-icon" />
+                <div className={styles['model-pricing-wrapper']}>
+                  <div className={styles['model-pricing']}>
+                    <FaAward className={styles['pricing-icon']} />
                     {model.pricing}
                   </div>
                 </div>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>
                   Choose Model
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -286,35 +287,35 @@ const AgenciesPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="agencies-services">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Agency-Focused Development Services</h2>
-            <p className="section-subtitle">
+      <section className={styles['agencies-services']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Agency-Focused Development Services</h2>
+            <p className={styles['section-subtitle']}>
               Comprehensive development services designed specifically for agency partnerships
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>
                   Get Started
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -323,37 +324,37 @@ const AgenciesPage = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="agencies-portfolio">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Agency Partnership Success Stories</h2>
-            <p className="section-subtitle">
+      <section className={styles['agencies-portfolio']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Agency Partnership Success Stories</h2>
+            <p className={styles['section-subtitle']}>
               Real partnerships that delivered exceptional results for agencies and their clients
             </p>
           </div>
-          <div className="portfolio-grid">
+          <div className={styles['portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img src={project.image} alt={project.title} />
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-agency">{project.agency}</div>
-                    <div className="portfolio-metrics">
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-agency']}>{project.agency}</div>
+                    <div className={styles['portfolio-metrics']}>
                       {Object.entries(project.metrics).map(([key, value]) => (
-                        <div key={key} className="metric-item">
-                          <span className="metric-value">{value}</span>
-                          <span className="metric-label">{key}</span>
+                        <div key={key} className={styles['metric-item']}>
+                          <span className={styles['metric-value']}>{value}</span>
+                          <span className={styles['metric-label']}>{key}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
                 </div>
@@ -364,23 +365,23 @@ const AgenciesPage = () => {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="tech-stack">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Agency-Ready Technology Stack</h2>
-            <p className="section-subtitle">
+      <section className={styles['tech-stack']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Agency-Ready Technology Stack</h2>
+            <p className={styles['section-subtitle']}>
               Modern technologies and tools that help agencies deliver exceptional client results
             </p>
           </div>
-          <div className="tech-categories">
+          <div className={styles['tech-categories']}>
             {techStack.map((category, index) => (
-              <div key={index} className="tech-category">
-                <h3 className="category-title">{category.category}</h3>
-                <div className="tech-items">
+              <div key={index} className={styles['tech-category']}>
+                <h3 className={styles['category-title']}>{category.category}</h3>
+                <div className={styles['tech-items']}>
                   {category.technologies.map((tech, idx) => (
-                    <div key={idx} className="tech-item">
-                      <tech.icon className="tech-icon" />
-                      <span className="tech-name">{tech.name}</span>
+                    <div key={idx} className={styles['tech-item']}>
+                      <tech.icon className={styles['tech-icon']} />
+                      <span className={styles['tech-name']}>{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -391,32 +392,32 @@ const AgenciesPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="agencies-testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Agency Partners Say</h2>
-            <p className="section-subtitle">
+      <section className={styles['agencies-testimonials']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Agency Partners Say</h2>
+            <p className={styles['section-subtitle']}>
               Success stories from agency leaders who transformed their business with our partnership
             </p>
           </div>
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-content">
-                  <div className="testimonial-stars">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-content']}>
+                  <div className={styles['testimonial-stars']}>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <FaStar key={i} className="star" />
+                      <FaStar key={i} className={styles.star} />
                     ))}
                   </div>
-                  <p className="testimonial-text">"{testimonial.text}"</p>
+                  <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
                 </div>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>
                     <img src={testimonial.image} alt={testimonial.name} />
                   </div>
-                  <div className="author-info">
-                    <h4 className="author-name">{testimonial.name}</h4>
-                    <p className="author-company">{testimonial.company}</p>
+                  <div className={styles['author-info']}>
+                    <h4 className={styles['author-name']}>{testimonial.name}</h4>
+                    <p className={styles['author-company']}>{testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -426,19 +427,19 @@ const AgenciesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="agencies-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Scale Your Agency?</h2>
-            <p className="cta-description">
+      <section className={styles['agencies-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h2 className={styles['cta-title']}>Ready to Scale Your Agency?</h2>
+            <p className={styles['cta-description']}>
               Join 150+ agencies who trust us to deliver exceptional development services under their brand. Let's grow together.
             </p>
-            <div className="cta-buttons">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-buttons']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Start Partnership
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Schedule Partnership Call
               </a></Link>
             </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './ContactSupportPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -62,22 +63,22 @@ const ContactSupportPage = () => {
   ];
 
   return (
-    <div className="contact-support-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['contact-support-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaHeadset className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaHeadset className={styles['badge-icon']} />
                 <span>Get Support</span>
               </div>
-              <h1 className="hero-title">
-                Contact <span className="highlight">Support</span>
+              <h1 className={styles['hero-title']}>
+                Contact <span className={styles.highlight}>Support</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 We're here to help! Reach out to our support team through any of the channels below or submit a support request.
               </p>
             </div>
@@ -85,27 +86,27 @@ const ContactSupportPage = () => {
         </div>
       </div>
 
-      <div className="support-channels-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Support Channels</h2>
-            <p className="section-subtitle">
+      <div className={styles['support-channels-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Support Channels</h2>
+            <p className={styles['section-subtitle']}>
               Choose the best way to reach us
             </p>
           </div>
-          <div className="channels-grid">
+          <div className={styles['channels-grid']}>
             {supportChannels.map((channel, index) => (
-              <div key={index} className="channel-card">
-                <div className="channel-icon">
+              <div key={index} className={styles['channel-card']}>
+                <div className={styles['channel-icon']}>
                   <channel.icon />
                 </div>
-                <h3 className="channel-title">{channel.title}</h3>
-                <p className="channel-contact">{channel.contact}</p>
-                <div className="channel-info">
-                  <div className="info-item">
+                <h3 className={styles['channel-title']}>{channel.title}</h3>
+                <p className={styles['channel-contact']}>{channel.contact}</p>
+                <div className={styles['channel-info']}>
+                  <div className={styles['info-item']}>
                     <FaClock /> {channel.hours}
                   </div>
-                  <div className="info-item">
+                  <div className={styles['info-item']}>
                     Response: {channel.response}
                   </div>
                 </div>
@@ -115,18 +116,18 @@ const ContactSupportPage = () => {
         </div>
       </div>
 
-      <div className="support-form-section">
-        <div className="container">
-          <div className="form-container">
-            <div className="form-header">
-              <h2 className="section-title">Submit Support Request</h2>
-              <p className="section-subtitle">
+      <div className={styles['support-form-section']}>
+        <div className={styles.container}>
+          <div className={styles['form-container']}>
+            <div className={styles['form-header']}>
+              <h2 className={styles['section-title']}>Submit Support Request</h2>
+              <p className={styles['section-subtitle']}>
                 Fill out the form below and we'll get back to you as soon as possible
               </p>
             </div>
-            <form onSubmit={handleSubmit} className="support-form">
-              <div className="form-row">
-                <div className="form-group">
+            <form onSubmit={handleSubmit} className={styles['support-form']}>
+              <div className={styles['form-row']}>
+                <div className={styles['form-group']}>
                   <label htmlFor="name">Name *</label>
                   <input
                     type="text"
@@ -137,7 +138,7 @@ const ContactSupportPage = () => {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="email">Email *</label>
                   <input
                     type="email"
@@ -150,8 +151,8 @@ const ContactSupportPage = () => {
                 </div>
               </div>
 
-              <div className="form-row">
-                <div className="form-group">
+              <div className={styles['form-row']}>
+                <div className={styles['form-group']}>
                   <label htmlFor="category">Category *</label>
                   <select
                     id="category"
@@ -167,7 +168,7 @@ const ContactSupportPage = () => {
                     ))}
                   </select>
                 </div>
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="priority">Priority *</label>
                   <select
                     id="priority"
@@ -184,7 +185,7 @@ const ContactSupportPage = () => {
                 </div>
               </div>
 
-              <div className="form-group">
+              <div className={styles['form-group']}>
                 <label htmlFor="subject">Subject *</label>
                 <input
                   type="text"
@@ -196,7 +197,7 @@ const ContactSupportPage = () => {
                 />
               </div>
 
-              <div className="form-group">
+              <div className={styles['form-group']}>
                 <label htmlFor="message">Message *</label>
                 <textarea
                   id="message"
@@ -208,28 +209,28 @@ const ContactSupportPage = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-button">
-                <FaTicketAlt className="button-icon" />
+              <button type="submit" className={styles['submit-button']}>
+                <FaTicketAlt className={styles['button-icon']} />
                 Submit Support Request
-                <FaArrowRight className="button-arrow" />
+                <FaArrowRight className={styles['button-arrow']} />
               </button>
             </form>
           </div>
         </div>
       </div>
 
-      <div className="help-links-section">
-        <div className="container">
-          <div className="help-links">
-            <Link href="/help-center" legacyBehavior><a className="help-link">
+      <div className={styles['help-links-section']}>
+        <div className={styles.container}>
+          <div className={styles['help-links']}>
+            <Link href="/help-center" legacyBehavior><a className={styles['help-link']}>
               <FaQuestionCircle />
               <span>Help Center</span>
             </a></Link>
-            <Link href="/documentation" legacyBehavior><a className="help-link">
+            <Link href="/documentation" legacyBehavior><a className={styles['help-link']}>
               <FaCheckCircle />
               <span>Documentation</span>
             </a></Link>
-            <Link href="/api-reference" legacyBehavior><a className="help-link">
+            <Link href="/api-reference" legacyBehavior><a className={styles['help-link']}>
               <FaCog />
               <span>API Reference</span>
             </a></Link>

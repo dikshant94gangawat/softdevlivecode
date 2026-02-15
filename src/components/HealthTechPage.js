@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './HealthTechPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -253,116 +254,116 @@ const HealthTechPage = () => {
   ];
 
   return (
-    <div className="healthtech-page">
+    <div className={styles['healthtech-page']}>
       {/* Hero Section */}
-      <div className="healthtech-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['healthtech-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="healthtech-hero-container">
-            <div className="healthtech-hero-content">
-              <div className="hero-badge">
-                <FaHeartbeat className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['healthtech-hero-container']}>
+            <div className={styles['healthtech-hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaHeartbeat className={styles['badge-icon']} />
                 <span>Leading HealthTech Development Company</span>
               </div>
-              <h1 className="healthtech-hero-title">
-                Innovative <span className="highlight">HealthTech Solutions</span> for Better Patient Care
+              <h1 className={styles['healthtech-hero-title']}>
+                Innovative <span className={styles.highlight}>HealthTech Solutions</span> for Better Patient Care
               </h1>
-              <p className="healthtech-hero-subtitle">
+              <p className={styles['healthtech-hero-subtitle']}>
                 Transform healthcare delivery with cutting-edge technology. We build HIPAA-compliant, secure, and scalable healthcare solutions that improve patient outcomes and streamline medical operations.
               </p>
             </div>
-            <div className="healthtech-hero-image">
-              <div className="hero-healthcare-visual">
-                <div className="healthcare-dashboard">
-                  <div className="dashboard-header">
-                    <div className="header-title">HealthTech Dashboard</div>
-                    <div className="header-status">
-                      <div className="status-dot active"></div>
+            <div className={styles['healthtech-hero-image']}>
+              <div className={styles['hero-healthcare-visual']}>
+                <div className={styles['healthcare-dashboard']}>
+                  <div className={styles['dashboard-header']}>
+                    <div className={styles['header-title']}>HealthTech Dashboard</div>
+                    <div className={styles['header-status']}>
+                      <div className={`styles['status-dot'] styles.active`}></div>
                       <span>Live</span>
                     </div>
                   </div>
-                  <div className="dashboard-content">
-                    <div className="patient-stats">
-                      <div className="stat-card">
-                        <div className="stat-icon">
+                  <div className={styles['dashboard-content']}>
+                    <div className={styles['patient-stats']}>
+                      <div className={styles['stat-card']}>
+                        <div className={styles['stat-icon']}>
                           <FaUserMd />
                         </div>
-                        <div className="stat-info">
-                          <div className="stat-number">1,247</div>
-                          <div className="stat-label">Active Patients</div>
+                        <div className={styles['stat-info']}>
+                          <div className={styles['stat-number']}>1,247</div>
+                          <div className={styles['stat-label']}>Active Patients</div>
                         </div>
                       </div>
-                      <div className="stat-card">
-                        <div className="stat-icon">
+                      <div className={styles['stat-card']}>
+                        <div className={styles['stat-icon']}>
                           <FaHeartbeat />
                         </div>
-                        <div className="stat-info">
-                          <div className="stat-number">98.5%</div>
-                          <div className="stat-label">Health Score</div>
+                        <div className={styles['stat-info']}>
+                          <div className={styles['stat-number']}>98.5%</div>
+                          <div className={styles['stat-label']}>Health Score</div>
                         </div>
                       </div>
                     </div>
-                    <div className="health-chart">
-                      <div className="chart-title">Patient Monitoring</div>
-                      <div className="chart-visualization">
-                        <div className="chart-bars">
+                    <div className={styles['health-chart']}>
+                      <div className={styles['chart-title']}>Patient Monitoring</div>
+                      <div className={styles['chart-visualization']}>
+                        <div className={styles['chart-bars']}>
                           {[85, 92, 78, 95, 88, 90, 87].map((height, index) => (
                             <div 
                               key={index} 
-                              className="chart-bar" 
+                              className={styles['chart-bar']} 
                               style={{ height: `${height}%` }}
                             ></div>
                           ))}
                         </div>
-                        <div className="chart-labels">
+                        <div className={styles['chart-labels']}>
                           {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, index) => (
-                            <div key={index} className="chart-label">{day}</div>
+                            <div key={index} className={styles['chart-label']}>{day}</div>
                           ))}
                         </div>
                       </div>
                     </div>
-                    <div className="recent-activity">
-                      <div className="activity-title">Recent Activity</div>
-                      <div className="activity-list">
-                        <div className="activity-item">
-                          <div className="activity-icon">
+                    <div className={styles['recent-activity']}>
+                      <div className={styles['activity-title']}>Recent Activity</div>
+                      <div className={styles['activity-list']}>
+                        <div className={styles['activity-item']}>
+                          <div className={styles['activity-icon']}>
                             <FaStethoscope />
                           </div>
-                          <div className="activity-text">New consultation completed</div>
+                          <div className={styles['activity-text']}>New consultation completed</div>
                         </div>
-                        <div className="activity-item">
-                          <div className="activity-icon">
+                        <div className={styles['activity-item']}>
+                          <div className={styles['activity-icon']}>
                             <FaPrescriptionBottleAlt />
                           </div>
-                          <div className="activity-text">Prescription updated</div>
+                          <div className={styles['activity-text']}>Prescription updated</div>
                         </div>
-                        <div className="activity-item">
-                          <div className="activity-icon">
+                        <div className={styles['activity-item']}>
+                          <div className={styles['activity-icon']}>
                             <FaAmbulance />
                           </div>
-                          <div className="activity-text">Emergency alert resolved</div>
+                          <div className={styles['activity-text']}>Emergency alert resolved</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="hero-image-glow"></div>
+              <div className={styles['hero-image-glow']}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Stats Section */}
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
@@ -370,14 +371,14 @@ const HealthTechPage = () => {
       </div>
 
       {/* Hero Actions Section */}
-      <div className="hero-actions-section">
-        <div className="container">
-          <div className="hero-actions">
-            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-              <FaHeadset className="btn-icon" />
+      <div className={styles['hero-actions-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-actions']}>
+            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <FaHeadset className={styles['btn-icon']} />
               Start Your HealthTech Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
               View Healthcare Portfolio
             </a></Link>
           </div>
@@ -385,35 +386,35 @@ const HealthTechPage = () => {
       </div>
 
       {/* Services Section */}
-      <div className="healthtech-services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Comprehensive HealthTech Development Services</h2>
-            <p className="section-subtitle">
+      <div className={styles['healthtech-services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Comprehensive HealthTech Development Services</h2>
+            <p className={styles['section-subtitle']}>
               From telemedicine platforms to AI-powered diagnostics, we deliver end-to-end healthcare solutions that revolutionize patient care.
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>
                   Get Started
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -422,18 +423,18 @@ const HealthTechPage = () => {
       </div>
 
       {/* Portfolio Section */}
-      <div className="healthtech-portfolio-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our HealthTech Success Stories</h2>
-            <p className="section-subtitle">
+      <div className={styles['healthtech-portfolio-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our HealthTech Success Stories</h2>
+            <p className={styles['section-subtitle']}>
               Discover how we've helped healthcare organizations build innovative solutions that improve patient outcomes and operational efficiency.
             </p>
           </div>
-          <div className="healthtech-portfolio-grid">
+          <div className={styles['healthtech-portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -442,25 +443,25 @@ const HealthTechPage = () => {
                       e.target.nextSibling.style.display = 'flex';
                     }}
                   />
-                  <div className="portfolio-image-placeholder" style={{ display: 'none', color: project.color }}>
+                  <div className={styles['portfolio-image-placeholder']} style={{ display: 'none', color: project.color }}>
                     <FaHeartbeat size={60} />
                   </div>
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-category">{project.category}</div>
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-category']}>{project.category}</div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
-                  <div className="portfolio-results">
+                  <div className={styles['portfolio-results']}>
                     {project.results.map((result, idx) => (
-                      <div key={idx} className="result-item">
-                        <FaCheckCircle className="result-icon" />
+                      <div key={idx} className={styles['result-item']}>
+                        <FaCheckCircle className={styles['result-icon']} />
                         {result}
                       </div>
                     ))}
@@ -473,22 +474,22 @@ const HealthTechPage = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="healthtech-technologies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Advanced HealthTech Technologies We Master</h2>
-            <p className="section-subtitle">
+      <div className={styles['healthtech-technologies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Advanced HealthTech Technologies We Master</h2>
+            <p className={styles['section-subtitle']}>
               Our expertise spans across cutting-edge technologies and healthcare standards that power modern medical solutions.
             </p>
           </div>
-          <div className="healthtech-technologies-grid">
+          <div className={styles['healthtech-technologies-grid']}>
             {technologies.map((techCategory, index) => (
-              <div key={index} className="tech-category-card">
-                <h3 className="tech-category-title">{techCategory.category}</h3>
-                <ul className="tech-category-list">
+              <div key={index} className={styles['tech-category-card']}>
+                <h3 className={styles['tech-category-title']}>{techCategory.category}</h3>
+                <ul className={styles['tech-category-list']}>
                   {techCategory.items.map((item, idx) => (
-                    <li key={idx} className="tech-category-item">
-                      <item.icon className="tech-icon" />
+                    <li key={idx} className={styles['tech-category-item']}>
+                      <item.icon className={styles['tech-icon']} />
                       {item.name}
                     </li>
                   ))}
@@ -500,25 +501,25 @@ const HealthTechPage = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="healthtech-testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Healthcare Clients Say</h2>
-            <p className="section-subtitle">
+      <div className={styles['healthtech-testimonials-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our Healthcare Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Hear from medical professionals and healthcare organizations who trust us with their digital transformation.
             </p>
           </div>
-          <div className="healthtech-testimonials-grid">
+          <div className={styles['healthtech-testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
+                <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
@@ -527,13 +528,13 @@ const HealthTechPage = () => {
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className="avatar-placeholder" style={{ display: 'none' }}>
+                    <div className={styles['avatar-placeholder']} style={{ display: 'none' }}>
                       <FaUserMd />
                     </div>
                   </div>
-                  <div className="author-info">
-                    <div className="author-name">{testimonial.name}</div>
-                    <div className="author-company">{testimonial.company}</div>
+                  <div className={styles['author-info']}>
+                    <div className={styles['author-name']}>{testimonial.name}</div>
+                    <div className={styles['author-company']}>{testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -543,19 +544,19 @@ const HealthTechPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="healthtech-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Transform Healthcare with Technology?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['healthtech-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Transform Healthcare with Technology?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's build innovative healthcare solutions that improve patient outcomes, enhance operational efficiency, and ensure regulatory compliance.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Schedule Healthcare Consultation
               </a></Link>
             </div>

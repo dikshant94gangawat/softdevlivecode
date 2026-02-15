@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './HelpCenterPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -95,61 +96,61 @@ const HelpCenterPage = () => {
   };
 
   return (
-    <div className="help-center-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['help-center-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaQuestionCircle className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaQuestionCircle className={styles['badge-icon']} />
                 <span>Help & Support</span>
               </div>
-              <h1 className="hero-title">
-                Help <span className="highlight">Center</span>
+              <h1 className={styles['hero-title']}>
+                Help <span className={styles.highlight}>Center</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Find answers to common questions and get the help you need. Can't find what you're looking for? Contact our support team.
               </p>
-              <div className="search-box">
-                <FaSearch className="search-icon" />
-                <input type="text" placeholder="Search for help..." className="search-input" />
+              <div className={styles['search-box']}>
+                <FaSearch className={styles['search-icon']} />
+                <input type="text" placeholder="Search for help..." className={styles['search-input']} />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="help-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Frequently Asked Questions</h2>
-            <p className="section-subtitle">
+      <div className={styles['help-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Frequently Asked Questions</h2>
+            <p className={styles['section-subtitle']}>
               Browse common questions organized by category
             </p>
           </div>
           
-          <div className="faq-categories">
+          <div className={styles['faq-categories']}>
             {faqCategories.map((category, index) => (
-              <div key={index} className="faq-category">
+              <div key={index} className={styles['faq-category']}>
                 <div 
-                  className="faq-category-header"
+                  className={styles['faq-category-header']}
                   onClick={() => toggleCategory(index)}
                 >
-                  <div className="faq-category-title">
-                    <category.icon className="category-icon" />
+                  <div className={styles['faq-category-title']}>
+                    <category.icon className={styles['category-icon']} />
                     <span>{category.title}</span>
                   </div>
                   <FaChevronDown className={`chevron ${openCategory === index ? 'open' : ''}`} />
                 </div>
                 {openCategory === index && (
-                  <div className="faq-list">
+                  <div className={styles['faq-list']}>
                     {category.faqs.map((faq, idx) => (
-                      <div key={idx} className="faq-item">
-                        <h4 className="faq-question">{faq.question}</h4>
-                        <p className="faq-answer">{faq.answer}</p>
+                      <div key={idx} className={styles['faq-item']}>
+                        <h4 className={styles['faq-question']}>{faq.question}</h4>
+                        <p className={styles['faq-answer']}>{faq.answer}</p>
                       </div>
                     ))}
                   </div>
@@ -160,38 +161,38 @@ const HelpCenterPage = () => {
         </div>
       </div>
 
-      <div className="articles-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Popular Articles</h2>
-            <p className="section-subtitle">
+      <div className={styles['articles-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Popular Articles</h2>
+            <p className={styles['section-subtitle']}>
               Most viewed help articles
             </p>
           </div>
-          <div className="articles-grid">
+          <div className={styles['articles-grid']}>
             {popularArticles.map((article, index) => (
-              <Link key={index} to={article.link} className="article-card">
-                <h3 className="article-title">{article.title}</h3>
-                <FaArrowRight className="article-arrow" />
+              <Link key={index} to={article.link} className={styles['article-card']}>
+                <h3 className={styles['article-title']}>{article.title}</h3>
+                <FaArrowRight className={styles['article-arrow']} />
               </Link>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Still Need Help?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Still Need Help?</h3>
+            <p className={styles['cta-subtitle']}>
               Our support team is here to assist you. Get in touch and we'll respond as soon as possible.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact-support" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact-support" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Contact Support
               </a></Link>
-              <Link href="/documentation" legacyBehavior><a className="btn btn-outline">
+              <Link href="/documentation" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 View Documentation
               </a></Link>
             </div>

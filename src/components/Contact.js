@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Contact.module.css';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub, FaPaperPlane, FaUsers } from 'react-icons/fa';
 
 const Contact = () => {
@@ -109,20 +110,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="contact section">
-      <div className="container">
-        <div className="contact-header text-center">
-          <h2 className="section-title fade-in">
-            Get In <span className="gradient-text">Touch</span>
+    <section id="contact" className={`styles.contact styles.section`}>
+      <div className={styles.container}>
+        <div className={`styles['contact-header'] styles['text-center']`}>
+          <h2 className={`styles['section-title'] styles['fade-in']`}>
+            Get In <span className={styles['gradient-text']}>Touch</span>
           </h2>
-          <p className="section-description slide-up">
+          <p className={`styles['section-description'] styles['slide-up']`}>
             Ready to start your project? We'd love to hear from you. Send us a message 
             and we'll respond as soon as possible.
           </p>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-info slide-up">
+        <div className={styles['contact-content']}>
+          <div className={`styles['contact-info'] styles['slide-up']`}>
             <h3>Let's Start a Conversation</h3>
             <p>
               Whether you have a project in mind, need technical consultation, or want to 
@@ -130,19 +131,19 @@ const Contact = () => {
               channels below.
             </p>
 
-            <div className="contact-methods">
+            <div className={styles['contact-methods']}>
               {contactInfo.map((info, index) => (
                 <a 
                   key={index}
                   href={info.link}
-                  className="contact-method"
+                  className={styles['contact-method']}
                   target={info.link.startsWith('http') ? '_blank' : '_self'}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : ''}
                 >
-                  <div className="method-icon">
+                  <div className={styles['method-icon']}>
                     {info.icon}
                   </div>
-                  <div className="method-content">
+                  <div className={styles['method-content']}>
                     <h4>{info.title}</h4>
                     <p>{info.details}</p>
                   </div>
@@ -150,16 +151,16 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="social-links">
+            <div className={styles['social-links']}>
               <h4>Follow Us</h4>
-              <div className="social-icons">
+              <div className={styles['social-icons']}>
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-link"
+                    className={styles['social-link']}
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -169,58 +170,58 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form-container slide-up">
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Full Name *</label>
+          <div className={`styles['contact-form-container'] styles['slide-up']`}>
+            <form onSubmit={handleSubmit} className={styles['contact-form']}>
+              <div className={styles['form-row']}>
+                <div className={styles['form-group']}>
+                  <label htmlFor="name" className={styles['form-label']}>Full Name *</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="form-input"
+                    className={styles['form-input']}
                     required
                     placeholder="Enter your full name"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email Address *</label>
+                <div className={styles['form-group']}>
+                  <label htmlFor="email" className={styles['form-label']}>Email Address *</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="form-input"
+                    className={styles['form-input']}
                     required
                     placeholder="Enter your email address"
                   />
                 </div>
               </div>
 
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="company" className="form-label">Company</label>
+              <div className={styles['form-row']}>
+                <div className={styles['form-group']}>
+                  <label htmlFor="company" className={styles['form-label']}>Company</label>
                   <input
                     type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="form-input"
+                    className={styles['form-input']}
                     placeholder="Enter your company name"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="service" className="form-label">Service Interested In</label>
+                <div className={styles['form-group']}>
+                  <label htmlFor="service" className={styles['form-label']}>Service Interested In</label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="form-select"
+                    className={styles['form-select']}
                   >
                     <option value="">Select a service</option>
                     <option value="app-development">App Development</option>
@@ -233,14 +234,14 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message *</label>
+              <div className={styles['form-group']}>
+                <label htmlFor="message" className={styles['form-label']}>Message *</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="form-textarea"
+                  className={styles['form-textarea']}
                   required
                   placeholder="Tell us about your project or requirements..."
                   rows="5"
@@ -248,31 +249,31 @@ const Contact = () => {
               </div>
 
               {submitStatus === 'success' && (
-                <div className="alert alert-success">
+                <div className={`styles.alert styles['alert-success']`}>
                   Thank you for your message! We'll get back to you within 24 hours.
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="alert alert-error">
+                <div className={`styles.alert styles['alert-error']`}>
                   Sorry, there was an error sending your message. Please try again or contact us directly.
                 </div>
               )}
 
               <button
                 type="submit"
-                className="btn btn-primary btn-lg"
+                className={`styles.btn styles['btn-primary'] styles['btn-lg']`}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   <>
-                    <span className="loading"></span>
+                    <span className={styles.loading}></span>
                     Sending...
                   </>
                 ) : (
                   <>
                     Send Message
-                    <FaPaperPlane className="icon-sm" />
+                    <FaPaperPlane className={styles['icon-sm']} />
                   </>
                 )}
               </button>

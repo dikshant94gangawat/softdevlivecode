@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './OurTeamPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -80,22 +81,22 @@ const OurTeamPage = () => {
   ];
 
   return (
-    <div className="our-team-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['our-team-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaUsers className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaUsers className={styles['badge-icon']} />
                 <span>Meet Our Team</span>
               </div>
-              <h1 className="hero-title">
-                Our <span className="highlight">Team</span>
+              <h1 className={styles['hero-title']}>
+                Our <span className={styles.highlight}>Team</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Meet the talented individuals who make SoftDevSquad a trusted technology partner. Our diverse team of experts is dedicated to delivering exceptional results.
               </p>
             </div>
@@ -103,18 +104,18 @@ const OurTeamPage = () => {
         </div>
       </div>
 
-      <div className="team-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Team</h2>
-            <p className="section-subtitle">
+      <div className={styles['team-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Team</h2>
+            <p className={styles['section-subtitle']}>
               Meet the talented individuals who make SoftDevSquad a trusted technology partner
             </p>
           </div>
-          <div className="team-grid">
+          <div className={styles['team-grid']}>
             {team.map((member, index) => (
-              <div key={index} className="team-card">
-                <div className="team-image">
+              <div key={index} className={styles['team-card']}>
+                <div className={styles['team-image']}>
                   {member.image ? (
                     <>
                       <img 
@@ -125,43 +126,43 @@ const OurTeamPage = () => {
                           e.target.nextSibling.style.display = 'flex';
                         }}
                       />
-                      <div className="team-image-placeholder" style={{ display: 'none' }}>
+                      <div className={styles['team-image-placeholder']} style={{ display: 'none' }}>
                         <FaUsers size={60} />
                       </div>
                     </>
                   ) : (
-                    <div className="team-image-placeholder" style={{ display: 'flex' }}>
+                    <div className={styles['team-image-placeholder']} style={{ display: 'flex' }}>
                       <FaUsers size={60} />
                     </div>
                   )}
                 </div>
-                <div className="team-info">
-                  <h3 className="team-name">{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-description">{member.description}</p>
-                  <div className="team-skills">
+                <div className={styles['team-info']}>
+                  <h3 className={styles['team-name']}>{member.name}</h3>
+                  <p className={styles['team-role']}>{member.role}</p>
+                  <p className={styles['team-description']}>{member.description}</p>
+                  <div className={styles['team-skills']}>
                     {member.skills.map((skill, idx) => (
-                      <span key={idx} className="skill-tag">{skill}</span>
+                      <span key={idx} className={styles['skill-tag']}>{skill}</span>
                     ))}
                   </div>
-                  <div className="team-social">
+                  <div className={styles['team-social']}>
                     {member.social.linkedin && (
-                      <a href={member.social.linkedin} className="social-link">
+                      <a href={member.social.linkedin} className={styles['social-link']}>
                         <FaLinkedin />
                       </a>
                     )}
                     {member.social.github && (
-                      <a href={member.social.github} className="social-link">
+                      <a href={member.social.github} className={styles['social-link']}>
                         <FaGithub />
                       </a>
                     )}
                     {member.social.twitter && (
-                      <a href={member.social.twitter} className="social-link">
+                      <a href={member.social.twitter} className={styles['social-link']}>
                         <FaTwitter />
                       </a>
                     )}
                     {member.social.email && (
-                      <a href={`mailto:${member.social.email}`} className="social-link">
+                      <a href={`mailto:${member.social.email}`} className={styles['social-link']}>
                         <FaEnvelope />
                       </a>
                     )}
@@ -173,39 +174,39 @@ const OurTeamPage = () => {
         </div>
       </div>
 
-      <div className="departments-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Departments</h2>
-            <p className="section-subtitle">
+      <div className={styles['departments-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Departments</h2>
+            <p className={styles['section-subtitle']}>
               Specialized teams working together
             </p>
           </div>
-          <div className="departments-grid">
+          <div className={styles['departments-grid']}>
             {departments.map((dept, index) => (
-              <div key={index} className="department-card">
-                <div className="department-count">{dept.count}</div>
-                <h3 className="department-name">{dept.name}</h3>
-                <p className="department-description">{dept.description}</p>
+              <div key={index} className={styles['department-card']}>
+                <div className={styles['department-count']}>{dept.count}</div>
+                <h3 className={styles['department-name']}>{dept.name}</h3>
+                <p className={styles['department-description']}>{dept.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Want to Join Our Team?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Want to Join Our Team?</h3>
+            <p className={styles['cta-subtitle']}>
               We're always looking for talented individuals to join our growing team.
             </p>
-            <div className="cta-actions">
-              <Link href="/careers" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/careers" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 View Open Positions
               </a></Link>
-              <Link href="/contact" legacyBehavior><a className="btn btn-outline">
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Get in Touch
               </a></Link>
             </div>

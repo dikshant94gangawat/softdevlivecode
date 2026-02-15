@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './FullStackDevelopment.module.css';
 import Link from 'next/link';
 
 import {
@@ -63,20 +64,20 @@ const FullStackDevelopment = () => {
     const { category, items, color } = stack;
     
     return (
-      <div className="tech-stack-card">
-        <div className="tech-stack-header">
-          <div className="tech-stack-icon" style={{ color: color }}>
+      <div className={styles['tech-stack-card']}>
+        <div className={styles['tech-stack-header']}>
+          <div className={styles['tech-stack-icon']} style={{ color: color }}>
             {stack.icon}
           </div>
-          <h3 className="tech-stack-title">{category}</h3>
+          <h3 className={styles['tech-stack-title']}>{category}</h3>
         </div>
-        <div className="tech-stack-items">
+        <div className={styles['tech-stack-items']}>
           {items.map((item, index) => (
-            <div key={index} className="tech-stack-item">
-              <div className="tech-item-icon" style={{ color: color }}>
+            <div key={index} className={styles['tech-stack-item']}>
+              <div className={styles['tech-item-icon']} style={{ color: color }}>
                 <item.icon />
               </div>
-              <span className="tech-item-name">{item.name}</span>
+              <span className={styles['tech-item-name']}>{item.name}</span>
             </div>
           ))}
         </div>
@@ -366,131 +367,131 @@ const FullStackDevelopment = () => {
   ];
 
   return (
-    <div className="fullstack-development-page">
+    <div className={styles['fullstack-development-page']}>
       {/* Hero Section */}
-      <div className="fullstack-hero">
-        <div className="fullstack-hero-background">
-          <div className="hero-pattern"></div>
-          <div className="hero-glow"></div>
+      <div className={styles['fullstack-hero']}>
+        <div className={styles['fullstack-hero-background']}>
+          <div className={styles['hero-pattern']}></div>
+          <div className={styles['hero-glow']}></div>
         </div>
-        <div className="container">
-          <div className="fullstack-hero-container">
-            <div className="fullstack-hero-content">
-              <div className="hero-badge">
-                <FaRocket className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['fullstack-hero-container']}>
+            <div className={styles['fullstack-hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaRocket className={styles['badge-icon']} />
                 <span>Complete Full Stack Solutions</span>
               </div>
-              <h1 className="fullstack-hero-title">
-                Top-Grade <span className="highlight">Full Stack Development</span> Company
+              <h1 className={styles['fullstack-hero-title']}>
+                Top-Grade <span className={styles.highlight}>Full Stack Development</span> Company
               </h1>
-              <p className="fullstack-hero-subtitle">
+              <p className={styles['fullstack-hero-subtitle']}>
                 Hire Full-stack developers from SoftDevSquad to set a faster pace of growth. With an extensive understanding and experience, we serve custom Full Stack development services and solutions with the latest technologies.
               </p>
             </div>
-            <div className="fullstack-hero-image">
-              <div className="hero-development-visual">
-                <div className="development-layers">
-                  <div className="layer frontend-layer">
-                    <div className="layer-header">
-                      <FaReact className="layer-icon" />
-                      <span className="layer-title">Frontend</span>
+            <div className={styles['fullstack-hero-image']}>
+              <div className={styles['hero-development-visual']}>
+                <div className={styles['development-layers']}>
+                  <div className={`styles.layer styles['frontend-layer']`}>
+                    <div className={styles['layer-header']}>
+                      <FaReact className={styles['layer-icon']} />
+                      <span className={styles['layer-title']}>Frontend</span>
                     </div>
-                    <div className="layer-content">
-                      <div className="code-block">
-                        <div className="code-line">
-                          <span className="code-keyword">const</span>
-                          <span className="code-variable">App</span>
-                          <span className="code-operator">=</span>
-                          <span className="code-function">() =&gt;</span>
+                    <div className={styles['layer-content']}>
+                      <div className={styles['code-block']}>
+                        <div className={styles['code-line']}>
+                          <span className={styles['code-keyword']}>const</span>
+                          <span className={styles['code-variable']}>App</span>
+                          <span className={styles['code-operator']}>=</span>
+                          <span className={styles['code-function']}>() =&gt;</span>
                         </div>
-                        <div className="code-line">
-                          <span className="code-return">return</span>
-                          <span className="code-jsx">&lt;Component /&gt;</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="layer backend-layer">
-                    <div className="layer-header">
-                      <FaServer className="layer-icon" />
-                      <span className="layer-title">Backend</span>
-                    </div>
-                    <div className="layer-content">
-                      <div className="api-endpoints">
-                        <div className="endpoint">
-                          <span className="http-method">GET</span>
-                          <span className="endpoint-path">/api/users</span>
-                        </div>
-                        <div className="endpoint">
-                          <span className="http-method">POST</span>
-                          <span className="endpoint-path">/api/auth</span>
+                        <div className={styles['code-line']}>
+                          <span className={styles['code-return']}>return</span>
+                          <span className={styles['code-jsx']}>&lt;Component /&gt;</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="layer database-layer">
-                    <div className="layer-header">
-                      <FaDatabase className="layer-icon" />
-                      <span className="layer-title">Database</span>
+                  <div className={`styles.layer styles['backend-layer']`}>
+                    <div className={styles['layer-header']}>
+                      <FaServer className={styles['layer-icon']} />
+                      <span className={styles['layer-title']}>Backend</span>
                     </div>
-                    <div className="layer-content">
-                      <div className="database-tables">
-                        <div className="table">
-                          <div className="table-name">Users</div>
-                          <div className="table-fields">
-                            <div className="field">id</div>
-                            <div className="field">name</div>
-                            <div className="field">email</div>
+                    <div className={styles['layer-content']}>
+                      <div className={styles['api-endpoints']}>
+                        <div className={styles.endpoint}>
+                          <span className={styles['http-method']}>GET</span>
+                          <span className={styles['endpoint-path']}>/api/users</span>
+                        </div>
+                        <div className={styles.endpoint}>
+                          <span className={styles['http-method']}>POST</span>
+                          <span className={styles['endpoint-path']}>/api/auth</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`styles.layer styles['database-layer']`}>
+                    <div className={styles['layer-header']}>
+                      <FaDatabase className={styles['layer-icon']} />
+                      <span className={styles['layer-title']}>Database</span>
+                    </div>
+                    <div className={styles['layer-content']}>
+                      <div className={styles['database-tables']}>
+                        <div className={styles.table}>
+                          <div className={styles['table-name']}>Users</div>
+                          <div className={styles['table-fields']}>
+                            <div className={styles.field}>id</div>
+                            <div className={styles.field}>name</div>
+                            <div className={styles.field}>email</div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="connection-lines">
-                  <div className="connection-line line-1"></div>
-                  <div className="connection-line line-2"></div>
+                <div className={styles['connection-lines']}>
+                  <div className={`styles['connection-line'] styles['line-1']`}></div>
+                  <div className={`styles['connection-line'] styles['line-2']`}></div>
                 </div>
               </div>
-              <div className="hero-image-glow"></div>
+              <div className={styles['hero-image-glow']}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Stats Section */}
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-number">1500+</span>
-              <span className="stat-label">Projects Completed</span>
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
+            <div className={styles['stat-item']}>
+              <span className={styles['stat-number']}>1500+</span>
+              <span className={styles['stat-label']}>Projects Completed</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">500+</span>
-              <span className="stat-label">Apps Developed</span>
+            <div className={styles['stat-item']}>
+              <span className={styles['stat-number']}>500+</span>
+              <span className={styles['stat-label']}>Apps Developed</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">800+</span>
-              <span className="stat-label">Resources</span>
+            <div className={styles['stat-item']}>
+              <span className={styles['stat-number']}>800+</span>
+              <span className={styles['stat-label']}>Resources</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">500+</span>
-              <span className="stat-label">Happy Clients</span>
+            <div className={styles['stat-item']}>
+              <span className={styles['stat-number']}>500+</span>
+              <span className={styles['stat-label']}>Happy Clients</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Actions Section */}
-      <div className="hero-actions-section">
-        <div className="container">
-          <div className="hero-actions">
-            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-              <FaRocket className="btn-icon" />
+      <div className={styles['hero-actions-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-actions']}>
+            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <FaRocket className={styles['btn-icon']} />
               Start Your Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
               Book a Free Consultation
             </a></Link>
           </div>
@@ -498,18 +499,18 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* Tech Stack Section */}
-      <div className="tech-stack-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Expertise as a Full Stack Web Development Company</h2>
-            <p className="section-subtitle">
+      <div className={styles['tech-stack-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Expertise as a Full Stack Web Development Company</h2>
+            <p className={styles['section-subtitle']}>
               Take advantage of our proven expertise across the gamut of Full Stack Development.
             </p>
           </div>
 
-          <div className="tech-stacks-grid">
+          <div className={styles['tech-stacks-grid']}>
             {techStacks.map((stack, index) => (
-              <div key={index} className="tech-stack-wrapper">
+              <div key={index} className={styles['tech-stack-wrapper']}>
                 {renderTechStack(stack)}
               </div>
             ))}
@@ -518,36 +519,36 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* Services Section */}
-      <div className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Comprehensive Full Stack Development Services</h2>
-            <p className="section-subtitle">
+      <div className={styles['services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Comprehensive Full Stack Development Services</h2>
+            <p className={styles['section-subtitle']}>
               Empowering innovation from concept to deployment with <strong>Custom Full Stack Development</strong>.
             </p>
           </div>
 
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>
                   Get Started
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -556,25 +557,25 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* Process Section */}
-      <div className="process-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Full Stack Development Process</h2>
-            <p className="section-subtitle">
+      <div className={styles['process-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Full Stack Development Process</h2>
+            <p className={styles['section-subtitle']}>
               A systematic approach that ensures successful delivery of complex full stack applications from start to finish.
             </p>
           </div>
 
-          <div className="process-steps">
+          <div className={styles['process-steps']}>
             {processSteps.map((step, index) => (
-              <div key={index} className="process-step">
-                <div className="step-number">{step.step}</div>
-                <div className="step-content">
-                  <h3 className="step-title">{step.title}</h3>
-                  <p className="step-description">{step.description}</p>
+              <div key={index} className={styles['process-step']}>
+                <div className={styles['step-number']}>{step.step}</div>
+                <div className={styles['step-content']}>
+                  <h3 className={styles['step-title']}>{step.title}</h3>
+                  <p className={styles['step-description']}>{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="step-connector"></div>
+                  <div className={styles['step-connector']}></div>
                 )}
               </div>
             ))}
@@ -583,23 +584,23 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="technologies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Full Stack Development Technologies We Serve</h2>
-            <p className="section-subtitle">
+      <div className={styles['technologies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Full Stack Development Technologies We Serve</h2>
+            <p className={styles['section-subtitle']}>
               Get a competitive edge with the latest Full Stack IT Services technology and features.
             </p>
           </div>
 
-          <div className="technologies-grid">
+          <div className={styles['technologies-grid']}>
             {technologies.map((techCategory, index) => (
-              <div key={index} className="tech-category-card">
-                <h3 className="tech-category-title">{techCategory.category}</h3>
-                <ul className="tech-list">
+              <div key={index} className={styles['tech-category-card']}>
+                <h3 className={styles['tech-category-title']}>{techCategory.category}</h3>
+                <ul className={styles['tech-list']}>
                   {techCategory.items.map((item, idx) => (
-                    <li key={idx} className="tech-item">
-                      <item.icon className="tech-icon" />
+                    <li key={idx} className={styles['tech-item']}>
+                      <item.icon className={styles['tech-icon']} />
                       {item.name}
                     </li>
                   ))}
@@ -611,27 +612,27 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What our Clients Say</h2>
-            <p className="section-subtitle">
+      <div className={styles['testimonials-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What our Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Explore first hand accounts of client experiences, echoing our transformative Digital Solutions.
             </p>
           </div>
 
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-name">{testimonial.name}</div>
-                  <div className="author-company">{testimonial.company}</div>
+                <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-name']}>{testimonial.name}</div>
+                  <div className={styles['author-company']}>{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -640,19 +641,19 @@ const FullStackDevelopment = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="fullstack-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Hire Full Stack Developers from SoftDevSquad Today!</h3>
-            <p className="cta-subtitle">
+      <div className={styles['fullstack-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Hire Full Stack Developers from SoftDevSquad Today!</h3>
+            <p className={styles['cta-subtitle']}>
               Ready to Build a Scalable Full Stack Solution? Let's discuss your project requirements and create a comprehensive full stack solution that drives your business success.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Get in Touch
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Request a Quote
               </a></Link>
             </div>

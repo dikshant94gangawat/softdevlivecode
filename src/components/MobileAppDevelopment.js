@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MobileAppDevelopment.module.css';
 import Link from 'next/link';
 
 import { 
@@ -35,41 +36,41 @@ const MobileAppDevelopment = () => {
     const { type, title, subtitle, elements } = appScreen;
     
     return (
-      <div className="app-screen-content">
-        <div className="app-header">
-          <div className="app-status-bar">
-            <div className="status-time">9:41</div>
-            <div className="status-icons">
-              <div className="signal-bars"></div>
-              <div className="wifi-icon"></div>
-              <div className="battery-icon"></div>
+      <div className={styles['app-screen-content']}>
+        <div className={styles['app-header']}>
+          <div className={styles['app-status-bar']}>
+            <div className={styles['status-time']}>9:41</div>
+            <div className={styles['status-icons']}>
+              <div className={styles['signal-bars']}></div>
+              <div className={styles['wifi-icon']}></div>
+              <div className={styles['battery-icon']}></div>
             </div>
           </div>
-          <div className="app-title-bar">
-            <h3 className="app-title">{title}</h3>
-            <p className="app-subtitle">{subtitle}</p>
+          <div className={styles['app-title-bar']}>
+            <h3 className={styles['app-title']}>{title}</h3>
+            <p className={styles['app-subtitle']}>{subtitle}</p>
           </div>
         </div>
         
-        <div className="app-body">
+        <div className={styles['app-body']}>
           {type === 'ecommerce' && (
-            <div className="ecommerce-screen">
-              <div className="search-section">
-                <div className="search-bar">
-                  <div className="search-icon"></div>
-                  <div className="search-text">Search products...</div>
+            <div className={styles['ecommerce-screen']}>
+              <div className={styles['search-section']}>
+                <div className={styles['search-bar']}>
+                  <div className={styles['search-icon']}></div>
+                  <div className={styles['search-text']}>Search products...</div>
                 </div>
-                <div className="cart-icon">
-                  <div className="cart-badge">3</div>
+                <div className={styles['cart-icon']}>
+                  <div className={styles['cart-badge']}>3</div>
                 </div>
               </div>
-              <div className="product-grid">
+              <div className={styles['product-grid']}>
                 {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="product-card">
-                    <div className="product-image"></div>
-                    <div className="product-info">
-                      <div className="product-name"></div>
-                      <div className="product-price"></div>
+                  <div key={i} className={styles['product-card']}>
+                    <div className={styles['product-image']}></div>
+                    <div className={styles['product-info']}>
+                      <div className={styles['product-name']}></div>
+                      <div className={styles['product-price']}></div>
                     </div>
                   </div>
                 ))}
@@ -78,19 +79,19 @@ const MobileAppDevelopment = () => {
           )}
           
           {type === 'fitness' && (
-            <div className="fitness-screen">
-              <div className="stats-section">
-                <div className="main-stat">
-                  <div className="stat-number">8,247</div>
-                  <div className="stat-label">Steps Today</div>
+            <div className={styles['fitness-screen']}>
+              <div className={styles['stats-section']}>
+                <div className={styles['main-stat']}>
+                  <div className={styles['stat-number']}>8,247</div>
+                  <div className={styles['stat-label']}>Steps Today</div>
                 </div>
-                <div className="progress-ring"></div>
+                <div className={styles['progress-ring']}></div>
               </div>
-              <div className="workout-cards">
+              <div className={styles['workout-cards']}>
                 {['Cardio', 'Strength', 'Yoga'].map(workout => (
-                  <div key={workout} className="workout-card">
-                    <div className="workout-icon"></div>
-                    <div className="workout-name">{workout}</div>
+                  <div key={workout} className={styles['workout-card']}>
+                    <div className={styles['workout-icon']}></div>
+                    <div className={styles['workout-name']}>{workout}</div>
                   </div>
                 ))}
               </div>
@@ -98,33 +99,33 @@ const MobileAppDevelopment = () => {
           )}
           
           {type === 'social' && (
-            <div className="social-screen">
-              <div className="stories-section">
-                <div className="story-item active">
-                  <div className="story-avatar"></div>
-                  <div className="story-name">Your Story</div>
+            <div className={styles['social-screen']}>
+              <div className={styles['stories-section']}>
+                <div className={`styles['story-item'] styles.active`}>
+                  <div className={styles['story-avatar']}></div>
+                  <div className={styles['story-name']}>Your Story</div>
                 </div>
                 {[1, 2, 3].map(i => (
-                  <div key={i} className="story-item">
-                    <div className="story-avatar"></div>
-                    <div className="story-name">User {i}</div>
+                  <div key={i} className={styles['story-item']}>
+                    <div className={styles['story-avatar']}></div>
+                    <div className={styles['story-name']}>User {i}</div>
                   </div>
                 ))}
               </div>
-              <div className="posts-section">
-                <div className="post">
-                  <div className="post-header">
-                    <div className="post-avatar"></div>
-                    <div className="post-info">
-                      <div className="post-name"></div>
-                      <div className="post-time"></div>
+              <div className={styles['posts-section']}>
+                <div className={styles.post}>
+                  <div className={styles['post-header']}>
+                    <div className={styles['post-avatar']}></div>
+                    <div className={styles['post-info']}>
+                      <div className={styles['post-name']}></div>
+                      <div className={styles['post-time']}></div>
                     </div>
                   </div>
-                  <div className="post-content"></div>
-                  <div className="post-actions">
-                    <div className="action-btn"></div>
-                    <div className="action-btn"></div>
-                    <div className="action-btn"></div>
+                  <div className={styles['post-content']}></div>
+                  <div className={styles['post-actions']}>
+                    <div className={styles['action-btn']}></div>
+                    <div className={styles['action-btn']}></div>
+                    <div className={styles['action-btn']}></div>
                   </div>
                 </div>
               </div>
@@ -132,36 +133,36 @@ const MobileAppDevelopment = () => {
           )}
           
           {type === 'finance' && (
-            <div className="finance-screen">
-              <div className="balance-section">
-                <div className="balance-label">Total Balance</div>
-                <div className="balance-amount">$12,456.78</div>
-                <div className="balance-change">+2.4% this month</div>
+            <div className={styles['finance-screen']}>
+              <div className={styles['balance-section']}>
+                <div className={styles['balance-label']}>Total Balance</div>
+                <div className={styles['balance-amount']}>$12,456.78</div>
+                <div className={styles['balance-change']}>+2.4% this month</div>
               </div>
-              <div className="quick-actions">
+              <div className={styles['quick-actions']}>
                 {['Send', 'Receive', 'Pay', 'Invest'].map(action => (
-                  <div key={action} className="action-item">
-                    <div className="action-icon"></div>
-                    <div className="action-name">{action}</div>
+                  <div key={action} className={styles['action-item']}>
+                    <div className={styles['action-icon']}></div>
+                    <div className={styles['action-name']}>{action}</div>
                   </div>
                 ))}
               </div>
-              <div className="transactions">
-                <div className="transaction-item">
-                  <div className="transaction-icon"></div>
-                  <div className="transaction-details">
-                    <div className="transaction-name"></div>
-                    <div className="transaction-date"></div>
+              <div className={styles.transactions}>
+                <div className={styles['transaction-item']}>
+                  <div className={styles['transaction-icon']}></div>
+                  <div className={styles['transaction-details']}>
+                    <div className={styles['transaction-name']}></div>
+                    <div className={styles['transaction-date']}></div>
                   </div>
-                  <div className="transaction-amount"></div>
+                  <div className={styles['transaction-amount']}></div>
                 </div>
-                <div className="transaction-item">
-                  <div className="transaction-icon"></div>
-                  <div className="transaction-details">
-                    <div className="transaction-name"></div>
-                    <div className="transaction-date"></div>
+                <div className={styles['transaction-item']}>
+                  <div className={styles['transaction-icon']}></div>
+                  <div className={styles['transaction-details']}>
+                    <div className={styles['transaction-name']}></div>
+                    <div className={styles['transaction-date']}></div>
                   </div>
-                  <div className="transaction-amount"></div>
+                  <div className={styles['transaction-amount']}></div>
                 </div>
               </div>
             </div>
@@ -343,63 +344,63 @@ const MobileAppDevelopment = () => {
   ];
 
   return (
-    <div className="mobile-app-page">
+    <div className={styles['mobile-app-page']}>
       {/* Hero Section */}
-      <div className="mobile-hero">
-        <div className="mobile-hero-background">
-          <div className="hero-pattern"></div>
-          <div className="hero-glow"></div>
+      <div className={styles['mobile-hero']}>
+        <div className={styles['mobile-hero-background']}>
+          <div className={styles['hero-pattern']}></div>
+          <div className={styles['hero-glow']}></div>
         </div>
-        <div className="container">
-          <div className="mobile-hero-container">
-            <div className="mobile-hero-content">
-              <div className="hero-badge">
-                <FaMobile className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['mobile-hero-container']}>
+            <div className={styles['mobile-hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaMobile className={styles['badge-icon']} />
                 <span>Professional Mobile Development</span>
               </div>
-              <h1 className="mobile-hero-title">
-                Top-Rated <span className="highlight">Mobile App Development</span> Company
+              <h1 className={styles['mobile-hero-title']}>
+                Top-Rated <span className={styles.highlight}>Mobile App Development</span> Company
               </h1>
-              <p className="mobile-hero-subtitle">
+              <p className={styles['mobile-hero-subtitle']}>
                 Renowned for our mobile app development services, SoftDevSquad delivers top-quality mobile applications 
                 for multiple platforms. With our proven process and 50+ successful apps, we ensure tailored solutions for your business needs.
               </p>
             </div>
-            <div className="mobile-hero-image">
-              <div className="hero-phones-container">
-                <div className="hero-phone hero-phone-1">
-                  <div className="phone-screen">
-                    <div className="app-screen-content">
-                      <div className="app-header">
-                        <div className="app-status-bar">
-                          <div className="status-time">9:41</div>
-                          <div className="status-icons">
-                            <div className="signal-bars"></div>
-                            <div className="wifi-icon"></div>
-                            <div className="battery-icon"></div>
+            <div className={styles['mobile-hero-image']}>
+              <div className={styles['hero-phones-container']}>
+                <div className={`styles['hero-phone'] styles['hero-phone-1']`}>
+                  <div className={styles['phone-screen']}>
+                    <div className={styles['app-screen-content']}>
+                      <div className={styles['app-header']}>
+                        <div className={styles['app-status-bar']}>
+                          <div className={styles['status-time']}>9:41</div>
+                          <div className={styles['status-icons']}>
+                            <div className={styles['signal-bars']}></div>
+                            <div className={styles['wifi-icon']}></div>
+                            <div className={styles['battery-icon']}></div>
                           </div>
                         </div>
-                        <div className="app-nav-bar">
-                          <div className="nav-title">Shopping</div>
-                          <div className="nav-cart">
-                            <div className="cart-badge">3</div>
+                        <div className={styles['app-nav-bar']}>
+                          <div className={styles['nav-title']}>Shopping</div>
+                          <div className={styles['nav-cart']}>
+                            <div className={styles['cart-badge']}>3</div>
                           </div>
                         </div>
                       </div>
-                      <div className="app-body">
-                        <div className="search-section">
-                          <div className="search-bar">
-                            <div className="search-icon"></div>
-                            <div className="search-placeholder">Search products...</div>
+                      <div className={styles['app-body']}>
+                        <div className={styles['search-section']}>
+                          <div className={styles['search-bar']}>
+                            <div className={styles['search-icon']}></div>
+                            <div className={styles['search-placeholder']}>Search products...</div>
                           </div>
                         </div>
-                        <div className="hero-product-grid">
+                        <div className={styles['hero-product-grid']}>
                           {[1, 2, 3, 4].map(i => (
-                            <div key={i} className="hero-product-card">
-                              <div className="hero-product-image"></div>
-                              <div className="hero-product-info">
-                                <div className="hero-product-name"></div>
-                                <div className="hero-product-price"></div>
+                            <div key={i} className={styles['hero-product-card']}>
+                              <div className={styles['hero-product-image']}></div>
+                              <div className={styles['hero-product-info']}>
+                                <div className={styles['hero-product-name']}></div>
+                                <div className={styles['hero-product-price']}></div>
                               </div>
                             </div>
                           ))}
@@ -408,37 +409,37 @@ const MobileAppDevelopment = () => {
                     </div>
                   </div>
                 </div>
-                <div className="hero-phone hero-phone-2">
-                  <div className="phone-screen">
-                    <div className="app-screen-content">
-                      <div className="app-header">
-                        <div className="app-status-bar">
-                          <div className="status-time">9:41</div>
-                          <div className="status-icons">
-                            <div className="signal-bars"></div>
-                            <div className="wifi-icon"></div>
-                            <div className="battery-icon"></div>
+                <div className={`styles['hero-phone'] styles['hero-phone-2']`}>
+                  <div className={styles['phone-screen']}>
+                    <div className={styles['app-screen-content']}>
+                      <div className={styles['app-header']}>
+                        <div className={styles['app-status-bar']}>
+                          <div className={styles['status-time']}>9:41</div>
+                          <div className={styles['status-icons']}>
+                            <div className={styles['signal-bars']}></div>
+                            <div className={styles['wifi-icon']}></div>
+                            <div className={styles['battery-icon']}></div>
                           </div>
                         </div>
-                        <div className="app-nav-bar">
-                          <div className="nav-title">Fitness</div>
+                        <div className={styles['app-nav-bar']}>
+                          <div className={styles['nav-title']}>Fitness</div>
                         </div>
                       </div>
-                      <div className="app-body">
-                        <div className="fitness-stats">
-                          <div className="main-stat">
-                            <div className="stat-number">8,247</div>
-                            <div className="stat-label">Steps Today</div>
+                      <div className={styles['app-body']}>
+                        <div className={styles['fitness-stats']}>
+                          <div className={styles['main-stat']}>
+                            <div className={styles['stat-number']}>8,247</div>
+                            <div className={styles['stat-label']}>Steps Today</div>
                           </div>
-                          <div className="progress-circle">
-                            <div className="progress-ring"></div>
+                          <div className={styles['progress-circle']}>
+                            <div className={styles['progress-ring']}></div>
                           </div>
                         </div>
-                        <div className="workout-section">
+                        <div className={styles['workout-section']}>
                           {['Cardio', 'Strength', 'Yoga'].map(workout => (
-                            <div key={workout} className="hero-workout-card">
-                              <div className="hero-workout-icon"></div>
-                              <div className="hero-workout-name">{workout}</div>
+                            <div key={workout} className={styles['hero-workout-card']}>
+                              <div className={styles['hero-workout-icon']}></div>
+                              <div className={styles['hero-workout-name']}>{workout}</div>
                             </div>
                           ))}
                         </div>
@@ -447,20 +448,20 @@ const MobileAppDevelopment = () => {
                   </div>
                 </div>
               </div>
-              <div className="hero-image-glow"></div>
+              <div className={styles['hero-image-glow']}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Stats Section */}
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
@@ -468,14 +469,14 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Hero Actions Section */}
-      <div className="hero-actions-section">
-        <div className="container">
-          <div className="hero-actions">
-            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-              <FaRocket className="btn-icon" />
+      <div className={styles['hero-actions-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-actions']}>
+            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <FaRocket className={styles['btn-icon']} />
               Get Started
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
               Book a Demo
             </a></Link>
           </div>
@@ -483,52 +484,52 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Platforms Section */}
-      <div className="platforms-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Mobile App Development on Multiple Platforms</h2>
-            <p className="section-subtitle">
+      <div className={styles['platforms-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Mobile App Development on Multiple Platforms</h2>
+            <p className={styles['section-subtitle']}>
               Leverage our expertise in mobile app development - from iOS and Android, to everything in between and beyond.
             </p>
           </div>
 
-          <div className="platforms-alternating">
+          <div className={styles['platforms-alternating']}>
             {platforms.map((platform, index) => (
               <div key={index} className={`platform-row ${index % 2 === 0 ? 'platform-row-even' : 'platform-row-odd'}`}>
-                <div className="platform-content">
-                  <div className="platform-details">
-                    <div className="platform-icon-large" style={{ color: platform.color }}>
+                <div className={styles['platform-content']}>
+                  <div className={styles['platform-details']}>
+                    <div className={styles['platform-icon-large']} style={{ color: platform.color }}>
                       <platform.icon />
                     </div>
-                    <h3 className="platform-title">{platform.title}</h3>
-                    <p className="platform-description">{platform.description}</p>
-                    <ul className="platform-features">
+                    <h3 className={styles['platform-title']}>{platform.title}</h3>
+                    <p className={styles['platform-description']}>{platform.description}</p>
+                    <ul className={styles['platform-features']}>
                       {platform.features.map((feature, idx) => (
-                        <li key={idx} className="platform-feature">
-                          <FaCheckCircle className="feature-icon" />
+                        <li key={idx} className={styles['platform-feature']}>
+                          <FaCheckCircle className={styles['feature-icon']} />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Link href="/contact" legacyBehavior><a className="platform-cta">
+                    <Link href="/contact" legacyBehavior><a className={styles['platform-cta']}>
                       Learn More
-                      <FaArrowRight className="cta-icon" />
+                      <FaArrowRight className={styles['cta-icon']} />
                     </a></Link>
                   </div>
                 </div>
-                <div className="platform-visual">
-                  <div className="platform-image-container">
+                <div className={styles['platform-visual']}>
+                  <div className={styles['platform-image-container']}>
                     <img 
                       src={platform.image} 
                       alt={platform.alt}
-                      className="platform-development-image"
+                      className={styles['platform-development-image']}
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextElementSibling.style.display = 'block';
                       }}
                     />
-                    <div className="image-fallback" style={{display: 'none'}}>
-                      <div className="fallback-icon" style={{ color: platform.color }}>
+                    <div className={styles['image-fallback']} style={{display: 'none'}}>
+                      <div className={styles['fallback-icon']} style={{ color: platform.color }}>
                         <platform.icon />
                       </div>
                       <p>Image not available</p>
@@ -542,27 +543,27 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Services Section */}
-      <div className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Expert Mobile App Development Solutions</h2>
-            <p className="section-subtitle">
+      <div className={styles['services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Expert Mobile App Development Solutions</h2>
+            <p className={styles['section-subtitle']}>
               Explore a wide array of expert Mobile Application Development Solutions tailored to meet diverse business needs.
             </p>
           </div>
 
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon">
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <ul className="service-features">
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
@@ -574,25 +575,25 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Process Section */}
-      <div className="process-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Mobile App Development Process</h2>
-            <p className="section-subtitle">
+      <div className={styles['process-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Mobile App Development Process</h2>
+            <p className={styles['section-subtitle']}>
               A proven methodology that ensures successful mobile app delivery from concept to launch.
             </p>
           </div>
 
-          <div className="process-steps">
+          <div className={styles['process-steps']}>
             {processSteps.map((step, index) => (
-              <div key={index} className="process-step">
-                <div className="step-number">{step.step}</div>
-                <div className="step-content">
-                  <h3 className="step-title">{step.title}</h3>
-                  <p className="step-description">{step.description}</p>
+              <div key={index} className={styles['process-step']}>
+                <div className={styles['step-number']}>{step.step}</div>
+                <div className={styles['step-content']}>
+                  <h3 className={styles['step-title']}>{step.title}</h3>
+                  <p className={styles['step-description']}>{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <div className="step-connector"></div>
+                  <div className={styles['step-connector']}></div>
                 )}
               </div>
             ))}
@@ -601,23 +602,23 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="technologies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Technologies We Use</h2>
-            <p className="section-subtitle">
+      <div className={styles['technologies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Technologies We Use</h2>
+            <p className={styles['section-subtitle']}>
               Build high-performing and scalable mobile apps with the best and latest tools and technologies.
             </p>
           </div>
 
-          <div className="technologies-grid">
+          <div className={styles['technologies-grid']}>
             {technologies.map((tech, index) => (
-              <div key={index} className="tech-item">
-                <div className="tech-icon">
+              <div key={index} className={styles['tech-item']}>
+                <div className={styles['tech-icon']}>
                   <tech.icon />
                 </div>
-                <span className="tech-name">{tech.name}</span>
-                <span className="tech-category">{tech.category}</span>
+                <span className={styles['tech-name']}>{tech.name}</span>
+                <span className={styles['tech-category']}>{tech.category}</span>
               </div>
             ))}
           </div>
@@ -625,28 +626,28 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Clients Say</h2>
-            <p className="section-subtitle">
+      <div className={styles['testimonials-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Real feedback from satisfied customers who trusted us with their mobile app development.
             </p>
           </div>
 
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-name">{testimonial.name}</div>
-                  <div className="author-company">{testimonial.company}</div>
-                  <div className="author-project">{testimonial.project}</div>
+                <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-name']}>{testimonial.name}</div>
+                  <div className={styles['author-company']}>{testimonial.company}</div>
+                  <div className={styles['author-project']}>{testimonial.project}</div>
                 </div>
               </div>
             ))}
@@ -655,20 +656,20 @@ const MobileAppDevelopment = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="mobile-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Bring Your App Ideas to Life?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['mobile-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Bring Your App Ideas to Life?</h3>
+            <p className={styles['cta-subtitle']}>
               Connect with our mobile app development experts and transform your vision into a successful mobile application.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaRocket className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaRocket className={styles['btn-icon']} />
                 Start Your Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
-                <FaUsers className="btn-icon" />
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+                <FaUsers className={styles['btn-icon']} />
                 Book a Consultation
               </a></Link>
             </div>

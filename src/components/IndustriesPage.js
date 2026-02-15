@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './IndustriesPage.module.css';
 import Link from 'next/link';
 
 import { 
@@ -132,38 +133,38 @@ const IndustriesPage = () => {
   const businessIndustries = industries.filter(ind => ind.category === 'Business');
 
   return (
-    <div className="industries-page">
+    <div className={styles['industries-page']}>
       {/* Hero Section */}
-      <div className="industries-hero">
-        <div className="industries-hero-background">
-          <div className="hero-pattern"></div>
-          <div className="hero-glow"></div>
+      <div className={styles['industries-hero']}>
+        <div className={styles['industries-hero-background']}>
+          <div className={styles['hero-pattern']}></div>
+          <div className={styles['hero-glow']}></div>
         </div>
-        <div className="container">
-          <div className="industries-hero-content">
-            <div className="hero-badge">
-              <FaIndustry className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['industries-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaIndustry className={styles['badge-icon']} />
               <span>Industry Expertise</span>
             </div>
-            <h1 className="industries-hero-title">
-              Industries We <span className="highlight">Serve</span>
+            <h1 className={styles['industries-hero-title']}>
+              Industries We <span className={styles.highlight}>Serve</span>
             </h1>
-            <p className="industries-hero-subtitle">
+            <p className={styles['industries-hero-subtitle']}>
               Specialized technology solutions across diverse industries. 
               We understand your unique challenges and deliver tailored solutions that drive growth.
             </p>
-            <div className="hero-stats">
-              <div className="stat-item">
-                <span className="stat-number">12+</span>
-                <span className="stat-label">Industries</span>
+            <div className={styles['hero-stats']}>
+              <div className={styles['stat-item']}>
+                <span className={styles['stat-number']}>12+</span>
+                <span className={styles['stat-label']}>Industries</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-number">200+</span>
-                <span className="stat-label">Projects Delivered</span>
+              <div className={styles['stat-item']}>
+                <span className={styles['stat-number']}>200+</span>
+                <span className={styles['stat-label']}>Projects Delivered</span>
               </div>
-              <div className="stat-item">
-                <span className="stat-number">98%</span>
-                <span className="stat-label">Client Satisfaction</span>
+              <div className={styles['stat-item']}>
+                <span className={styles['stat-number']}>98%</span>
+                <span className={styles['stat-label']}>Client Satisfaction</span>
               </div>
             </div>
           </div>
@@ -171,36 +172,36 @@ const IndustriesPage = () => {
       </div>
 
       {/* Technology Industries Section */}
-      <div className="industries-main">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Technology Industries</h2>
-            <p className="section-subtitle">
+      <div className={styles['industries-main']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Technology Industries</h2>
+            <p className={styles['section-subtitle']}>
               Cutting-edge solutions for technology-driven sectors
             </p>
           </div>
 
-          <div className="industries-grid">
+          <div className={styles['industries-grid']}>
             {technologyIndustries.map((industry, index) => (
-              <div key={index} className="industry-card">
-                <div className="industry-icon">
+              <div key={index} className={styles['industry-card']}>
+                <div className={styles['industry-icon']}>
                   <industry.icon />
                 </div>
-                <h3 className="industry-title">{industry.title}</h3>
-                <p className="industry-description">{industry.description}</p>
+                <h3 className={styles['industry-title']}>{industry.title}</h3>
+                <p className={styles['industry-description']}>{industry.description}</p>
                 
-                <ul className="industry-features">
+                <ul className={styles['industry-features']}>
                   {industry.features.map((feature, idx) => (
-                    <li key={idx} className="industry-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['industry-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link to={industry.link} className="industry-cta">
+                <Link to={industry.link} className={styles['industry-cta']}>
                   Learn More
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </Link>
               </div>
             ))}
@@ -209,36 +210,36 @@ const IndustriesPage = () => {
       </div>
 
       {/* Business Industries Section */}
-      <div className="industries-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Business Sectors</h2>
-            <p className="section-subtitle">
+      <div className={styles['industries-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Business Sectors</h2>
+            <p className={styles['section-subtitle']}>
               Tailored solutions for businesses of all sizes
             </p>
           </div>
 
-          <div className="industries-grid">
+          <div className={styles['industries-grid']}>
             {businessIndustries.map((industry, index) => (
-              <div key={index} className="industry-card">
-                <div className="industry-icon">
+              <div key={index} className={styles['industry-card']}>
+                <div className={styles['industry-icon']}>
                   <industry.icon />
                 </div>
-                <h3 className="industry-title">{industry.title}</h3>
-                <p className="industry-description">{industry.description}</p>
+                <h3 className={styles['industry-title']}>{industry.title}</h3>
+                <p className={styles['industry-description']}>{industry.description}</p>
                 
-                <ul className="industry-features">
+                <ul className={styles['industry-features']}>
                   {industry.features.map((feature, idx) => (
-                    <li key={idx} className="industry-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['industry-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link to={industry.link} className="industry-cta">
+                <Link to={industry.link} className={styles['industry-cta']}>
                   Learn More
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </Link>
               </div>
             ))}
@@ -247,23 +248,23 @@ const IndustriesPage = () => {
       </div>
 
       {/* Solutions Section */}
-      <div className="solutions-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Specialized Solutions</h2>
-            <p className="section-subtitle">
+      <div className={styles['solutions-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Specialized Solutions</h2>
+            <p className={styles['section-subtitle']}>
               Advanced solutions for complex business requirements
             </p>
           </div>
 
-          <div className="solutions-grid">
+          <div className={styles['solutions-grid']}>
             {solutions.map((solution, index) => (
-              <Link key={index} to={solution.link} className="solution-card">
-                <h3 className="solution-title">{solution.title}</h3>
-                <p className="solution-description">{solution.description}</p>
-                <div className="solution-link">
+              <Link key={index} to={solution.link} className={styles['solution-card']}>
+                <h3 className={styles['solution-title']}>{solution.title}</h3>
+                <p className={styles['solution-description']}>{solution.description}</p>
+                <div className={styles['solution-link']}>
                   Explore Solution
-                  <FaArrowRight className="solution-arrow" />
+                  <FaArrowRight className={styles['solution-arrow']} />
                 </div>
               </Link>
             ))}
@@ -272,27 +273,27 @@ const IndustriesPage = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Clients Say</h2>
-            <p className="section-subtitle">
+      <div className={styles['testimonials-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Real feedback from satisfied customers across industries
             </p>
           </div>
 
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-name">{testimonial.name}</div>
-                  <div className="author-company">{testimonial.company}</div>
+                <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-name']}>{testimonial.name}</div>
+                  <div className={styles['author-company']}>{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -301,19 +302,19 @@ const IndustriesPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="industries-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Transform Your Industry?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['industries-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Transform Your Industry?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's discuss how our industry-specific solutions can help your business grow
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaRocket className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaRocket className={styles['btn-icon']} />
                 Get Started
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Book a Demo
               </a></Link>
             </div>

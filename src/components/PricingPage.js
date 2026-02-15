@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './PricingPage.module.css';
 import Link from 'next/link';
 import {
   FaCheckCircle, FaArrowRight, FaHeadset, FaRocket, FaCode, FaCloud, FaBuilding
@@ -93,22 +94,22 @@ const PricingPage = () => {
   ];
 
   return (
-    <div className="pricing-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['pricing-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaRocket className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaRocket className={styles['badge-icon']} />
                 <span>Transparent Pricing</span>
               </div>
-              <h1 className="hero-title">
-                Our <span className="highlight">Pricing</span>
+              <h1 className={styles['hero-title']}>
+                Our <span className={styles.highlight}>Pricing</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Flexible pricing plans tailored to your needs. All projects are custom-quoted based on your specific requirements.
               </p>
             </div>
@@ -116,54 +117,54 @@ const PricingPage = () => {
         </div>
       </div>
 
-      <div className="pricing-plans-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Project-Based Pricing</h2>
-            <p className="section-subtitle">
+      <div className={styles['pricing-plans-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Project-Based Pricing</h2>
+            <p className={styles['section-subtitle']}>
               Choose the plan that fits your project needs
             </p>
           </div>
-          <div className="pricing-grid">
+          <div className={styles['pricing-grid']}>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
-                {plan.popular && <div className="popular-badge">Most Popular</div>}
-                <div className="pricing-icon">
+                {plan.popular && <div className={styles['popular-badge']}>Most Popular</div>}
+                <div className={styles['pricing-icon']}>
                   <plan.icon />
                 </div>
-                <h3 className="pricing-name">{plan.name}</h3>
-                <div className="pricing-price">{plan.price}</div>
-                <p className="pricing-description">{plan.description}</p>
-                <ul className="pricing-features">
+                <h3 className={styles['pricing-name']}>{plan.name}</h3>
+                <div className={styles['pricing-price']}>{plan.price}</div>
+                <p className={styles['pricing-description']}>{plan.description}</p>
+                <ul className={styles['pricing-features']}>
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="pricing-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['pricing-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" legacyBehavior><a className="pricing-cta">Get Quote<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['pricing-cta']}>Get Quote<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
         </div>
       </div>
 {/* 
-      <div className="services-pricing-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Service Pricing</h2>
-            <p className="section-subtitle">
+      <div className={styles['services-pricing-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Service Pricing</h2>
+            <p className={styles['section-subtitle']}>
               Starting prices for individual services
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-pricing-card">
-                <h3 className="service-name">{service.name}</h3>
-                <div className="service-price">{service.price}</div>
-                <p className="service-description">{service.description}</p>
-                <Link to="/contact" className="service-cta">
+              <div key={index} className={styles['service-pricing-card']}>
+                <h3 className={styles['service-name']}>{service.name}</h3>
+                <div className={styles['service-price']}>{service.price}</div>
+                <p className={styles['service-description']}>{service.description}</p>
+                <Link to="/contact" className={styles['service-cta']}>
                   Contact Us
                 </Link>
               </div>
@@ -172,16 +173,16 @@ const PricingPage = () => {
         </div>
       </div> */}
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Need a Custom Quote?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Need a Custom Quote?</h3>
+            <p className={styles['cta-subtitle']}>
               Every project is unique. Contact us for a personalized quote based on your specific requirements.
             </p>
-            <div className="cta-actions">
-                <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Get Custom Quote</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Demo</a></Link>
+            <div className={styles['cta-actions']}>
+                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Custom Quote</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Demo</a></Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './CareersPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -70,22 +71,22 @@ const CareersPage = () => {
   ];
 
   return (
-    <div className="careers-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['careers-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaBriefcase className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaBriefcase className={styles['badge-icon']} />
                 <span>Join Our Team</span>
               </div>
-              <h1 className="hero-title">
-                Build Your <span className="highlight">Career</span> With Us
+              <h1 className={styles['hero-title']}>
+                Build Your <span className={styles.highlight}>Career</span> With Us
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Join a team of passionate professionals working on cutting-edge projects. We're always looking for talented individuals to help us grow.
               </p>
             </div>
@@ -93,45 +94,45 @@ const CareersPage = () => {
         </div>
       </div>
 
-      <div className="positions-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Open Positions</h2>
-            <p className="section-subtitle">
+      <div className={styles['positions-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Open Positions</h2>
+            <p className={styles['section-subtitle']}>
               Explore current job opportunities
             </p>
           </div>
-          <div className="positions-grid">
+          <div className={styles['positions-grid']}>
             {openPositions.map((position, index) => (
-              <div key={index} className="position-card">
-                <div className="position-icon">
+              <div key={index} className={styles['position-card']}>
+                <div className={styles['position-icon']}>
                   <position.icon />
                 </div>
-                <h3 className="position-title">{position.title}</h3>
-                <div className="position-meta">
-                  <span className="position-department">{position.department}</span>
-                  <span className="position-location">
+                <h3 className={styles['position-title']}>{position.title}</h3>
+                <div className={styles['position-meta']}>
+                  <span className={styles['position-department']}>{position.department}</span>
+                  <span className={styles['position-location']}>
                     <FaMapMarkerAlt /> {position.location}
                   </span>
-                  <span className="position-type">
+                  <span className={styles['position-type']}>
                     <FaClock /> {position.type}
                   </span>
                 </div>
-                <p className="position-description">{position.description}</p>
-                <div className="position-requirements">
+                <p className={styles['position-description']}>{position.description}</p>
+                <div className={styles['position-requirements']}>
                   <h4>Requirements:</h4>
                   <ul>
                     {position.requirements.map((req, idx) => (
                       <li key={idx}>
-                        <FaCheckCircle className="check-icon" />
+                        <FaCheckCircle className={styles['check-icon']} />
                         {req}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <Link href="/contact" legacyBehavior><a className="position-apply">
+                <Link href="/contact" legacyBehavior><a className={styles['position-apply']}>
                   Apply Now
-                  <FaArrowRight className="arrow-icon" />
+                  <FaArrowRight className={styles['arrow-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -139,38 +140,38 @@ const CareersPage = () => {
         </div>
       </div>
 
-      <div className="benefits-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Why Work With Us</h2>
-            <p className="section-subtitle">
+      <div className={styles['benefits-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Why Work With Us</h2>
+            <p className={styles['section-subtitle']}>
               Benefits and perks of joining our team
             </p>
           </div>
-          <div className="benefits-grid">
+          <div className={styles['benefits-grid']}>
             {benefits.map((benefit, index) => (
-              <div key={index} className="benefit-card">
-                <div className="benefit-icon">
+              <div key={index} className={styles['benefit-card']}>
+                <div className={styles['benefit-icon']}>
                   <benefit.icon />
                 </div>
-                <h3 className="benefit-title">{benefit.title}</h3>
-                <p className="benefit-description">{benefit.description}</p>
+                <h3 className={styles['benefit-title']}>{benefit.title}</h3>
+                <p className={styles['benefit-description']}>{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Don't See a Position That Fits?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Don't See a Position That Fits?</h3>
+            <p className={styles['cta-subtitle']}>
               We're always interested in connecting with talented individuals. Send us your resume!
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Send Your Resume
               </a></Link>
             </div>

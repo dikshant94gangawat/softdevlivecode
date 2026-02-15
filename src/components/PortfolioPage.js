@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './PortfolioPage.module.css';
 import Link from 'next/link';
 import {
   FaRocket, FaCheckCircle, FaArrowRight, FaHeadset, FaFilter,
@@ -106,22 +107,22 @@ const PortfolioPage = () => {
   ];
 
   return (
-    <div className="portfolio-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['portfolio-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaRocket className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaRocket className={styles['badge-icon']} />
                 <span>Our Work</span>
               </div>
-              <h1 className="hero-title">
-                Our <span className="highlight">Portfolio</span>
+              <h1 className={styles['hero-title']}>
+                Our <span className={styles.highlight}>Portfolio</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Explore our successful projects across various industries. From startups to enterprises, we've delivered innovative solutions that drive business growth.
               </p>
             </div>
@@ -129,29 +130,29 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="portfolio-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Featured Projects</h2>
-            <p className="section-subtitle">
+      <div className={styles['portfolio-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Featured Projects</h2>
+            <p className={styles['section-subtitle']}>
               Showcasing our best work across different industries and technologies
             </p>
           </div>
           
-          <div className="filter-tabs">
+          <div className={styles['filter-tabs']}>
             {categories.map((category) => (
               <button
                 key={category}
@@ -163,10 +164,10 @@ const PortfolioPage = () => {
             ))}
           </div>
 
-          <div className="portfolio-grid">
+          <div className={styles['portfolio-grid']}>
             {filteredPortfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -175,25 +176,25 @@ const PortfolioPage = () => {
                       e.target.nextSibling.style.display = 'flex';
                     }}
                   />
-                  <div className="portfolio-image-placeholder" style={{ display: 'none' }}>
+                  <div className={styles['portfolio-image-placeholder']} style={{ display: 'none' }}>
                     <project.icon size={60} />
                   </div>
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-category">{project.category}</div>
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-category']}>{project.category}</div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
-                  <div className="portfolio-results">
+                  <div className={styles['portfolio-results']}>
                     {project.results.map((result, idx) => (
-                      <div key={idx} className="result-item">
-                        <FaCheckCircle className="result-icon" />
+                      <div key={idx} className={styles['result-item']}>
+                        <FaCheckCircle className={styles['result-icon']} />
                         {result}
                       </div>
                     ))}
@@ -205,16 +206,16 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Start Your Project?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Start Your Project?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's discuss how we can help bring your vision to life.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Get Started</a></Link>
-              <Link href="/case-studies" legacyBehavior><a className="btn btn-outline">View Case Studies</a></Link>
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Started</a></Link>
+              <Link href="/case-studies" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Case Studies</a></Link>
             </div>
           </div>
         </div>

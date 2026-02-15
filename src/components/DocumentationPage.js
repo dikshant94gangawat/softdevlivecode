@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './DocumentationPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -76,22 +77,22 @@ const DocumentationPage = () => {
   ];
 
   return (
-    <div className="documentation-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['documentation-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaBook className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaBook className={styles['badge-icon']} />
                 <span>Technical Documentation</span>
               </div>
-              <h1 className="hero-title">
-                Documentation <span className="highlight">Center</span>
+              <h1 className={styles['hero-title']}>
+                Documentation <span className={styles.highlight}>Center</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Comprehensive technical documentation, guides, and resources to help you build and deploy applications successfully.
               </p>
             </div>
@@ -99,28 +100,28 @@ const DocumentationPage = () => {
         </div>
       </div>
 
-      <div className="documentation-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Documentation Sections</h2>
-            <p className="section-subtitle">
+      <div className={styles['documentation-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Documentation Sections</h2>
+            <p className={styles['section-subtitle']}>
               Browse documentation by category
             </p>
           </div>
-          <div className="docs-grid">
+          <div className={styles['docs-grid']}>
             {docSections.map((section, index) => (
-              <div key={index} className="doc-card">
-                <div className="doc-icon">
+              <div key={index} className={styles['doc-card']}>
+                <div className={styles['doc-icon']}>
                   <section.icon />
                 </div>
-                <h3 className="doc-title">{section.title}</h3>
-                <p className="doc-description">{section.description}</p>
-                <ul className="doc-articles">
+                <h3 className={styles['doc-title']}>{section.title}</h3>
+                <p className={styles['doc-description']}>{section.description}</p>
+                <ul className={styles['doc-articles']}>
                   {section.articles.map((article, idx) => (
-                    <li key={idx} className="doc-article-item">
-                      <Link href="#" legacyBehavior><a className="doc-article-link">
+                    <li key={idx} className={styles['doc-article-item']}>
+                      <Link href="#" legacyBehavior><a className={styles['doc-article-link']}>
                         {article}
-                        <FaArrowRight className="article-arrow" />
+                        <FaArrowRight className={styles['article-arrow']} />
                       </a></Link>
                     </li>
                   ))}
@@ -131,19 +132,19 @@ const DocumentationPage = () => {
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Need More Help?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Need More Help?</h3>
+            <p className={styles['cta-subtitle']}>
               Can't find what you're looking for? Contact our technical support team.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact-support" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact-support" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Contact Support
               </a></Link>
-              <Link href="/api-reference" legacyBehavior><a className="btn btn-outline">
+              <Link href="/api-reference" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 View API Reference
               </a></Link>
             </div>

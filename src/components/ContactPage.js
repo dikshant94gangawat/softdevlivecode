@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './ContactPage.module.css';
 import Link from 'next/link';
 
 import { 
@@ -183,37 +184,37 @@ const ContactPage = () => {
 
 
   return (
-    <div className="contact-page">
+    <div className={styles['contact-page']}>
       {/* Hero Section */}
-      <div className="contact-hero">
-        <div className="contact-hero-background">
-          <div className="hero-pattern"></div>
-          <div className="hero-glow"></div>
+      <div className={styles['contact-hero']}>
+        <div className={styles['contact-hero-background']}>
+          <div className={styles['hero-pattern']}></div>
+          <div className={styles['hero-glow']}></div>
         </div>
-        <div className="container">
-          <div className="contact-hero-content">
-            <div className="hero-badge">
-              <FaRocket className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['contact-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaRocket className={styles['badge-icon']} />
               <span>Get In Touch</span>
             </div>
-            <h1 className="contact-hero-title">
-              Let's Build Something <span className="highlight">Amazing</span> Together
+            <h1 className={styles['contact-hero-title']}>
+              Let's Build Something <span className={styles.highlight}>Amazing</span> Together
             </h1>
-            <p className="contact-hero-subtitle">
+            <p className={styles['contact-hero-subtitle']}>
               Ready to transform your ideas into powerful digital solutions? 
               We're here to help you every step of the way.
             </p>
-            <div className="hero-features">
-              <div className="hero-feature">
-                <FaCheckCircle className="feature-icon" />
+            <div className={styles['hero-features']}>
+              <div className={styles['hero-feature']}>
+                <FaCheckCircle className={styles['feature-icon']} />
                 <span>Free Consultation</span>
               </div>
-              <div className="hero-feature">
-                <FaCheckCircle className="feature-icon" />
+              <div className={styles['hero-feature']}>
+                <FaCheckCircle className={styles['feature-icon']} />
                 <span>24h Response Time</span>
               </div>
-              <div className="hero-feature">
-                <FaCheckCircle className="feature-icon" />
+              <div className={styles['hero-feature']}>
+                <FaCheckCircle className={styles['feature-icon']} />
                 <span>Custom Solutions</span>
               </div>
             </div>
@@ -222,16 +223,16 @@ const ContactPage = () => {
       </div>
 
       {/* Main Contact Section */}
-      <div className="contact-main">
-        <div className="container">
-          <div className="contact-grid">
+      <div className={styles['contact-main']}>
+        <div className={styles.container}>
+          <div className={styles['contact-grid']}>
             
             {/* Contact Form */}
-            <div className="contact-form-section">
-              <h2 className="section-title">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-row">
-                  <div className="form-group">
+            <div className={styles['contact-form-section']}>
+              <h2 className={styles['section-title']}>Send Us a Message</h2>
+              <form onSubmit={handleSubmit} className={styles['contact-form']}>
+                <div className={styles['form-row']}>
+                  <div className={styles['form-group']}>
                     <label htmlFor="name">Full Name</label>
                     <input
                       type="text"
@@ -243,7 +244,7 @@ const ContactPage = () => {
                       placeholder="Your full name"
                     />
                   </div>
-                  <div className="form-group">
+                  <div className={styles['form-group']}>
                     <label htmlFor="email">Email Address</label>
                     <input
                       type="email"
@@ -257,8 +258,8 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <div className="form-row">
-                  <div className="form-group">
+                <div className={styles['form-row']}>
+                  <div className={styles['form-group']}>
                     <label htmlFor="phone">Phone Number</label>
                     <input
                       type="tel"
@@ -269,7 +270,7 @@ const ContactPage = () => {
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
-                  <div className="form-group">
+                  <div className={styles['form-group']}>
                     <label htmlFor="company">Company</label>
                     <input
                       type="text"
@@ -282,7 +283,7 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="subject">Subject</label>
                   <select
                     id="subject"
@@ -301,7 +302,7 @@ const ContactPage = () => {
                   </select>
                 </div>
 
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="message">Message</label>
                   <textarea
                     id="message"
@@ -314,24 +315,24 @@ const ContactPage = () => {
                   ></textarea>
                 </div>
 
-                <div className="form-group">
-                  <h4 className="contact-section-title">Services of Interest</h4>
-                  <div className="contact-services-grid">
+                <div className={styles['form-group']}>
+                  <h4 className={styles['contact-section-title']}>Services of Interest</h4>
+                  <div className={styles['contact-services-grid']}>
                     {serviceOptions.map(service => {
                       const IconComponent = service.icon;
                       return (
-                        <div key={service.id} className="contact-service-option">
+                        <div key={service.id} className={styles['contact-service-option']}>
                           <input
                             type="checkbox"
                             id={service.id}
                             checked={formData.serviceInterests.includes(service.id)}
                             onChange={() => handleServiceInterestChange(service.id)}
                           />
-                          <label htmlFor={service.id} className="contact-service-label">
-                            <div className="contact-service-checkbox">
-                              <div className="contact-checkbox-icon">✓</div>
+                          <label htmlFor={service.id} className={styles['contact-service-label']}>
+                            <div className={styles['contact-service-checkbox']}>
+                              <div className={styles['contact-checkbox-icon']}>✓</div>
                             </div>
-                            <IconComponent className="contact-service-icon" />
+                            <IconComponent className={styles['contact-service-icon']} />
                             <span>{service.label}</span>
                           </label>
                         </div>
@@ -340,10 +341,10 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <div className="form-group">
-                  <h4 className="contact-section-title">Preferred Meeting Schedule</h4>
-                  <div className="form-row">
-                    <div className="form-group">
+                <div className={styles['form-group']}>
+                  <h4 className={styles['contact-section-title']}>Preferred Meeting Schedule</h4>
+                  <div className={styles['form-row']}>
+                    <div className={styles['form-group']}>
                       <label htmlFor="preferredDate">Preferred Date</label>
                       <input
                         type="date"
@@ -355,7 +356,7 @@ const ContactPage = () => {
                         placeholder="Select a date"
                       />
                     </div>
-                    <div className="form-group">
+                    <div className={styles['form-group']}>
                       <label htmlFor="preferredTime">Preferred Time</label>
                       <select
                         id="preferredTime"
@@ -381,8 +382,8 @@ const ContactPage = () => {
                 </button>
 
                 {submitStatus === 'success' && (
-                  <div className="submit-success">
-                    <FaCheckCircle className="success-icon" />
+                  <div className={styles['submit-success']}>
+                    <FaCheckCircle className={styles['success-icon']} />
                     Thank you! Your message has been sent successfully.
                   </div>
                 )}
@@ -390,22 +391,22 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="contact-info-section">
-              <h2 className="section-title">Contact Information</h2>
-              <div className="contact-info-cards">
+            <div className={styles['contact-info-section']}>
+              <h2 className={styles['section-title']}>Contact Information</h2>
+              <div className={styles['contact-info-cards']}>
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="contact-info-card">
-                    <div className="info-icon">
+                  <div key={index} className={styles['contact-info-card']}>
+                    <div className={styles['info-icon']}>
                       <info.icon />
                     </div>
-                    <div className="info-content">
-                      <h3 className="info-title">{info.title}</h3>
+                    <div className={styles['info-content']}>
+                      <h3 className={styles['info-title']}>{info.title}</h3>
                       {info.action ? (
-                        <a href={info.action} className="info-detail">
+                        <a href={info.action} className={styles['info-detail']}>
                           {info.detail}
                         </a>
                       ) : (
-                        <p className="info-detail">{info.detail}</p>
+                        <p className={styles['info-detail']}>{info.detail}</p>
                       )}
                     </div>
                   </div>
@@ -413,18 +414,18 @@ const ContactPage = () => {
               </div>
 
               {/* Founders Section */}
-              <div className="founders-section">
-                <h3 className="founders-title">Meet Our Founders</h3>
-                <div className="founders-grid">
+              <div className={styles['founders-section']}>
+                <h3 className={styles['founders-title']}>Meet Our Founders</h3>
+                <div className={styles['founders-grid']}>
                   {founders.map((founder, index) => (
-                    <div key={index} className="founder-card">
-                      <div className="founder-avatar">
+                    <div key={index} className={styles['founder-card']}>
+                      <div className={styles['founder-avatar']}>
                         {founder.image ? (
                           <>
                             <img 
                               src={founder.image} 
                               alt={founder.name}
-                              className="founder-avatar-image"
+                              className={styles['founder-avatar-image']}
                               onError={(e) => {
                                 e.target.style.display = 'none';
                                 const initialsSpan = e.target.parentNode.querySelector('.avatar-initials');
@@ -434,22 +435,22 @@ const ContactPage = () => {
                               }}
                             />
                             <span 
-                              className="avatar-initials" 
+                              className={styles['avatar-initials']} 
                               style={{ display: 'none' }}
                             >
                               {founder.avatar}
                             </span>
                           </>
                         ) : (
-                          <span className="avatar-initials">{founder.avatar}</span>
+                          <span className={styles['avatar-initials']}>{founder.avatar}</span>
                         )}
                       </div>
-                      <div className="founder-info">
-                        <h4 className="founder-name">{founder.name}</h4>
-                        <p className="founder-role">{founder.role}</p>
-                        <div className="founder-expertise">
+                      <div className={styles['founder-info']}>
+                        <h4 className={styles['founder-name']}>{founder.name}</h4>
+                        <p className={styles['founder-role']}>{founder.role}</p>
+                        <div className={styles['founder-expertise']}>
                           {founder.expertise.map((skill, idx) => (
-                            <span key={idx} className="expertise-tag">{skill}</span>
+                            <span key={idx} className={styles['expertise-tag']}>{skill}</span>
                           ))}
                         </div>
                       </div>
@@ -459,35 +460,35 @@ const ContactPage = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="quick-actions">
-                <h3 className="quick-actions-title">Quick Actions</h3>
-                <div className="quick-actions-grid">
-                  <Link href="/demo" legacyBehavior><a className="quick-action-btn">
+              <div className={styles['quick-actions']}>
+                <h3 className={styles['quick-actions-title']}>Quick Actions</h3>
+                <div className={styles['quick-actions-grid']}>
+                  <Link href="/demo" legacyBehavior><a className={styles['quick-action-btn']}>
                     📋 Book a Demo
                   </a></Link>
-                  <a href="mailto:softdevsquad@gmail.com" className="quick-action-btn">
+                  <a href="mailto:softdevsquad@gmail.com" className={styles['quick-action-btn']}>
                     ✉️ Email Us
                   </a>
-                  <Link href="/services" legacyBehavior><a className="quick-action-btn">
+                  <Link href="/services" legacyBehavior><a className={styles['quick-action-btn']}>
                     🛠️ Our Services
                   </a></Link>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="social-section">
-                <h3 className="social-title">Follow Our Journey</h3>
-                <div className="social-links">
-                  <a href="https://linkedin.com/company/softdevsquad" className="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <div className={styles['social-section']}>
+                <h3 className={styles['social-title']}>Follow Our Journey</h3>
+                <div className={styles['social-links']}>
+                  <a href="https://linkedin.com/company/softdevsquad" className={styles['social-link']} target="_blank" rel="noopener noreferrer" title="LinkedIn">
                     <FaLinkedin />
                   </a>
-                  <a href="https://twitter.com/softdevsquad" className="social-link" target="_blank" rel="noopener noreferrer" title="Twitter">
+                  <a href="https://twitter.com/softdevsquad" className={styles['social-link']} target="_blank" rel="noopener noreferrer" title="Twitter">
                     <FaTwitter />
                   </a>
-                  <a href="https://github.com/softdevsquad" className="social-link" target="_blank" rel="noopener noreferrer" title="GitHub">
+                  <a href="https://github.com/softdevsquad" className={styles['social-link']} target="_blank" rel="noopener noreferrer" title="GitHub">
                     <FaGithub />
                   </a>
-                  <a href="https://facebook.com/softdevsquad" className="social-link" target="_blank" rel="noopener noreferrer" title="Facebook">
+                  <a href="https://facebook.com/softdevsquad" className={styles['social-link']} target="_blank" rel="noopener noreferrer" title="Facebook">
                     <FaFacebook />
                   </a>
                 </div>
@@ -500,18 +501,18 @@ const ContactPage = () => {
 
 
       {/* CTA Section */}
-      <div className="contact-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Get Started?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['contact-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Get Started?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's discuss your project and see how we can help bring your vision to life
             </p>
-            <div className="cta-actions">
-              <a href="tel:+917760554526" className="btn btn-primary">
+            <div className={styles['cta-actions']}>
+              <a href="tel:+917760554526" className={`styles.btn styles['btn-primary']`}>
                 📞 Call Now
               </a>
-              <Link href="/services" legacyBehavior><a className="btn btn-outline">
+              <Link href="/services" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 View Services
               </a></Link>
             </div>

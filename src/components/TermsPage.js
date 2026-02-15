@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './TermsPage.module.css';
 import Link from 'next/link';
 import { 
   FaFileContract,
@@ -118,28 +119,28 @@ const TermsPage = () => {
   });
 
   return (
-    <div className="terms-page">
+    <div className={styles['terms-page']}>
       {/* Hero Section */}
-      <div className="terms-hero">
-        <div className="terms-hero-background">
-          <div className="hero-pattern"></div>
-          <div className="hero-glow"></div>
+      <div className={styles['terms-hero']}>
+        <div className={styles['terms-hero-background']}>
+          <div className={styles['hero-pattern']}></div>
+          <div className={styles['hero-glow']}></div>
         </div>
-        <div className="container">
-          <div className="terms-hero-content">
-            <div className="hero-badge">
-              <FaFileContract className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['terms-hero-content']}>
+            <div className={styles['hero-badge']}>
+              <FaFileContract className={styles['badge-icon']} />
               <span>Terms & Conditions</span>
             </div>
-            <h1 className="terms-hero-title">
-              Terms of <span className="highlight">Service</span>
+            <h1 className={styles['terms-hero-title']}>
+              Terms of <span className={styles.highlight}>Service</span>
             </h1>
-            <p className="terms-hero-subtitle">
+            <p className={styles['terms-hero-subtitle']}>
               Please read these Terms and Conditions carefully before using our services. 
               These terms govern your relationship with SoftDevSquad and outline your rights and obligations.
             </p>
-            <div className="terms-update-date">
-              <FaInfoCircle className="update-icon" />
+            <div className={styles['terms-update-date']}>
+              <FaInfoCircle className={styles['update-icon']} />
               <span>Last Updated: {currentDate}</span>
             </div>
           </div>
@@ -147,22 +148,22 @@ const TermsPage = () => {
       </div>
 
       {/* Overview Section */}
-      <div className="terms-overview-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Terms Overview</h2>
-            <p className="section-subtitle">
+      <div className={styles['terms-overview-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Terms Overview</h2>
+            <p className={styles['section-subtitle']}>
               Understanding the terms that govern your use of our services
             </p>
           </div>
-          <div className="terms-features-grid">
+          <div className={styles['terms-features-grid']}>
             {termsSections.map((section, index) => (
-              <div key={index} className="terms-feature-card">
-                <div className="terms-feature-icon">
+              <div key={index} className={styles['terms-feature-card']}>
+                <div className={styles['terms-feature-icon']}>
                   <section.icon />
                 </div>
-                <h3 className="terms-feature-title">{section.title}</h3>
-                <p className="terms-feature-description">{section.description}</p>
+                <h3 className={styles['terms-feature-title']}>{section.title}</h3>
+                <p className={styles['terms-feature-description']}>{section.description}</p>
               </div>
             ))}
           </div>
@@ -170,27 +171,27 @@ const TermsPage = () => {
       </div>
 
       {/* User Responsibilities Section */}
-      <div className="terms-responsibilities-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">User Responsibilities</h2>
-            <p className="section-subtitle">
+      <div className={styles['terms-responsibilities-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>User Responsibilities</h2>
+            <p className={styles['section-subtitle']}>
               Your obligations and responsibilities when using our services
             </p>
           </div>
-          <div className="responsibilities-grid">
+          <div className={styles['responsibilities-grid']}>
             {userResponsibilities.map((responsibility, index) => (
-              <div key={index} className="responsibility-card">
-                <div className="responsibility-header">
-                  <div className="responsibility-icon">
+              <div key={index} className={styles['responsibility-card']}>
+                <div className={styles['responsibility-header']}>
+                  <div className={styles['responsibility-icon']}>
                     <responsibility.icon />
                   </div>
-                  <h3 className="responsibility-title">{responsibility.title}</h3>
+                  <h3 className={styles['responsibility-title']}>{responsibility.title}</h3>
                 </div>
-                <ul className="responsibility-list">
+                <ul className={styles['responsibility-list']}>
                   {responsibility.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="responsibility-item">
-                      <FaCheckCircle className="list-icon" />
+                    <li key={itemIndex} className={styles['responsibility-item']}>
+                      <FaCheckCircle className={styles['list-icon']} />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -202,22 +203,22 @@ const TermsPage = () => {
       </div>
 
       {/* Payment Terms Section */}
-      <div className="terms-payment-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Payment Terms</h2>
-            <p className="section-subtitle">
+      <div className={styles['terms-payment-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Payment Terms</h2>
+            <p className={styles['section-subtitle']}>
               Information about payments, refunds, and billing policies
             </p>
           </div>
-          <div className="payment-grid">
+          <div className={styles['payment-grid']}>
             {paymentTerms.map((term, index) => (
-              <div key={index} className="payment-card">
-                <div className="payment-icon">
+              <div key={index} className={styles['payment-card']}>
+                <div className={styles['payment-icon']}>
                   <term.icon />
                 </div>
-                <h3 className="payment-title">{term.title}</h3>
-                <p className="payment-description">{term.description}</p>
+                <h3 className={styles['payment-title']}>{term.title}</h3>
+                <p className={styles['payment-description']}>{term.description}</p>
               </div>
             ))}
           </div>
@@ -225,22 +226,22 @@ const TermsPage = () => {
       </div>
 
       {/* Termination Section */}
-      <div className="terms-termination-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Termination</h2>
-            <p className="section-subtitle">
+      <div className={styles['terms-termination-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Termination</h2>
+            <p className={styles['section-subtitle']}>
               Conditions under which services may be terminated
             </p>
           </div>
-          <div className="termination-grid">
+          <div className={styles['termination-grid']}>
             {terminationTerms.map((term, index) => (
-              <div key={index} className="termination-card">
-                <div className="termination-icon">
+              <div key={index} className={styles['termination-card']}>
+                <div className={styles['termination-icon']}>
                   <term.icon />
                 </div>
-                <h3 className="termination-title">{term.title}</h3>
-                <p className="termination-description">{term.description}</p>
+                <h3 className={styles['termination-title']}>{term.title}</h3>
+                <p className={styles['termination-description']}>{term.description}</p>
               </div>
             ))}
           </div>
@@ -248,37 +249,37 @@ const TermsPage = () => {
       </div>
 
       {/* Limitation of Liability Section */}
-      <div className="terms-liability-section">
-        <div className="container">
-          <div className="liability-content">
-            <div className="liability-text">
-              <h2 className="liability-title">Limitation of Liability</h2>
-              <p className="liability-description">
+      <div className={styles['terms-liability-section']}>
+        <div className={styles.container}>
+          <div className={styles['liability-content']}>
+            <div className={styles['liability-text']}>
+              <h2 className={styles['liability-title']}>Limitation of Liability</h2>
+              <p className={styles['liability-description']}>
                 To the maximum extent permitted by law, SoftDevSquad shall not be liable for any indirect, 
                 incidental, special, consequential, or punitive damages, or any loss of profits or revenues, 
                 whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses.
               </p>
-              <p className="liability-description">
+              <p className={styles['liability-description']}>
                 Our total liability for any claims arising from or related to the use of our services shall not 
                 exceed the amount you paid to us in the twelve (12) months preceding the claim. Some jurisdictions 
                 do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.
               </p>
             </div>
-            <div className="liability-features">
-              <div className="liability-feature">
-                <FaExclamationTriangle className="liability-feature-icon" />
+            <div className={styles['liability-features']}>
+              <div className={styles['liability-feature']}>
+                <FaExclamationTriangle className={styles['liability-feature-icon']} />
                 <span>Limited Liability</span>
               </div>
-              <div className="liability-feature">
-                <FaShieldAlt className="liability-feature-icon" />
+              <div className={styles['liability-feature']}>
+                <FaShieldAlt className={styles['liability-feature-icon']} />
                 <span>Service Warranty</span>
               </div>
-              <div className="liability-feature">
-                <FaBalanceScale className="liability-feature-icon" />
+              <div className={styles['liability-feature']}>
+                <FaBalanceScale className={styles['liability-feature-icon']} />
                 <span>Legal Protection</span>
               </div>
-              <div className="liability-feature">
-                <FaInfoCircle className="liability-feature-icon" />
+              <div className={styles['liability-feature']}>
+                <FaInfoCircle className={styles['liability-feature-icon']} />
                 <span>Jurisdiction</span>
               </div>
             </div>
@@ -287,16 +288,16 @@ const TermsPage = () => {
       </div>
 
       {/* Changes to Terms Section */}
-      <div className="terms-changes-section">
-        <div className="container">
-          <div className="changes-content">
-            <h2 className="changes-title">Changes to Terms</h2>
-            <p className="changes-description">
+      <div className={styles['terms-changes-section']}>
+        <div className={styles.container}>
+          <div className={styles['changes-content']}>
+            <h2 className={styles['changes-title']}>Changes to Terms</h2>
+            <p className={styles['changes-description']}>
               We reserve the right to modify these Terms and Conditions at any time. We will notify you of any 
               material changes by posting the new Terms on this page and updating the "Last Updated" date. 
               Your continued use of our services after such modifications constitutes your acceptance of the updated Terms.
             </p>
-            <p className="changes-description">
+            <p className={styles['changes-description']}>
               We encourage you to review these Terms periodically to stay informed about how we operate and 
               what terms apply to your use of our services.
             </p>
@@ -305,17 +306,17 @@ const TermsPage = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="terms-contact-section">
-        <div className="container">
-          <div className="contact-content">
-            <h2 className="contact-title">Questions About Terms?</h2>
-            <p className="contact-description">
+      <div className={styles['terms-contact-section']}>
+        <div className={styles.container}>
+          <div className={styles['contact-content']}>
+            <h2 className={styles['contact-title']}>Questions About Terms?</h2>
+            <p className={styles['contact-description']}>
               If you have any questions, concerns, or need clarification regarding these Terms and Conditions, 
               please contact us. We are here to help you understand your rights and obligations.
             </p>
-            <div className="contact-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaInfoCircle className="btn-icon" />Contact Us</a></Link>
-              <Link href="/" legacyBehavior><a className="btn btn-outline">Back to Home</a></Link>
+            <div className={styles['contact-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaInfoCircle className={styles['btn-icon']} />Contact Us</a></Link>
+              <Link href="/" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Back to Home</a></Link>
             </div>
           </div>
         </div>

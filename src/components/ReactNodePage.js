@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './ReactNodePage.module.css';
 import Link from 'next/link';
 import {
   FaReact, FaNodeJs, FaCode, FaServer, FaDatabase, FaCloud,
@@ -72,106 +73,106 @@ const ReactNodePage = () => {
   ];
 
   return (
-    <div className="react-node-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['react-node-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaReact className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaReact className={styles['badge-icon']} />
                 <span>Expert React & Node.js Development</span>
               </div>
-              <h1 className="hero-title">
-                Powerful <span className="highlight">React & Node.js</span> Solutions
+              <h1 className={styles['hero-title']}>
+                Powerful <span className={styles.highlight}>React & Node.js</span> Solutions
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Build modern, scalable web applications with React and Node.js. From frontend interfaces to backend APIs, we deliver full-stack solutions that drive business growth.
               </p>
-              <div className="hero-actions">
-                <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
-                <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
+              <div className={styles['hero-actions']}>
+                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
+                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Portfolio</a></Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our React & Node.js Services</h2>
-            <p className="section-subtitle">
+      <div className={styles['services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our React & Node.js Services</h2>
+            <p className={styles['section-subtitle']}>
               Comprehensive development services for building modern web applications
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <ul className="service-features">
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Get Started<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="technologies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Technologies We Use</h2>
-            <p className="section-subtitle">
+      <div className={styles['technologies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Technologies We Use</h2>
+            <p className={styles['section-subtitle']}>
               Modern tools and frameworks for building exceptional applications
             </p>
           </div>
-          <div className="technologies-grid">
+          <div className={styles['technologies-grid']}>
             {technologies.map((tech, index) => (
-              <div key={index} className="tech-card">
-                <tech.icon className="tech-icon" />
-                <span className="tech-name">{tech.name}</span>
+              <div key={index} className={styles['tech-card']}>
+                <tech.icon className={styles['tech-icon']} />
+                <span className={styles['tech-name']}>{tech.name}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Build with React & Node.js?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Build with React & Node.js?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's create powerful, scalable web applications that drive your business forward.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Get Started Today</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Started Today</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

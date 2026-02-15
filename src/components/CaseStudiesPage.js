@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './CaseStudiesPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -101,22 +102,22 @@ const CaseStudiesPage = () => {
   ];
 
   return (
-    <div className="case-studies-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['case-studies-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaFileAlt className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaFileAlt className={styles['badge-icon']} />
                 <span>Success Stories</span>
               </div>
-              <h1 className="hero-title">
-                Case <span className="highlight">Studies</span>
+              <h1 className={styles['hero-title']}>
+                Case <span className={styles.highlight}>Studies</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Detailed insights into how we've helped businesses transform and achieve remarkable results through innovative technology solutions.
               </p>
             </div>
@@ -124,53 +125,53 @@ const CaseStudiesPage = () => {
         </div>
       </div>
 
-      <div className="case-studies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Featured Case Studies</h2>
-            <p className="section-subtitle">
+      <div className={styles['case-studies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Featured Case Studies</h2>
+            <p className={styles['section-subtitle']}>
               Real projects, real results, real impact
             </p>
           </div>
-          <div className="case-studies-grid">
+          <div className={styles['case-studies-grid']}>
             {caseStudies.map((study, index) => (
-              <div key={index} className="case-study-card">
-                <div className="case-study-header">
-                  <div className="case-study-industry">{study.industry}</div>
-                  <div className="case-study-duration">
+              <div key={index} className={styles['case-study-card']}>
+                <div className={styles['case-study-header']}>
+                  <div className={styles['case-study-industry']}>{study.industry}</div>
+                  <div className={styles['case-study-duration']}>
                     <FaClock /> {study.duration}
                   </div>
                 </div>
-                <h3 className="case-study-title">{study.title}</h3>
-                <p className="case-study-client"><strong>Client:</strong> {study.client}</p>
+                <h3 className={styles['case-study-title']}>{study.title}</h3>
+                <p className={styles['case-study-client']}><strong>Client:</strong> {study.client}</p>
                 
-                <div className="case-study-section">
-                  <h4 className="section-label">Challenge</h4>
-                  <p className="case-study-text">{study.challenge}</p>
+                <div className={styles['case-study-section']}>
+                  <h4 className={styles['section-label']}>Challenge</h4>
+                  <p className={styles['case-study-text']}>{study.challenge}</p>
                 </div>
 
-                <div className="case-study-section">
-                  <h4 className="section-label">Solution</h4>
-                  <p className="case-study-text">{study.solution}</p>
+                <div className={styles['case-study-section']}>
+                  <h4 className={styles['section-label']}>Solution</h4>
+                  <p className={styles['case-study-text']}>{study.solution}</p>
                 </div>
 
-                <div className="case-study-results">
-                  <h4 className="section-label">Results</h4>
-                  <div className="results-grid">
+                <div className={styles['case-study-results']}>
+                  <h4 className={styles['section-label']}>Results</h4>
+                  <div className={styles['results-grid']}>
                     {study.results.map((result, idx) => (
-                      <div key={idx} className="result-card">
-                        <div className="result-metric">{result.metric}</div>
-                        <div className="result-label">{result.label}</div>
+                      <div key={idx} className={styles['result-card']}>
+                        <div className={styles['result-metric']}>{result.metric}</div>
+                        <div className={styles['result-label']}>{result.label}</div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="case-study-technologies">
-                  <h4 className="section-label">Technologies Used</h4>
-                  <div className="tech-tags">
+                <div className={styles['case-study-technologies']}>
+                  <h4 className={styles['section-label']}>Technologies Used</h4>
+                  <div className={styles['tech-tags']}>
                     {study.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
                 </div>
@@ -180,19 +181,19 @@ const CaseStudiesPage = () => {
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Create Your Success Story?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Create Your Success Story?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's discuss how we can help you achieve similar results.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Get Started
               </a></Link>
-              <Link href="/portfolio" legacyBehavior><a className="btn btn-outline">
+              <Link href="/portfolio" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 View Portfolio
               </a></Link>
             </div>

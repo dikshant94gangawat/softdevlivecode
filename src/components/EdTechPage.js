@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './EdTechPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -253,108 +254,108 @@ const EdTechPage = () => {
   ];
 
   return (
-    <div className="edtech-page">
+    <div className={styles['edtech-page']}>
       {/* Hero Section */}
-      <div className="edtech-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['edtech-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="edtech-hero-container">
-            <div className="edtech-hero-content">
-              <div className="hero-badge">
-                <FaGraduationCap className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['edtech-hero-container']}>
+            <div className={styles['edtech-hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaGraduationCap className={styles['badge-icon']} />
                 <span>Leading EdTech Development Company</span>
               </div>
-              <h1 className="edtech-hero-title">
-                Innovative <span className="highlight">EdTech Solutions</span> for Modern Learning
+              <h1 className={styles['edtech-hero-title']}>
+                Innovative <span className={styles.highlight}>EdTech Solutions</span> for Modern Learning
               </h1>
-              <p className="edtech-hero-subtitle">
+              <p className={styles['edtech-hero-subtitle']}>
                 Transform education with cutting-edge technology. We build comprehensive learning platforms, AI-powered tutoring systems, and interactive educational experiences that enhance learning outcomes.
               </p>
             </div>
-            <div className="edtech-hero-image">
-              <div className="edtech-visual-container">
-                <div className="edtech-laptop">
-                  <div className="laptop-screen">
-                    <div className="learning-interface">
-                      <div className="interface-header">
-                        <div className="header-nav">
-                          <div className="nav-item active">Dashboard</div>
-                          <div className="nav-item">Courses</div>
-                          <div className="nav-item">Progress</div>
-                          <div className="nav-item">Assignments</div>
+            <div className={styles['edtech-hero-image']}>
+              <div className={styles['edtech-visual-container']}>
+                <div className={styles['edtech-laptop']}>
+                  <div className={styles['laptop-screen']}>
+                    <div className={styles['learning-interface']}>
+                      <div className={styles['interface-header']}>
+                        <div className={styles['header-nav']}>
+                          <div className={`styles['nav-item'] styles.active`}>Dashboard</div>
+                          <div className={styles['nav-item']}>Courses</div>
+                          <div className={styles['nav-item']}>Progress</div>
+                          <div className={styles['nav-item']}>Assignments</div>
                         </div>
-                        <div className="user-profile">
-                          <div className="profile-avatar">👨‍🎓</div>
+                        <div className={styles['user-profile']}>
+                          <div className={styles['profile-avatar']}>👨‍🎓</div>
                         </div>
                       </div>
-                      <div className="interface-body">
-                        <div className="welcome-section">
-                          <h3 className="welcome-title">Welcome back, Student!</h3>
-                          <p className="welcome-subtitle">Continue your learning journey</p>
+                      <div className={styles['interface-body']}>
+                        <div className={styles['welcome-section']}>
+                          <h3 className={styles['welcome-title']}>Welcome back, Student!</h3>
+                          <p className={styles['welcome-subtitle']}>Continue your learning journey</p>
                         </div>
-                        <div className="course-progress">
-                          <div className="progress-item">
-                            <div className="course-icon">📊</div>
-                            <div className="course-info">
-                              <div className="course-name">Data Science</div>
-                              <div className="progress-bar">
-                                <div className="progress-fill" style={{width: '75%'}}></div>
+                        <div className={styles['course-progress']}>
+                          <div className={styles['progress-item']}>
+                            <div className={styles['course-icon']}>📊</div>
+                            <div className={styles['course-info']}>
+                              <div className={styles['course-name']}>Data Science</div>
+                              <div className={styles['progress-bar']}>
+                                <div className={styles['progress-fill']} style={{width: '75%'}}></div>
                               </div>
-                              <div className="progress-text">75% Complete</div>
+                              <div className={styles['progress-text']}>75% Complete</div>
                             </div>
                           </div>
-                          <div className="progress-item">
-                            <div className="course-icon">💻</div>
-                            <div className="course-info">
-                              <div className="course-name">Web Development</div>
-                              <div className="progress-bar">
-                                <div className="progress-fill" style={{width: '60%'}}></div>
+                          <div className={styles['progress-item']}>
+                            <div className={styles['course-icon']}>💻</div>
+                            <div className={styles['course-info']}>
+                              <div className={styles['course-name']}>Web Development</div>
+                              <div className={styles['progress-bar']}>
+                                <div className={styles['progress-fill']} style={{width: '60%'}}></div>
                               </div>
-                              <div className="progress-text">60% Complete</div>
+                              <div className={styles['progress-text']}>60% Complete</div>
                             </div>
                           </div>
-                          <div className="progress-item">
-                            <div className="course-icon">🤖</div>
-                            <div className="course-info">
-                              <div className="course-name">AI & Machine Learning</div>
-                              <div className="progress-bar">
-                                <div className="progress-fill" style={{width: '45%'}}></div>
+                          <div className={styles['progress-item']}>
+                            <div className={styles['course-icon']}>🤖</div>
+                            <div className={styles['course-info']}>
+                              <div className={styles['course-name']}>AI & Machine Learning</div>
+                              <div className={styles['progress-bar']}>
+                                <div className={styles['progress-fill']} style={{width: '45%'}}></div>
                               </div>
-                              <div className="progress-text">45% Complete</div>
+                              <div className={styles['progress-text']}>45% Complete</div>
                             </div>
                           </div>
                         </div>
-                        <div className="achievements">
-                          <div className="achievement-badge">🏆</div>
-                          <div className="achievement-badge">🥇</div>
-                          <div className="achievement-badge">⭐</div>
+                        <div className={styles.achievements}>
+                          <div className={styles['achievement-badge']}>🏆</div>
+                          <div className={styles['achievement-badge']}>🥇</div>
+                          <div className={styles['achievement-badge']}>⭐</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="floating-elements">
-                  <div className="floating-book">📚</div>
-                  <div className="floating-graduation">🎓</div>
-                  <div className="floating-lightbulb">💡</div>
+                <div className={styles['floating-elements']}>
+                  <div className={styles['floating-book']}>📚</div>
+                  <div className={styles['floating-graduation']}>🎓</div>
+                  <div className={styles['floating-lightbulb']}>💡</div>
                 </div>
               </div>
-              <div className="hero-image-glow"></div>
+              <div className={styles['hero-image-glow']}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Stats Section */}
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
@@ -362,14 +363,14 @@ const EdTechPage = () => {
       </div>
 
       {/* Hero Actions Section */}
-      <div className="hero-actions-section">
-        <div className="container">
-          <div className="hero-actions">
-            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-              <FaHeadset className="btn-icon" />
+      <div className={styles['hero-actions-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-actions']}>
+            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <FaHeadset className={styles['btn-icon']} />
               Start Your EdTech Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
               View Educational Portfolio
             </a></Link>
           </div>
@@ -377,35 +378,35 @@ const EdTechPage = () => {
       </div>
 
       {/* Services Section */}
-      <div className="edtech-services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Comprehensive EdTech Development Services</h2>
-            <p className="section-subtitle">
+      <div className={styles['edtech-services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Comprehensive EdTech Development Services</h2>
+            <p className={styles['section-subtitle']}>
               From learning management systems to AI-powered tutoring, we deliver end-to-end educational technology solutions that revolutionize learning experiences.
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>
                   Get Started
-                  <FaArrowRight className="cta-icon" />
+                  <FaArrowRight className={styles['cta-icon']} />
                 </a></Link>
               </div>
             ))}
@@ -414,18 +415,18 @@ const EdTechPage = () => {
       </div>
 
       {/* Portfolio Section */}
-      <div className="edtech-portfolio-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our EdTech Success Stories</h2>
-            <p className="section-subtitle">
+      <div className={styles['edtech-portfolio-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our EdTech Success Stories</h2>
+            <p className={styles['section-subtitle']}>
               Discover how we've helped educational institutions and organizations build innovative learning solutions that improve educational outcomes.
             </p>
           </div>
-          <div className="edtech-portfolio-grid">
+          <div className={styles['edtech-portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -434,25 +435,25 @@ const EdTechPage = () => {
                       e.target.nextSibling.style.display = 'flex';
                     }}
                   />
-                  <div className="portfolio-image-placeholder" style={{ display: 'none', color: project.color }}>
+                  <div className={styles['portfolio-image-placeholder']} style={{ display: 'none', color: project.color }}>
                     <FaGraduationCap size={60} />
                   </div>
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-category">{project.category}</div>
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-category']}>{project.category}</div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
-                  <div className="portfolio-results">
+                  <div className={styles['portfolio-results']}>
                     {project.results.map((result, idx) => (
-                      <div key={idx} className="result-item">
-                        <FaCheckCircle className="result-icon" />
+                      <div key={idx} className={styles['result-item']}>
+                        <FaCheckCircle className={styles['result-icon']} />
                         {result}
                       </div>
                     ))}
@@ -465,22 +466,22 @@ const EdTechPage = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="edtech-technologies-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Advanced EdTech Technologies We Master</h2>
-            <p className="section-subtitle">
+      <div className={styles['edtech-technologies-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Advanced EdTech Technologies We Master</h2>
+            <p className={styles['section-subtitle']}>
               Our expertise spans across cutting-edge technologies and educational standards that power modern learning platforms.
             </p>
           </div>
-          <div className="edtech-technologies-grid">
+          <div className={styles['edtech-technologies-grid']}>
             {technologies.map((techCategory, index) => (
-              <div key={index} className="tech-category-card">
-                <h3 className="tech-category-title">{techCategory.category}</h3>
-                <ul className="tech-category-list">
+              <div key={index} className={styles['tech-category-card']}>
+                <h3 className={styles['tech-category-title']}>{techCategory.category}</h3>
+                <ul className={styles['tech-category-list']}>
                   {techCategory.items.map((item, idx) => (
-                    <li key={idx} className="tech-category-item">
-                      <item.icon className="tech-icon" />
+                    <li key={idx} className={styles['tech-category-item']}>
+                      <item.icon className={styles['tech-icon']} />
                       {item.name}
                     </li>
                   ))}
@@ -492,25 +493,25 @@ const EdTechPage = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="edtech-testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Educational Clients Say</h2>
-            <p className="section-subtitle">
+      <div className={styles['edtech-testimonials-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our Educational Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Hear from educators and institutions who trust us with their digital transformation in education.
             </p>
           </div>
-          <div className="edtech-testimonials-grid">
+          <div className={styles['edtech-testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-rating">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-rating']}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FaStar key={i} className="star-icon" />
+                    <FaStar key={i} className={styles['star-icon']} />
                   ))}
                 </div>
-                <p className="testimonial-text">"{testimonial.text}"</p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">
+                <p className={styles['testimonial-text']}>"{testimonial.text}"</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
@@ -519,13 +520,13 @@ const EdTechPage = () => {
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className="avatar-placeholder" style={{ display: 'none' }}>
+                    <div className={styles['avatar-placeholder']} style={{ display: 'none' }}>
                       <FaGraduationCap />
                     </div>
                   </div>
-                  <div className="author-info">
-                    <div className="author-name">{testimonial.name}</div>
-                    <div className="author-company">{testimonial.company}</div>
+                  <div className={styles['author-info']}>
+                    <div className={styles['author-name']}>{testimonial.name}</div>
+                    <div className={styles['author-company']}>{testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -535,19 +536,19 @@ const EdTechPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="edtech-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Transform Education with Technology?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['edtech-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Transform Education with Technology?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's build innovative educational solutions that enhance learning experiences, improve outcomes, and prepare students for the future.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Schedule Educational Consultation
               </a></Link>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './ReactNativePage.module.css';
 import Link from 'next/link';
 import {
   FaMobile, FaCode, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -53,87 +54,87 @@ const ReactNativePage = () => {
   ];
 
   return (
-    <div className="react-native-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['react-native-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaMobile className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaMobile className={styles['badge-icon']} />
                 <span>Expert React Native Development</span>
               </div>
-              <h1 className="hero-title">
-                Build <span className="highlight">React Native</span> Mobile Apps
+              <h1 className={styles['hero-title']}>
+                Build <span className={styles.highlight}>React Native</span> Mobile Apps
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Create powerful, cross-platform mobile applications with React Native. One codebase for iOS and Android, delivering native performance and user experience.
               </p>
-              <div className="hero-actions">
-                <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
-                <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
+              <div className={styles['hero-actions']}>
+                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
+                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Portfolio</a></Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+              <div key={index} className={styles['stat-item']}>
+                <span className={styles['stat-number']}>{stat.number}</span>
+                <span className={styles['stat-label']}>{stat.label}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="services-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our React Native Services</h2>
-            <p className="section-subtitle">
+      <div className={styles['services-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our React Native Services</h2>
+            <p className={styles['section-subtitle']}>
               Comprehensive mobile app development services
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <ul className="service-features">
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Get Started<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Build Your Mobile App?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Build Your Mobile App?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's create a powerful React Native application that works seamlessly on iOS and Android.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Get Started Today</a></Link>
-              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Started Today</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

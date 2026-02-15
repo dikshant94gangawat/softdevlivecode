@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MissionVisionPage.module.css';
 import Link from 'next/link';
 
 import {
@@ -48,22 +49,22 @@ const MissionVisionPage = () => {
   ];
 
   return (
-    <div className="mission-vision-page">
-      <div className="page-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+    <div className={styles['mission-vision-page']}>
+      <div className={styles['page-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <FaRocket className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['hero-container']}>
+            <div className={styles['hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaRocket className={styles['badge-icon']} />
                 <span>Our Purpose</span>
               </div>
-              <h1 className="hero-title">
-                Mission & <span className="highlight">Vision</span>
+              <h1 className={styles['hero-title']}>
+                Mission & <span className={styles.highlight}>Vision</span>
               </h1>
-              <p className="hero-subtitle">
+              <p className={styles['hero-subtitle']}>
                 Discover what drives us and where we're heading. Our mission and vision guide everything we do.
               </p>
             </div>
@@ -71,62 +72,62 @@ const MissionVisionPage = () => {
         </div>
       </div>
 
-      <div className="mission-vision-section">
-        <div className="container">
-          <div className="mission-vision-grid">
-            <div className="mission-card">
-              <div className="mission-icon">
+      <div className={styles['mission-vision-section']}>
+        <div className={styles.container}>
+          <div className={styles['mission-vision-grid']}>
+            <div className={styles['mission-card']}>
+              <div className={styles['mission-icon']}>
                 <mission.icon />
               </div>
-              <h2 className="mission-title">{mission.title}</h2>
-              <p className="mission-description">{mission.description}</p>
+              <h2 className={styles['mission-title']}>{mission.title}</h2>
+              <p className={styles['mission-description']}>{mission.description}</p>
             </div>
-            <div className="vision-card">
-              <div className="vision-icon">
+            <div className={styles['vision-card']}>
+              <div className={styles['vision-icon']}>
                 <vision.icon />
               </div>
-              <h2 className="vision-title">{vision.title}</h2>
-              <p className="vision-description">{vision.description}</p>
+              <h2 className={styles['vision-title']}>{vision.title}</h2>
+              <p className={styles['vision-description']}>{vision.description}</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="values-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Core Values</h2>
-            <p className="section-subtitle">
+      <div className={styles['values-section']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Core Values</h2>
+            <p className={styles['section-subtitle']}>
               The principles that guide our actions and decisions
             </p>
           </div>
-          <div className="values-grid">
+          <div className={styles['values-grid']}>
             {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">
+              <div key={index} className={styles['value-card']}>
+                <div className={styles['value-icon']}>
                   <value.icon />
                 </div>
-                <h3 className="value-title">{value.title}</h3>
-                <p className="value-description">{value.description}</p>
+                <h3 className={styles['value-title']}>{value.title}</h3>
+                <p className={styles['value-description']}>{value.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h3 className="cta-title">Ready to Work With Us?</h3>
-            <p className="cta-subtitle">
+      <div className={styles['cta-section']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h3 className={styles['cta-title']}>Ready to Work With Us?</h3>
+            <p className={styles['cta-subtitle']}>
               Let's discuss how we can help you achieve your goals.
             </p>
-            <div className="cta-actions">
-              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-actions']}>
+              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Get in Touch
               </a></Link>
-              <Link href="/our-story" legacyBehavior><a className="btn btn-outline">
+              <Link href="/our-story" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
                 Learn More
               </a></Link>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './UIUXDesign.module.css';
 import Link from 'next/link';
 import {
   FaPalette, FaMobile, FaDesktop, FaUsers, FaStar, FaCheckCircle, 
@@ -203,95 +204,95 @@ const UIUXDesign = () => {
   ];
 
   return (
-    <div className="uiux-page">
+    <div className={styles['uiux-page']}>
       {/* Hero Section */}
-      <div className="uiux-hero">
-        <div className="hero-background">
-          <div className="hero-pattern"></div>
+      <div className={styles['uiux-hero']}>
+        <div className={styles['hero-background']}>
+          <div className={styles['hero-pattern']}></div>
         </div>
-        <div className="container">
-          <div className="uiux-hero-container">
-            <div className="uiux-hero-content">
-              <div className="hero-badge">
-                <FaPalette className="badge-icon" />
+        <div className={styles.container}>
+          <div className={styles['uiux-hero-container']}>
+            <div className={styles['uiux-hero-content']}>
+              <div className={styles['hero-badge']}>
+                <FaPalette className={styles['badge-icon']} />
                 <span>Leading UI/UX Design Agency</span>
               </div>
-              <h1 className="uiux-hero-title">
-                Exceptional <span className="highlight">UI/UX Design</span> That Converts
+              <h1 className={styles['uiux-hero-title']}>
+                Exceptional <span className={styles.highlight}>UI/UX Design</span> That Converts
               </h1>
-              <p className="uiux-hero-subtitle">
+              <p className={styles['uiux-hero-subtitle']}>
                 Create stunning user experiences that delight your users and drive business results. We design intuitive, beautiful, and conversion-focused interfaces that make your brand stand out.
               </p>
             </div>
-            <div className="uiux-hero-image">
-              <div className="uiux-mockup-container">
-                <div className="uiux-device uiux-laptop">
-                  <div className="laptop-screen">
-                    <div className="uiux-interface">
-                      <div className="uiux-header">
-                        <div className="nav-bar">
-                          <div className="logo">DesignStudio</div>
-                          <div className="nav-items">
-                            <div className="nav-item">Home</div>
-                            <div className="nav-item">Portfolio</div>
-                            <div className="nav-item">Services</div>
-                            <div className="nav-item">Contact</div>
+            <div className={styles['uiux-hero-image']}>
+              <div className={styles['uiux-mockup-container']}>
+                <div className={`styles['uiux-device'] styles['uiux-laptop']`}>
+                  <div className={styles['laptop-screen']}>
+                    <div className={styles['uiux-interface']}>
+                      <div className={styles['uiux-header']}>
+                        <div className={styles['nav-bar']}>
+                          <div className={styles.logo}>DesignStudio</div>
+                          <div className={styles['nav-items']}>
+                            <div className={styles['nav-item']}>Home</div>
+                            <div className={styles['nav-item']}>Portfolio</div>
+                            <div className={styles['nav-item']}>Services</div>
+                            <div className={styles['nav-item']}>Contact</div>
                           </div>
                         </div>
                       </div>
-                      <div className="uiux-content">
-                        <div className="hero-section">
-                          <div className="hero-text">
-                            <div className="hero-title">Creative Design Solutions</div>
-                            <div className="hero-subtitle">Transform your ideas into reality</div>
-                            <div className="hero-button">Get Started</div>
+                      <div className={styles['uiux-content']}>
+                        <div className={styles['hero-section']}>
+                          <div className={styles['hero-text']}>
+                            <div className={styles['hero-title']}>Creative Design Solutions</div>
+                            <div className={styles['hero-subtitle']}>Transform your ideas into reality</div>
+                            <div className={styles['hero-button']}>Get Started</div>
                           </div>
-                          <div className="hero-visual">
-                            <div className="design-element circle"></div>
-                            <div className="design-element square"></div>
-                            <div className="design-element triangle"></div>
+                          <div className={styles['hero-visual']}>
+                            <div className={`styles['design-element'] styles.circle`}></div>
+                            <div className={`styles['design-element'] styles.square`}></div>
+                            <div className={`styles['design-element'] styles.triangle`}></div>
                           </div>
                         </div>
-                        <div className="features-section">
-                          <div className="feature-card">
-                            <div className="feature-icon">🎨</div>
-                            <div className="feature-title">UI Design</div>
+                        <div className={styles['features-section']}>
+                          <div className={styles['feature-card']}>
+                            <div className={styles['feature-icon']}>🎨</div>
+                            <div className={styles['feature-title']}>UI Design</div>
                           </div>
-                          <div className="feature-card">
-                            <div className="feature-icon">👥</div>
-                            <div className="feature-title">UX Research</div>
+                          <div className={styles['feature-card']}>
+                            <div className={styles['feature-icon']}>👥</div>
+                            <div className={styles['feature-title']}>UX Research</div>
                           </div>
-                          <div className="feature-card">
-                            <div className="feature-icon">📱</div>
-                            <div className="feature-title">Mobile Design</div>
+                          <div className={styles['feature-card']}>
+                            <div className={styles['feature-icon']}>📱</div>
+                            <div className={styles['feature-title']}>Mobile Design</div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="uiux-device uiux-tablet">
-                  <div className="tablet-screen">
-                    <div className="tablet-uiux-interface">
-                      <div className="tablet-header">
-                        <div className="tablet-nav">
-                          <div className="menu-icon">☰</div>
-                          <div className="tablet-logo">Design</div>
-                          <div className="search-icon">🔍</div>
+                <div className={`styles['uiux-device'] styles['uiux-tablet']`}>
+                  <div className={styles['tablet-screen']}>
+                    <div className={styles['tablet-uiux-interface']}>
+                      <div className={styles['tablet-header']}>
+                        <div className={styles['tablet-nav']}>
+                          <div className={styles['menu-icon']}>☰</div>
+                          <div className={styles['tablet-logo']}>Design</div>
+                          <div className={styles['search-icon']}>🔍</div>
                         </div>
                       </div>
-                      <div className="tablet-content">
-                        <div className="tablet-hero">
-                          <div className="tablet-hero-title">Portfolio</div>
-                          <div className="tablet-hero-subtitle">Our Latest Work</div>
+                      <div className={styles['tablet-content']}>
+                        <div className={styles['tablet-hero']}>
+                          <div className={styles['tablet-hero-title']}>Portfolio</div>
+                          <div className={styles['tablet-hero-subtitle']}>Our Latest Work</div>
                         </div>
-                        <div className="tablet-grid">
+                        <div className={styles['tablet-grid']}>
                           {[1, 2, 3, 4].map(i => (
-                            <div key={i} className="tablet-project">
-                              <div className="tablet-project-image"></div>
-                              <div className="tablet-project-info">
-                                <div className="tablet-project-title">Project {i}</div>
-                                <div className="tablet-project-type">UI/UX Design</div>
+                            <div key={i} className={styles['tablet-project']}>
+                              <div className={styles['tablet-project-image']}></div>
+                              <div className={styles['tablet-project-info']}>
+                                <div className={styles['tablet-project-title']}>Project {i}</div>
+                                <div className={styles['tablet-project-type']}>UI/UX Design</div>
                               </div>
                             </div>
                           ))}
@@ -300,59 +301,59 @@ const UIUXDesign = () => {
                     </div>
                   </div>
                 </div>
-                <div className="uiux-device uiux-mobile">
-                  <div className="mobile-screen">
-                    <div className="mobile-uiux-interface">
-                      <div className="mobile-header">
-                        <div className="mobile-nav">
-                          <div className="back-icon">←</div>
-                          <div className="mobile-logo">App</div>
-                          <div className="more-icon">⋯</div>
+                <div className={`styles['uiux-device'] styles['uiux-mobile']`}>
+                  <div className={styles['mobile-screen']}>
+                    <div className={styles['mobile-uiux-interface']}>
+                      <div className={styles['mobile-header']}>
+                        <div className={styles['mobile-nav']}>
+                          <div className={styles['back-icon']}>←</div>
+                          <div className={styles['mobile-logo']}>App</div>
+                          <div className={styles['more-icon']}>⋯</div>
                         </div>
                       </div>
-                      <div className="mobile-content">
-                        <div className="mobile-profile">
-                          <div className="profile-avatar"></div>
-                          <div className="profile-name">John Designer</div>
-                          <div className="profile-title">UI/UX Designer</div>
+                      <div className={styles['mobile-content']}>
+                        <div className={styles['mobile-profile']}>
+                          <div className={styles['profile-avatar']}></div>
+                          <div className={styles['profile-name']}>John Designer</div>
+                          <div className={styles['profile-title']}>UI/UX Designer</div>
                         </div>
-                        <div className="mobile-stats">
-                          <div className="stat">
-                            <div className="stat-number">127</div>
-                            <div className="stat-label">Projects</div>
+                        <div className={styles['mobile-stats']}>
+                          <div className={styles.stat}>
+                            <div className={styles['stat-number']}>127</div>
+                            <div className={styles['stat-label']}>Projects</div>
                           </div>
-                          <div className="stat">
-                            <div className="stat-number">45K</div>
-                            <div className="stat-label">Followers</div>
+                          <div className={styles.stat}>
+                            <div className={styles['stat-number']}>45K</div>
+                            <div className={styles['stat-label']}>Followers</div>
                           </div>
-                          <div className="stat">
-                            <div className="stat-number">892</div>
-                            <div className="stat-label">Likes</div>
+                          <div className={styles.stat}>
+                            <div className={styles['stat-number']}>892</div>
+                            <div className={styles['stat-label']}>Likes</div>
                           </div>
                         </div>
-                        <div className="mobile-actions">
-                          <div className="action-btn primary">Follow</div>
-                          <div className="action-btn secondary">Message</div>
+                        <div className={styles['mobile-actions']}>
+                          <div className={`styles['action-btn'] styles.primary`}>Follow</div>
+                          <div className={`styles['action-btn'] styles.secondary`}>Message</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="uiux-image-glow"></div>
+              <div className={styles['uiux-image-glow']}></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Hero Stats Section */}
-      <div className="hero-stats-section">
-        <div className="container">
-          <div className="hero-stats">
+      <div className={styles['hero-stats-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-stats']}>
             {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
+              <div key={index} className={styles['stat-item']}>
+                <div className={styles['stat-number']}>{stat.number}</div>
+                <div className={styles['stat-label']}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -360,44 +361,44 @@ const UIUXDesign = () => {
       </div>
 
       {/* Hero Actions Section */}
-      <div className="hero-actions-section">
-        <div className="container">
-          <div className="hero-actions">
-            <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Design Project</a></Link>
-            <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
+      <div className={styles['hero-actions-section']}>
+        <div className={styles.container}>
+          <div className={styles['hero-actions']}>
+            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Design Project</a></Link>
+            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Portfolio</a></Link>
           </div>
         </div>
       </div>
 
       {/* Design Solutions Section */}
-      <section className="design-solutions">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Why Choose Our Design Solutions</h2>
-            <p className="section-subtitle">
+      <section className={styles['design-solutions']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Why Choose Our Design Solutions</h2>
+            <p className={styles['section-subtitle']}>
               User-centered design approach that creates meaningful and impactful experiences
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {designSolutions.map((solution, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: '#e74c3c' }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: '#e74c3c' }}>
                   <solution.icon />
                 </div>
-                <div className="solution-category">{solution.category}</div>
-                <h3 className="service-title">{solution.title}</h3>
-                <p className="service-description">{solution.description}</p>
+                <div className={styles['solution-category']}>{solution.category}</div>
+                <h3 className={styles['service-title']}>{solution.title}</h3>
+                <p className={styles['service-description']}>{solution.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {solution.benefits.map((benefit, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {benefit}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">Learn More<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Learn More<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
@@ -405,33 +406,33 @@ const UIUXDesign = () => {
       </section>
 
       {/* Services Section */}
-      <section className="uiux-services">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our UI/UX Design Services</h2>
-            <p className="section-subtitle">
+      <section className={styles['uiux-services']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our UI/UX Design Services</h2>
+            <p className={styles['section-subtitle']}>
               Comprehensive design solutions for every stage of your product journey
             </p>
           </div>
-          <div className="services-grid">
+          <div className={styles['services-grid']}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon" style={{ color: service.color }}>
+              <div key={index} className={styles['service-card']}>
+                <div className={styles['service-icon']} style={{ color: service.color }}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={styles['service-title']}>{service.title}</h3>
+                <p className={styles['service-description']}>{service.description}</p>
 
-                <ul className="service-features">
+                <ul className={styles['service-features']}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={styles['service-feature']}>
+                      <FaCheckCircle className={styles['feature-icon']} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
+                <Link href="/contact" legacyBehavior><a className={styles['service-cta']}>Get Started<FaArrowRight className={styles['cta-icon']} /></a></Link>
               </div>
             ))}
           </div>
@@ -439,42 +440,42 @@ const UIUXDesign = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="uiux-portfolio">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Design Portfolio</h2>
-            <p className="section-subtitle">
+      <section className={styles['uiux-portfolio']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Design Portfolio</h2>
+            <p className={styles['section-subtitle']}>
               Successful design projects that showcase our expertise and creativity
             </p>
           </div>
-          <div className="portfolio-grid">
+          <div className={styles['portfolio-grid']}>
             {portfolio.map((project, index) => (
-              <div key={index} className="portfolio-card">
-                <div className="portfolio-image">
+              <div key={index} className={styles['portfolio-card']}>
+                <div className={styles['portfolio-image']}>
                   <img src={project.image} alt={project.title} />
-                  <div className="portfolio-overlay">
-                    <div className="portfolio-stats">
+                  <div className={styles['portfolio-overlay']}>
+                    <div className={styles['portfolio-stats']}>
                       {Object.entries(project.stats).map(([key, value]) => (
-                        <div key={key} className="portfolio-stat">
-                          <span className="stat-value">{value}</span>
-                          <span className="stat-key">{key}</span>
+                        <div key={key} className={styles['portfolio-stat']}>
+                          <span className={styles['stat-value']}>{value}</span>
+                          <span className={styles['stat-key']}>{key}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                <div className="portfolio-content">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-description">{project.description}</p>
-                  <div className="portfolio-technologies">
+                <div className={styles['portfolio-content']}>
+                  <h3 className={styles['portfolio-title']}>{project.title}</h3>
+                  <p className={styles['portfolio-description']}>{project.description}</p>
+                  <div className={styles['portfolio-technologies']}>
                     {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag">{tech}</span>
+                      <span key={idx} className={styles['tech-tag']}>{tech}</span>
                     ))}
                   </div>
-                  <div className="portfolio-features">
+                  <div className={styles['portfolio-features']}>
                     {project.features.map((feature, idx) => (
-                      <span key={idx} className="portfolio-feature">
-                        <FaCheckCircle className="feature-check" />
+                      <span key={idx} className={styles['portfolio-feature']}>
+                        <FaCheckCircle className={styles['feature-check']} />
                         {feature}
                       </span>
                     ))}
@@ -487,23 +488,23 @@ const UIUXDesign = () => {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="tech-stack">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Design Technology Stack</h2>
-            <p className="section-subtitle">
+      <section className={styles['tech-stack']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Design Technology Stack</h2>
+            <p className={styles['section-subtitle']}>
               Industry-leading tools and technologies for exceptional design outcomes
             </p>
           </div>
-          <div className="tech-categories">
+          <div className={styles['tech-categories']}>
             {techStack.map((category, index) => (
-              <div key={index} className="tech-category">
-                <h3 className="category-title">{category.category}</h3>
-                <div className="tech-items">
+              <div key={index} className={styles['tech-category']}>
+                <h3 className={styles['category-title']}>{category.category}</h3>
+                <div className={styles['tech-items']}>
                   {category.technologies.map((tech, idx) => (
-                    <div key={idx} className="tech-item">
-                      <tech.icon className="tech-icon" />
-                      <span className="tech-name">{tech.name}</span>
+                    <div key={idx} className={styles['tech-item']}>
+                      <tech.icon className={styles['tech-icon']} />
+                      <span className={styles['tech-name']}>{tech.name}</span>
                     </div>
                   ))}
                 </div>
@@ -514,15 +515,15 @@ const UIUXDesign = () => {
       </section>
 
       {/* Process Section */}
-      <section className="uiux-process">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Our Design Process</h2>
-            <p className="section-subtitle">
+      <section className={styles['uiux-process']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>Our Design Process</h2>
+            <p className={styles['section-subtitle']}>
               A proven methodology that ensures exceptional design outcomes
             </p>
           </div>
-          <div className="process-steps">
+          <div className={styles['process-steps']}>
             {[
               {
                 step: '01',
@@ -560,15 +561,15 @@ const UIUXDesign = () => {
                 color: '#f39c12'
               }
             ].map((process, index) => (
-              <div key={index} className="process-step">
-                <div className="step-number" style={{ backgroundColor: process.color }}>
+              <div key={index} className={styles['process-step']}>
+                <div className={styles['step-number']} style={{ backgroundColor: process.color }}>
                   {process.step}
                 </div>
-                <div className="step-icon" style={{ color: process.color }}>
+                <div className={styles['step-icon']} style={{ color: process.color }}>
                   <process.icon />
                 </div>
-                <h3 className="step-title">{process.title}</h3>
-                <p className="step-description">{process.description}</p>
+                <h3 className={styles['step-title']}>{process.title}</h3>
+                <p className={styles['step-description']}>{process.description}</p>
               </div>
             ))}
           </div>
@@ -576,31 +577,31 @@ const UIUXDesign = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="uiux-testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Our Design Clients Say</h2>
-            <p className="section-subtitle">
+      <section className={styles['uiux-testimonials']}>
+        <div className={styles.container}>
+          <div className={styles['section-header']}>
+            <h2 className={styles['section-title']}>What Our Design Clients Say</h2>
+            <p className={styles['section-subtitle']}>
               Success stories from businesses we've helped transform through design
             </p>
           </div>
-          <div className="testimonials-grid">
+          <div className={styles['testimonials-grid']}>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="testimonial-content">
-                  <div className="testimonial-stars">
+              <div key={index} className={styles['testimonial-card']}>
+                <div className={styles['testimonial-content']}>
+                  <div className={styles['testimonial-stars']}>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <FaStar key={i} className="star" />
+                      <FaStar key={i} className={styles.star} />
                     ))}
                   </div>
-                  <p className="testimonial-text">"{testimonial.content}"</p>
+                  <p className={styles['testimonial-text']}>"{testimonial.content}"</p>
                 </div>
-                <div className="testimonial-author">
-                  <div className="author-avatar">{testimonial.avatar}</div>
-                  <div className="author-info">
-                    <h4 className="author-name">{testimonial.name}</h4>
-                    <p className="author-position">{testimonial.position}</p>
-                    <p className="author-company">{testimonial.company}</p>
+                <div className={styles['testimonial-author']}>
+                  <div className={styles['author-avatar']}>{testimonial.avatar}</div>
+                  <div className={styles['author-info']}>
+                    <h4 className={styles['author-name']}>{testimonial.name}</h4>
+                    <p className={styles['author-position']}>{testimonial.position}</p>
+                    <p className={styles['author-company']}>{testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -610,19 +611,19 @@ const UIUXDesign = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="uiux-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">Ready to Create Amazing User Experiences?</h2>
-            <p className="cta-description">
+      <section className={styles['uiux-cta']}>
+        <div className={styles.container}>
+          <div className={styles['cta-content']}>
+            <h2 className={styles['cta-title']}>Ready to Create Amazing User Experiences?</h2>
+            <p className={styles['cta-description']}>
               Let's design beautiful, intuitive, and conversion-focused interfaces that delight your users and drive business growth.
             </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
+            <div className={styles['cta-buttons']}>
+              <Link to="/contact" className={`styles.btn styles['btn-primary']`}>
+                <FaHeadset className={styles['btn-icon']} />
                 Start Your Project
               </Link>
-              <Link to="/demo" className="btn btn-outline">
+              <Link to="/demo" className={`styles.btn styles['btn-outline']`}>
                 Schedule Consultation
               </Link>
             </div>

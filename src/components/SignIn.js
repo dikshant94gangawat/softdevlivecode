@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './SignIn.module.css';
 import Link from 'next/link';
 import { 
   FaGoogle, 
@@ -172,12 +173,12 @@ const SignIn = () => {
   };
 
   return (
-    <div className="signin-page">
-      <div className="signin-container">
+    <div className={styles['signin-page']}>
+      <div className={styles['signin-container']}>
         {/* Header */}
-        <div className="signin-header">
+        <div className={styles['signin-header']}>
           <Link href="/" legacyBehavior>
-            <a className="back-link">
+            <a className={styles['back-link']}>
               <FaArrowLeft />
               <span>Back to Home</span>
             </a>
@@ -185,38 +186,38 @@ const SignIn = () => {
         </div>
 
         {/* Main Content */}
-        <div className="signin-content">
+        <div className={styles['signin-content']}>
           {/* Left Side - Welcome */}
-          <div className="signin-welcome">
-            <div className="welcome-content">
-              <div className="brand-section">
-                <div className="brand-icon">
+          <div className={styles['signin-welcome']}>
+            <div className={styles['welcome-content']}>
+              <div className={styles['brand-section']}>
+                <div className={styles['brand-icon']}>
                   <FaUser />
                 </div>
                 <h1>Welcome Back</h1>
                 <p>Sign in to your SoftDevSquad account and continue your digital transformation journey</p>
               </div>
               
-              <div className="features-list">
-                <div className="feature-item">
-                  <span className="feature-icon">🚀</span>
+              <div className={styles['features-list']}>
+                <div className={styles['feature-item']}>
+                  <span className={styles['feature-icon']}>🚀</span>
                   <span>Access your project dashboard</span>
                 </div>
-                <div className="feature-item">
-                  <span className="feature-icon">💬</span>
+                <div className={styles['feature-item']}>
+                  <span className={styles['feature-icon']}>💬</span>
                   <span>Direct communication with your team</span>
                 </div>
-                <div className="feature-item">
-                  <span className="feature-icon">📊</span>
+                <div className={styles['feature-item']}>
+                  <span className={styles['feature-icon']}>📊</span>
                   <span>Real-time project progress tracking</span>
                 </div>
-                <div className="feature-item">
-                  <span className="feature-icon">🔒</span>
+                <div className={styles['feature-item']}>
+                  <span className={styles['feature-icon']}>🔒</span>
                   <span>Secure and encrypted data access</span>
                 </div>
               </div>
               
-              <div className="help-section">
+              <div className={styles['help-section']}>
                 <p>Need help? <Link href="/contact" legacyBehavior><a>Contact our support team</a></Link></p>
                 <p>Don't have an account? <Link href="/demo" legacyBehavior><a>Book a demo</a></Link></p>
               </div>
@@ -224,26 +225,26 @@ const SignIn = () => {
           </div>
 
           {/* Right Side - Form */}
-          <div className="signin-form-section">
-            <div className="form-container">
-              <div className="form-header">
-                <FaSignInAlt className="form-icon" />
+          <div className={styles['signin-form-section']}>
+            <div className={styles['form-container']}>
+              <div className={styles['form-header']}>
+                <FaSignInAlt className={styles['form-icon']} />
                 <h2>Sign In</h2>
                 <p>Enter your credentials to access your account</p>
               </div>
 
               {error && (
-                <div className="error-alert">
+                <div className={styles['error-alert']}>
                   <span>{error}</span>
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="signin-form">
+              <form onSubmit={handleSubmit} className={styles['signin-form']}>
                 {/* Email Field */}
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="email">Email Address</label>
-                  <div className="input-container">
-                    <FaEnvelope className="input-icon" />
+                  <div className={styles['input-container']}>
+                    <FaEnvelope className={styles['input-icon']} />
                     <input
                       type="email"
                       id="email"
@@ -257,10 +258,10 @@ const SignIn = () => {
                 </div>
 
                 {/* Password Field */}
-                <div className="form-group">
+                <div className={styles['form-group']}>
                   <label htmlFor="password">Password</label>
-                  <div className="input-container">
-                    <FaLock className="input-icon" />
+                  <div className={styles['input-container']}>
+                    <FaLock className={styles['input-icon']} />
                     <input
                       type={showPassword ? 'text' : 'password'}
                       id="password"
@@ -272,7 +273,7 @@ const SignIn = () => {
                     />
                     <button
                       type="button"
-                      className="password-toggle"
+                      className={styles['password-toggle']}
                       onClick={() => setShowPassword(!showPassword)}
                     >
                       {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -281,24 +282,24 @@ const SignIn = () => {
                 </div>
 
                 {/* Form Options */}
-                <div className="form-options">
-                  <label className="remember-me">
+                <div className={styles['form-options']}>
+                  <label className={styles['remember-me']}>
                     <input type="checkbox" />
-                    <span className="checkmark"></span>
+                    <span className={styles.checkmark}></span>
                     Remember me
                   </label>
-                  <Link href="/forgot-password" legacyBehavior><a className="forgot-link">Forgot Password?</a></Link>
+                  <Link href="/forgot-password" legacyBehavior><a className={styles['forgot-link']}>Forgot Password?</a></Link>
                 </div>
 
                 {/* Submit Button */}
                 <button 
                   type="submit" 
-                  className="signin-btn"
+                  className={styles['signin-btn']}
                   disabled={isLoading}
                 >
                   {isLoading ? (
                     <>
-                      <span className="loading-spinner"></span>
+                      <span className={styles['loading-spinner']}></span>
                       Signing in...
                     </>
                   ) : (
@@ -310,20 +311,20 @@ const SignIn = () => {
                 </button>
 
                 {/* Divider */}
-                <div className="divider">
+                <div className={styles.divider}>
                   <span>or</span>
                 </div>
 
                 {/* Google Sign In */}
                 <button 
                   type="button" 
-                  className="google-btn"
+                  className={styles['google-btn']}
                   onClick={handleGoogleSignIn}
                   disabled={isLoading || isGoogleLoading || !GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID === 'YOUR_GOOGLE_CLIENT_ID'}
                 >
                   {isGoogleLoading ? (
                     <>
-                      <span className="loading-spinner"></span>
+                      <span className={styles['loading-spinner']}></span>
                       Signing in with Google...
                     </>
                   ) : (!GOOGLE_CLIENT_ID || GOOGLE_CLIENT_ID === 'YOUR_GOOGLE_CLIENT_ID') ? (
@@ -341,7 +342,7 @@ const SignIn = () => {
               </form>
 
               {/* Demo Credentials */}
-              <div className="demo-info">
+              <div className={styles['demo-info']}>
                 <h4>Demo Credentials</h4>
                 <p><strong>Email:</strong> demo@softdevsquad.com</p>
                 <p><strong>Password:</strong> Any password</p>
