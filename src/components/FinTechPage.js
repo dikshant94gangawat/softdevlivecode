@@ -324,15 +324,15 @@ const FinTechPage = () => {
                           { name: 'Salary Deposit', amount: '+$5,200.00', type: 'credit' },
                           { name: 'Amazon', amount: '-$89.47', type: 'debit' }
                         ].map((transaction, index) => (
-                          <div key={index} className="transaction-item">
-                            <div className="transaction-icon"></div>
-                            <div className="transaction-details">
-                              <div className="transaction-name">{transaction.name}</div>
-                              <div className={`${transaction-amount} ${${transaction.type}}`}>
-                                {transaction.amount}
+                            <div key={index} className={styles['transaction-item']}>
+                              <div className={styles['transaction-icon']}></div>
+                              <div className={styles['transaction-details']}>
+                                <div className={styles['transaction-name']}>{transaction.name}</div>
+                                <div className={`${styles['transaction-amount']} ${styles[transaction.type]}`}>
+                                  {transaction.amount}
+                                </div>
                               </div>
                             </div>
-                          </div>
                         ))}
                       </div>
                     </div>
