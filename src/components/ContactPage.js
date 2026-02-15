@@ -375,7 +375,7 @@ const ContactPage = () => {
 
                 <button 
                   type="submit" 
-                  className={`${submit-btn} ${${isSubmitting} ${?} ${'submitting'} ${:} ${''}}`}
+                  className={`${styles['submit-btn']} ${isSubmitting ? styles['submitting'] : ''}`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
