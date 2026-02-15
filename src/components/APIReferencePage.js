@@ -120,15 +120,15 @@ const APIReferencePage = () => {
           <div className="api-layout">
             <div className="api-sidebar">
               <h3 className="sidebar-title">Endpoints</h3>
-              <ul className="endpoint-list">
+              <ul className={styles['endpoint-list']}>
                 {apiEndpoints.map((endpoint, index) => (
                   <li key={index}>
                     <button
-                      className={`${endpoint-item} ${${selectedEndpoint} ${===} ${index} ${?} ${'active'} ${:} ${''}}`}
+                      className={`${styles['endpoint-item']} ${selectedEndpoint === index ? styles.active : ''}`}
                       onClick={() => setSelectedEndpoint(index)}
                     >
-                      <span className="endpoint-method">{endpoint.method}</span>
-                      <span className="endpoint-path">{endpoint.path}</span>
+                      <span className={styles['endpoint-method']}>{endpoint.method}</span>
+                      <span className={styles['endpoint-path']}>{endpoint.path}</span>
                     </button>
                   </li>
                 ))}
