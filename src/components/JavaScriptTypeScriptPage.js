@@ -74,11 +74,11 @@ const JavaScriptTypeScriptPage = () => {
                 Build scalable, type-safe applications with JavaScript and TypeScript. From frontend to backend, we deliver modern solutions that drive business growth.
               </p>
               <div className={styles['hero-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                   <FaHeadset className={styles['btn-icon']} />
                   Start Your Project
                 </a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                   View Portfolio
                 </a></Link>
               </div>
@@ -142,11 +142,11 @@ const JavaScriptTypeScriptPage = () => {
               Let's create powerful, scalable applications that drive your business forward.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </a></Link>
             </div>

@@ -270,7 +270,7 @@ const BlockChainDevelopment = () => {
                                 </div>
                                 <div className="crypto-value">
                                   <div className="value">{crypto.value}</div>
-                                  <div className={`change ${crypto.change.startsWith('+') ? 'positive' : 'negative'}`}>
+                                  <div className={`${change} ${${crypto.change.startsWith('+')} ${?} ${'positive'} ${:} ${'negative'}}`}>
                                     {crypto.change}
                                   </div>
                                 </div>

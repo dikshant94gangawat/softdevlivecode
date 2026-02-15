@@ -74,11 +74,11 @@ const CloudSolutionsPage = () => {
                 Migrate to the cloud, optimize infrastructure, and scale your applications with AWS, Azure, and GCP solutions.
               </p>
               <div className={styles['hero-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                   <FaHeadset className={styles['btn-icon']} />
                   Start Your Project
                 </a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                   View Portfolio
                 </a></Link>
               </div>
@@ -142,11 +142,11 @@ const CloudSolutionsPage = () => {
               Let's migrate your infrastructure and scale your applications in the cloud.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </a></Link>
             </div>

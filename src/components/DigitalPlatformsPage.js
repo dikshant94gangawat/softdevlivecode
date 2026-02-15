@@ -272,11 +272,11 @@ const DigitalPlatformsPage = () => {
               From enterprise platforms to customer experience hubs, we create comprehensive digital ecosystems that unify your business operations and drive growth.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Your Platform
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Explore Platforms
               </a></Link>
             </div>
@@ -473,11 +473,11 @@ const DigitalPlatformsPage = () => {
               Transform your business with a powerful digital platform that scales with your growth.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Platform Development
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 <FaUsers className={styles['btn-icon']} />
                 Schedule Strategy Call
               </a></Link>

@@ -375,7 +375,7 @@ const ContactPage = () => {
 
                 <button 
                   type="submit" 
-                  className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
+                  className={`${submit-btn} ${${isSubmitting} ${?} ${'submitting'} ${:} ${''}}`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -509,10 +509,10 @@ const ContactPage = () => {
               Let's discuss your project and see how we can help bring your vision to life
             </p>
             <div className={styles['cta-actions']}>
-              <a href="tel:+917760554526" className={`styles.btn styles['btn-primary']`}>
+              <a href="tel:+917760554526" className={`${styles.btn} ${styles['btn-primary']}`}>
                 📞 Call Now
               </a>
-              <Link href="/services" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/services" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Services
               </a></Link>
             </div>

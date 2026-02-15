@@ -222,11 +222,11 @@ const AgenciesPage = () => {
               Partner with us to expand your service offerings, deliver exceptional client projects, and grow your agency with white label development solutions.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Become a Partner
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Partnership Models
               </a></Link>
             </div>
@@ -435,11 +435,11 @@ const AgenciesPage = () => {
               Join 150+ agencies who trust us to deliver exceptional development services under their brand. Let's grow together.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Start Partnership
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Partnership Call
               </a></Link>
             </div>

@@ -280,7 +280,7 @@ const HealthTechPage = () => {
                   <div className={styles['dashboard-header']}>
                     <div className={styles['header-title']}>HealthTech Dashboard</div>
                     <div className={styles['header-status']}>
-                      <div className={`styles['status-dot'] styles.active`}></div>
+                      <div className={`${styles['status-dot']} ${styles.active}`}></div>
                       <span>Live</span>
                     </div>
                   </div>
@@ -374,11 +374,11 @@ const HealthTechPage = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
               <FaHeadset className={styles['btn-icon']} />
               Start Your HealthTech Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
               View Healthcare Portfolio
             </a></Link>
           </div>
@@ -552,11 +552,11 @@ const HealthTechPage = () => {
               Let's build innovative healthcare solutions that improve patient outcomes, enhance operational efficiency, and ensure regulatory compliance.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Healthcare Consultation
               </a></Link>
             </div>

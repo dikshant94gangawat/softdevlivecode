@@ -127,7 +127,7 @@ const PricingPage = () => {
           </div>
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
+              <div key={index} className={`${pricing-card} ${${plan.popular} ${?} ${'popular'} ${:} ${''}}`}>
                 {plan.popular && <div className="popular-badge">Most Popular</div>}
                 <div className="pricing-icon">
                   <plan.icon />

@@ -127,7 +127,7 @@ const PricingPage = () => {
           </div>
           <div className={styles['pricing-grid']}>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
+              <div key={index} className={`${pricing-card} ${${plan.popular} ${?} ${'popular'} ${:} ${''}}`}>
                 {plan.popular && <div className={styles['popular-badge']}>Most Popular</div>}
                 <div className={styles['pricing-icon']}>
                   <plan.icon />
@@ -181,8 +181,8 @@ const PricingPage = () => {
               Every project is unique. Contact us for a personalized quote based on your specific requirements.
             </p>
             <div className={styles['cta-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Custom Quote</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Demo</a></Link>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Get Custom Quote</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Schedule Demo</a></Link>
             </div>
           </div>
         </div>

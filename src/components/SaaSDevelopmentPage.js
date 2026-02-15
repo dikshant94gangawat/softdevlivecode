@@ -271,8 +271,8 @@ const SaaSDevelopmentPage = () => {
               From MVP to enterprise-scale SaaS platforms, we deliver cloud-native solutions with multi-tenant architecture, robust security, and seamless user experiences.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaRocket className={styles['btn-icon']} />Start Your SaaS Journey</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View SaaS Portfolio</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaRocket className={styles['btn-icon']} />Start Your SaaS Journey</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View SaaS Portfolio</a></Link>
             </div>
             <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
@@ -464,8 +464,8 @@ const SaaSDevelopmentPage = () => {
               Let's build a scalable SaaS platform that grows with your business and delights your users.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaRocket className={styles['btn-icon']} />Start Building Now</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}><FaUsers className={styles['btn-icon']} />Schedule Discovery Call</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaRocket className={styles['btn-icon']} />Start Building Now</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}><FaUsers className={styles['btn-icon']} />Schedule Discovery Call</a></Link>
             </div>
           </div>
         </div>

@@ -73,11 +73,11 @@ const MaintenanceSupportPage = () => {
                 Keep your systems running smoothly with our comprehensive maintenance and support services. Proactive monitoring, regular updates, and expert support ensure optimal performance.
               </p>
               <div className={styles['hero-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                   <FaHeadset className={styles['btn-icon']} />
                   Get Support
                 </a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                   View Services
                 </a></Link>
               </div>
@@ -141,11 +141,11 @@ const MaintenanceSupportPage = () => {
               Let's ensure your systems are always running smoothly with our expert maintenance services.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </a></Link>
             </div>

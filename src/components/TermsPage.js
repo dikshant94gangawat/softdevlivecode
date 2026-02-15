@@ -315,8 +315,8 @@ const TermsPage = () => {
               please contact us. We are here to help you understand your rights and obligations.
             </p>
             <div className={styles['contact-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaInfoCircle className={styles['btn-icon']} />Contact Us</a></Link>
-              <Link href="/" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Back to Home</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaInfoCircle className={styles['btn-icon']} />Contact Us</a></Link>
+              <Link href="/" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Back to Home</a></Link>
             </div>
           </div>
         </div>

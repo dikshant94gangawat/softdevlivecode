@@ -221,11 +221,11 @@ const EnterprisesPage = () => {
               Transform your large-scale operations with enterprise-grade solutions that deliver performance, security, and scalability for global organizations.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Start Enterprise Consultation
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Enterprise Portfolio
               </a></Link>
             </div>
@@ -428,11 +428,11 @@ const EnterprisesPage = () => {
               Let's build enterprise-grade solutions that scale with your organization and drive measurable business outcomes.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Start Enterprise Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Executive Briefing
               </a></Link>
             </div>

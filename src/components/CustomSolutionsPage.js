@@ -272,11 +272,11 @@ const CustomSolutionsPage = () => {
               From concept to deployment, we create tailored software solutions that address your unique challenges and drive business growth with precision and innovation.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Your Custom Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Our Portfolio
               </a></Link>
             </div>
@@ -473,11 +473,11 @@ const CustomSolutionsPage = () => {
               Let's discuss your unique requirements and create a solution that drives your business forward.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Your Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 <FaUsers className={styles['btn-icon']} />
                 Schedule Consultation
               </a></Link>

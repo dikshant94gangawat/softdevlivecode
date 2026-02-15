@@ -189,11 +189,11 @@ const CaseStudiesPage = () => {
               Let's discuss how we can help you achieve similar results.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started
               </a></Link>
-              <Link href="/portfolio" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/portfolio" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Portfolio
               </a></Link>
             </div>

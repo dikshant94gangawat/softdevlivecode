@@ -72,8 +72,8 @@ const TechSupportPage = () => {
                 Comprehensive technical support and maintenance services to keep your systems running at peak performance. Available 24/7 to resolve issues quickly and efficiently.
               </p>
               <div className={styles['hero-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaSupport className={styles['btn-icon']} />Get Support</a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Services</a></Link>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaSupport className={styles['btn-icon']} />Get Support</a></Link>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View Services</a></Link>
               </div>
             </div>
           </div>
@@ -132,8 +132,8 @@ const TechSupportPage = () => {
               Let's ensure your systems are always running smoothly with our expert support services.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaSupport className={styles['btn-icon']} />Get Started Today</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaSupport className={styles['btn-icon']} />Get Started Today</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

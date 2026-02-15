@@ -197,7 +197,7 @@ const ECommercePage = () => {
             </div>
             <div className={styles['ecommerce-hero-image']}>
               <div className={styles['ecommerce-mockup-container']}>
-                <div className={`styles['ecommerce-device'] styles['ecommerce-laptop']`}>
+                <div className={`${styles['ecommerce-device']} ${styles['ecommerce-laptop']}`}>
                   <div className={styles['laptop-screen']}>
                     <div className={styles['ecommerce-interface']}>
                       <div className={styles['ecommerce-header']}>
@@ -242,7 +242,7 @@ const ECommercePage = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`styles['ecommerce-device'] styles['ecommerce-mobile']`}>
+                <div className={`${styles['ecommerce-device']} ${styles['ecommerce-mobile']}`}>
                   <div className={styles['mobile-screen']}>
                     <div className={styles['mobile-ecommerce-interface']}>
                       <div className={styles['mobile-header']}>
@@ -305,11 +305,11 @@ const ECommercePage = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
               <FaHeadset className={styles['btn-icon']} />
               Start Your E-commerce Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
               View Portfolio
             </a></Link>
           </div>
@@ -533,11 +533,11 @@ const ECommercePage = () => {
               Let's build an e-commerce solution that drives sales, delights customers, and grows your business.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Start Your Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </a></Link>
             </div>

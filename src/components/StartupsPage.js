@@ -221,8 +221,8 @@ const StartupsPage = () => {
               From idea to market-ready product, we help startups build, launch, and scale with cutting-edge technology, agile development, and strategic guidance.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Startup Journey</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Success Stories</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Start Your Startup Journey</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View Success Stories</a></Link>
             </div>
             <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
@@ -408,8 +408,8 @@ const StartupsPage = () => {
               Let's turn your innovative idea into a market-ready product that users love and investors fund.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

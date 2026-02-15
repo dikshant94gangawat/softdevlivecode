@@ -101,7 +101,7 @@ const MobileAppDevelopment = () => {
           {type === 'social' && (
             <div className={styles['social-screen']}>
               <div className={styles['stories-section']}>
-                <div className={`styles['story-item'] styles.active`}>
+                <div className={`${styles['story-item']} ${styles.active}`}>
                   <div className={styles['story-avatar']}></div>
                   <div className={styles['story-name']}>Your Story</div>
                 </div>
@@ -368,7 +368,7 @@ const MobileAppDevelopment = () => {
             </div>
             <div className={styles['mobile-hero-image']}>
               <div className={styles['hero-phones-container']}>
-                <div className={`styles['hero-phone'] styles['hero-phone-1']`}>
+                <div className={`${styles['hero-phone']} ${styles['hero-phone-1']}`}>
                   <div className={styles['phone-screen']}>
                     <div className={styles['app-screen-content']}>
                       <div className={styles['app-header']}>
@@ -409,7 +409,7 @@ const MobileAppDevelopment = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`styles['hero-phone'] styles['hero-phone-2']`}>
+                <div className={`${styles['hero-phone']} ${styles['hero-phone-2']}`}>
                   <div className={styles['phone-screen']}>
                     <div className={styles['app-screen-content']}>
                       <div className={styles['app-header']}>
@@ -472,11 +472,11 @@ const MobileAppDevelopment = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
               <FaRocket className={styles['btn-icon']} />
               Get Started
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
               Book a Demo
             </a></Link>
           </div>
@@ -495,7 +495,7 @@ const MobileAppDevelopment = () => {
 
           <div className={styles['platforms-alternating']}>
             {platforms.map((platform, index) => (
-              <div key={index} className={`platform-row ${index % 2 === 0 ? 'platform-row-even' : 'platform-row-odd'}`}>
+              <div key={index} className={`${platform-row} ${${index} ${%} ${2} ${===} ${0} ${?} ${'platform-row-even'} ${:} ${'platform-row-odd'}}`}>
                 <div className={styles['platform-content']}>
                   <div className={styles['platform-details']}>
                     <div className={styles['platform-icon-large']} style={{ color: platform.color }}>
@@ -664,11 +664,11 @@ const MobileAppDevelopment = () => {
               Connect with our mobile app development experts and transform your vision into a successful mobile application.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Your Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 <FaUsers className={styles['btn-icon']} />
                 Book a Consultation
               </a></Link>

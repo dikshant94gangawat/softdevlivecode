@@ -155,11 +155,11 @@ const OurStoryPage = () => {
               Join us on our journey and let's create something amazing together.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get in Touch
               </a></Link>
-              <Link href="/careers" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/careers" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Careers
               </a></Link>
             </div>

@@ -73,11 +73,11 @@ const ITRecruitmentPage = () => {
                 Connect with exceptional tech professionals or find your dream job. We specialize in IT recruitment, helping companies build high-performing teams and professionals advance their careers.
               </p>
               <div className={styles['hero-actions']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                   <FaHeadset className={styles['btn-icon']} />
                   Start Hiring
                 </a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                   View Services
                 </a></Link>
               </div>
@@ -141,11 +141,11 @@ const ITRecruitmentPage = () => {
               Let's find the perfect tech talent to drive your business forward.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </a></Link>
             </div>

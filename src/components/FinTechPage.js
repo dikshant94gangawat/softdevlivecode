@@ -328,7 +328,7 @@ const FinTechPage = () => {
                             <div className="transaction-icon"></div>
                             <div className="transaction-details">
                               <div className="transaction-name">{transaction.name}</div>
-                              <div className={`transaction-amount ${transaction.type}`}>
+                              <div className={`${transaction-amount} ${${transaction.type}}`}>
                                 {transaction.amount}
                               </div>
                             </div>

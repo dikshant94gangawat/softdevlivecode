@@ -226,7 +226,7 @@ const UIUXDesign = () => {
             </div>
             <div className={styles['uiux-hero-image']}>
               <div className={styles['uiux-mockup-container']}>
-                <div className={`styles['uiux-device'] styles['uiux-laptop']`}>
+                <div className={`${styles['uiux-device']} ${styles['uiux-laptop']}`}>
                   <div className={styles['laptop-screen']}>
                     <div className={styles['uiux-interface']}>
                       <div className={styles['uiux-header']}>
@@ -248,9 +248,9 @@ const UIUXDesign = () => {
                             <div className={styles['hero-button']}>Get Started</div>
                           </div>
                           <div className={styles['hero-visual']}>
-                            <div className={`styles['design-element'] styles.circle`}></div>
-                            <div className={`styles['design-element'] styles.square`}></div>
-                            <div className={`styles['design-element'] styles.triangle`}></div>
+                            <div className={`${styles['design-element']} ${styles.circle}`}></div>
+                            <div className={`${styles['design-element']} ${styles.square}`}></div>
+                            <div className={`${styles['design-element']} ${styles.triangle}`}></div>
                           </div>
                         </div>
                         <div className={styles['features-section']}>
@@ -271,7 +271,7 @@ const UIUXDesign = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`styles['uiux-device'] styles['uiux-tablet']`}>
+                <div className={`${styles['uiux-device']} ${styles['uiux-tablet']}`}>
                   <div className={styles['tablet-screen']}>
                     <div className={styles['tablet-uiux-interface']}>
                       <div className={styles['tablet-header']}>
@@ -301,7 +301,7 @@ const UIUXDesign = () => {
                     </div>
                   </div>
                 </div>
-                <div className={`styles['uiux-device'] styles['uiux-mobile']`}>
+                <div className={`${styles['uiux-device']} ${styles['uiux-mobile']}`}>
                   <div className={styles['mobile-screen']}>
                     <div className={styles['mobile-uiux-interface']}>
                       <div className={styles['mobile-header']}>
@@ -332,8 +332,8 @@ const UIUXDesign = () => {
                           </div>
                         </div>
                         <div className={styles['mobile-actions']}>
-                          <div className={`styles['action-btn'] styles.primary`}>Follow</div>
-                          <div className={`styles['action-btn'] styles.secondary`}>Message</div>
+                          <div className={`${styles['action-btn']} ${styles.primary}`}>Follow</div>
+                          <div className={`${styles['action-btn']} ${styles.secondary}`}>Message</div>
                         </div>
                       </div>
                     </div>
@@ -364,8 +364,8 @@ const UIUXDesign = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Design Project</a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Portfolio</a></Link>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Start Your Design Project</a></Link>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View Portfolio</a></Link>
           </div>
         </div>
       </div>
@@ -619,11 +619,11 @@ const UIUXDesign = () => {
               Let's design beautiful, intuitive, and conversion-focused interfaces that delight your users and drive business growth.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link to="/contact" className={`styles.btn styles['btn-primary']`}>
+              <Link to="/contact" className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Start Your Project
               </Link>
-              <Link to="/demo" className={`styles.btn styles['btn-outline']`}>
+              <Link to="/demo" className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Consultation
               </Link>
             </div>

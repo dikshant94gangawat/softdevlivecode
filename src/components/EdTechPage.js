@@ -281,7 +281,7 @@ const EdTechPage = () => {
                     <div className={styles['learning-interface']}>
                       <div className={styles['interface-header']}>
                         <div className={styles['header-nav']}>
-                          <div className={`styles['nav-item'] styles.active`}>Dashboard</div>
+                          <div className={`${styles['nav-item']} ${styles.active}`}>Dashboard</div>
                           <div className={styles['nav-item']}>Courses</div>
                           <div className={styles['nav-item']}>Progress</div>
                           <div className={styles['nav-item']}>Assignments</div>
@@ -366,11 +366,11 @@ const EdTechPage = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
               <FaHeadset className={styles['btn-icon']} />
               Start Your EdTech Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
               View Educational Portfolio
             </a></Link>
           </div>
@@ -544,11 +544,11 @@ const EdTechPage = () => {
               Let's build innovative educational solutions that enhance learning experiences, improve outcomes, and prepare students for the future.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get Started Today
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Schedule Educational Consultation
               </a></Link>
             </div>

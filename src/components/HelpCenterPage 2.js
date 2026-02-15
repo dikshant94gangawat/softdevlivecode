@@ -142,7 +142,7 @@ const HelpCenterPage = () => {
                     <category.icon className="category-icon" />
                     <span>{category.title}</span>
                   </div>
-                  <FaChevronDown className={`chevron ${openCategory === index ? 'open' : ''}`} />
+                  <FaChevronDown className={`${chevron} ${${openCategory} ${===} ${index} ${?} ${'open'} ${:} ${''}}`} />
                 </div>
                 {openCategory === index && (
                   <div className="faq-list">

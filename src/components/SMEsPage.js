@@ -221,8 +221,8 @@ const SMEsPage = () => {
               Transform your small to medium enterprise with tailored technology solutions that streamline operations, boost productivity, and drive sustainable growth.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Transformation</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Case Studies</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Start Your Transformation</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View Case Studies</a></Link>
             </div>
             <div className={styles['hero-stats']}>
               {stats.map((stat, index) => (
@@ -420,8 +420,8 @@ const SMEsPage = () => {
               Let's build technology solutions that streamline your operations, reduce costs, and accelerate your business growth.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Schedule Consultation</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

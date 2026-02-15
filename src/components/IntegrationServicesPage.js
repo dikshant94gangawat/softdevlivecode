@@ -272,11 +272,11 @@ const IntegrationServicesPage = () => {
               From API development to enterprise system integration, we connect your technology ecosystem for seamless data flow and unified operations.
             </p>
             <div className={styles['hero-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Integration Project
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Integration Cases
               </a></Link>
             </div>
@@ -473,11 +473,11 @@ const IntegrationServicesPage = () => {
               Let's connect your technology ecosystem for seamless operations and improved efficiency.
             </p>
             <div className={styles['cta-buttons']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaRocket className={styles['btn-icon']} />
                 Start Integration
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 <FaUsers className={styles['btn-icon']} />
                 Schedule Consultation
               </a></Link>

@@ -156,7 +156,7 @@ const PortfolioPage = () => {
             {categories.map((category) => (
               <button
                 key={category}
-                className={`filter-tab ${selectedCategory === category ? 'active' : ''}`}
+                className={`${filter-tab} ${${selectedCategory} ${===} ${category} ${?} ${'active'} ${:} ${''}}`}
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}

@@ -140,11 +140,11 @@ const DocumentationPage = () => {
               Can't find what you're looking for? Contact our technical support team.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact-support" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact-support" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Contact Support
               </a></Link>
-              <Link href="/api-reference" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/api-reference" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View API Reference
               </a></Link>
             </div>

@@ -240,7 +240,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div 
                 key={index}
-                className={`service-card ${activeService === index ? 'active' : ''} ${isVisible ? 'animate-in' : ''}`}
+                className={`${service-card} ${${activeService} ${===} ${index} ${?} ${'active'} ${:} ${''}} ${${isVisible} ${?} ${'animate-in'} ${:} ${''}}`}
                 style={{ 
                   '--service-color': service.color,
                   '--service-color-rgb': service.colorRgb,
@@ -325,7 +325,7 @@ const Services = () => {
             </div>
             <div className="stats-grid">
               {stats.map((stat, index) => (
-                <div key={index} className={`stat-item ${isVisible ? 'animate-in' : ''}`}>
+                <div key={index} className={`${stat-item} ${${isVisible} ${?} ${'animate-in'} ${:} ${''}}`}>
                   <div className="stat-icon">{stat.icon}</div>
                   <div className="stat-number">
                     {animatedStats[`stat-${index}`] || 0}{stat.suffix}
@@ -341,7 +341,7 @@ const Services = () => {
         <div className="services-benefits">
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
-              <div key={index} className={`benefit-item ${isVisible ? 'animate-in' : ''}`}>
+              <div key={index} className={`${benefit-item} ${${isVisible} ${?} ${'animate-in'} ${:} ${''}}`}>
                 <div className="benefit-icon">{benefit.icon}</div>
                 <h4 className="benefit-title">{benefit.title}</h4>
                 <p className="benefit-description">{benefit.description}</p>

@@ -202,11 +202,11 @@ const OurTeamPage = () => {
               We're always looking for talented individuals to join our growing team.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/careers" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/careers" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 View Open Positions
               </a></Link>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Get in Touch
               </a></Link>
             </div>

@@ -307,8 +307,8 @@ const PrivacyPage = () => {
               practices, please contact us. We are committed to addressing your privacy concerns promptly.
             </p>
             <div className={styles['contact-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaInfoCircle className={styles['btn-icon']} />Contact Us</a></Link>
-              <Link href="/" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Back to Home</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaInfoCircle className={styles['btn-icon']} />Contact Us</a></Link>
+              <Link href="/" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Back to Home</a></Link>
             </div>
           </div>
         </div>

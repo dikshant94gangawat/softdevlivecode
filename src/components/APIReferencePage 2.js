@@ -122,7 +122,7 @@ const APIReferencePage = () => {
                 {apiEndpoints.map((endpoint, index) => (
                   <li key={index}>
                     <button
-                      className={`endpoint-item ${selectedEndpoint === index ? 'active' : ''}`}
+                      className={`${endpoint-item} ${${selectedEndpoint} ${===} ${index} ${?} ${'active'} ${:} ${''}}`}
                       onClick={() => setSelectedEndpoint(index)}
                     >
                       <span className="endpoint-method">{endpoint.method}</span>

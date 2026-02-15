@@ -170,7 +170,7 @@ const CareersPage = () => {
               We're always interested in connecting with talented individuals. Send us your resume!
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Send Your Resume
               </a></Link>

@@ -110,20 +110,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className={`styles.contact styles.section`}>
+    <section id="contact" className={`${styles.contact} ${styles.section}`}>
       <div className={styles.container}>
-        <div className={`styles['contact-header'] styles['text-center']`}>
-          <h2 className={`styles['section-title'] styles['fade-in']`}>
+        <div className={`${styles['contact-header']} ${styles['text-center']}`}>
+          <h2 className={`${styles['section-title']} ${styles['fade-in']}`}>
             Get In <span className={styles['gradient-text']}>Touch</span>
           </h2>
-          <p className={`styles['section-description'] styles['slide-up']`}>
+          <p className={`${styles['section-description']} ${styles['slide-up']}`}>
             Ready to start your project? We'd love to hear from you. Send us a message 
             and we'll respond as soon as possible.
           </p>
         </div>
 
         <div className={styles['contact-content']}>
-          <div className={`styles['contact-info'] styles['slide-up']`}>
+          <div className={`${styles['contact-info']} ${styles['slide-up']}`}>
             <h3>Let's Start a Conversation</h3>
             <p>
               Whether you have a project in mind, need technical consultation, or want to 
@@ -170,7 +170,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className={`styles['contact-form-container'] styles['slide-up']`}>
+          <div className={`${styles['contact-form-container']} ${styles['slide-up']}`}>
             <form onSubmit={handleSubmit} className={styles['contact-form']}>
               <div className={styles['form-row']}>
                 <div className={styles['form-group']}>
@@ -249,20 +249,20 @@ const Contact = () => {
               </div>
 
               {submitStatus === 'success' && (
-                <div className={`styles.alert styles['alert-success']`}>
+                <div className={`${styles.alert} ${styles['alert-success']}`}>
                   Thank you for your message! We'll get back to you within 24 hours.
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className={`styles.alert styles['alert-error']`}>
+                <div className={`${styles.alert} ${styles['alert-error']}`}>
                   Sorry, there was an error sending your message. Please try again or contact us directly.
                 </div>
               )}
 
               <button
                 type="submit"
-                className={`styles.btn styles['btn-primary'] styles['btn-lg']`}
+                className={`${styles.btn} ${styles['btn-primary']} ${styles['btn-lg']}`}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (

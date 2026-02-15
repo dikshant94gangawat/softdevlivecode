@@ -156,7 +156,7 @@ const PortfolioPage = () => {
             {categories.map((category) => (
               <button
                 key={category}
-                className={`filter-tab ${selectedCategory === category ? 'active' : ''}`}
+                className={`${filter-tab} ${${selectedCategory} ${===} ${category} ${?} ${'active'} ${:} ${''}}`}
                 onClick={() => setSelectedCategory(category)}
               >
                 {category}
@@ -214,8 +214,8 @@ const PortfolioPage = () => {
               Let's discuss how we can help bring your vision to life.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}><FaHeadset className={styles['btn-icon']} />Get Started</a></Link>
-              <Link href="/case-studies" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>View Case Studies</a></Link>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}><FaHeadset className={styles['btn-icon']} />Get Started</a></Link>
+              <Link href="/case-studies" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>View Case Studies</a></Link>
             </div>
           </div>
         </div>

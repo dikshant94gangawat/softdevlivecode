@@ -95,7 +95,7 @@ const Footer = () => {
                 <FaPhone className={styles['contact-icon']} />
                 <a href="tel:+917760554526">+91 77605 54526</a>
               </div>
-              <div className={`styles['contact-item'] styles['founders-item']`}>
+              <div className={`${styles['contact-item']} ${styles['founders-item']}`}>
                 <FaUsers className={styles['contact-icon']} />
                 <div className={styles['founders-info']}>
                   <span className={styles['founders-label']}>Founders:</span>
@@ -187,8 +187,8 @@ const Footer = () => {
                 Ready to start your project? Let's discuss how we can help you achieve your goals.
               </p>
               <div className={styles['footer-cta']}>
-                <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>Start Your Project</a></Link>
-                <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>Book Demo</a></Link>
+                <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>Start Your Project</a></Link>
+                <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>Book Demo</a></Link>
               </div>
               <div className={styles['footer-social']}>
                 <h4>Follow Us</h4>

@@ -391,7 +391,7 @@ const FullStackDevelopment = () => {
             <div className={styles['fullstack-hero-image']}>
               <div className={styles['hero-development-visual']}>
                 <div className={styles['development-layers']}>
-                  <div className={`styles.layer styles['frontend-layer']`}>
+                  <div className={`${styles.layer} ${styles['frontend-layer']}`}>
                     <div className={styles['layer-header']}>
                       <FaReact className={styles['layer-icon']} />
                       <span className={styles['layer-title']}>Frontend</span>
@@ -411,7 +411,7 @@ const FullStackDevelopment = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`styles.layer styles['backend-layer']`}>
+                  <div className={`${styles.layer} ${styles['backend-layer']}`}>
                     <div className={styles['layer-header']}>
                       <FaServer className={styles['layer-icon']} />
                       <span className={styles['layer-title']}>Backend</span>
@@ -429,7 +429,7 @@ const FullStackDevelopment = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`styles.layer styles['database-layer']`}>
+                  <div className={`${styles.layer} ${styles['database-layer']}`}>
                     <div className={styles['layer-header']}>
                       <FaDatabase className={styles['layer-icon']} />
                       <span className={styles['layer-title']}>Database</span>
@@ -449,8 +449,8 @@ const FullStackDevelopment = () => {
                   </div>
                 </div>
                 <div className={styles['connection-lines']}>
-                  <div className={`styles['connection-line'] styles['line-1']`}></div>
-                  <div className={`styles['connection-line'] styles['line-2']`}></div>
+                  <div className={`${styles['connection-line']} ${styles['line-1']}`}></div>
+                  <div className={`${styles['connection-line']} ${styles['line-2']}`}></div>
                 </div>
               </div>
               <div className={styles['hero-image-glow']}></div>
@@ -487,11 +487,11 @@ const FullStackDevelopment = () => {
       <div className={styles['hero-actions-section']}>
         <div className={styles.container}>
           <div className={styles['hero-actions']}>
-            <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+            <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
               <FaRocket className={styles['btn-icon']} />
               Start Your Project
             </a></Link>
-            <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+            <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
               Book a Free Consultation
             </a></Link>
           </div>
@@ -649,11 +649,11 @@ const FullStackDevelopment = () => {
               Ready to Build a Scalable Full Stack Solution? Let's discuss your project requirements and create a comprehensive full stack solution that drives your business success.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Get in Touch
               </a></Link>
-              <Link href="/demo" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/demo" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 Request a Quote
               </a></Link>
             </div>

@@ -143,7 +143,7 @@ const HelpCenterPage = () => {
                     <category.icon className={styles['category-icon']} />
                     <span>{category.title}</span>
                   </div>
-                  <FaChevronDown className={`chevron ${openCategory === index ? 'open' : ''}`} />
+                  <FaChevronDown className={`${chevron} ${${openCategory} ${===} ${index} ${?} ${'open'} ${:} ${''}}`} />
                 </div>
                 {openCategory === index && (
                   <div className={styles['faq-list']}>
@@ -188,11 +188,11 @@ const HelpCenterPage = () => {
               Our support team is here to assist you. Get in touch and we'll respond as soon as possible.
             </p>
             <div className={styles['cta-actions']}>
-              <Link href="/contact-support" legacyBehavior><a className={`styles.btn styles['btn-primary']`}>
+              <Link href="/contact-support" legacyBehavior><a className={`${styles.btn} ${styles['btn-primary']}`}>
                 <FaHeadset className={styles['btn-icon']} />
                 Contact Support
               </a></Link>
-              <Link href="/documentation" legacyBehavior><a className={`styles.btn styles['btn-outline']`}>
+              <Link href="/documentation" legacyBehavior><a className={`${styles.btn} ${styles['btn-outline']}`}>
                 View Documentation
               </a></Link>
             </div>
