@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './AboutPage.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import { 
   FaRocket,
   FaUsers,
@@ -10,7 +13,6 @@ import {
   FaCode,
   FaClock
 } from 'react-icons/fa';
-import './AboutPage.css';
 
 const AboutPage = () => {
   const values = [
@@ -286,13 +288,13 @@ const AboutPage = () => {
               efficiency, and success in the digital age.
             </p>
             <div className="mission-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaUsers className="btn-icon" />
                 Join Our Journey
-              </Link>
-              <Link to="/services" className="btn btn-outline">
+              </a></Link>
+              <Link href="/services" legacyBehavior><a className="btn btn-outline">
                 Our Services
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

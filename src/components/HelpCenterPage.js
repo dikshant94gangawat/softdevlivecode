@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaQuestionCircle, FaSearch, FaChevronDown, FaHeadset, FaBook, FaCog, FaRocket, FaArrowRight
 } from 'react-icons/fa';
-import './HelpCenterPage.css';
 
 const HelpCenterPage = () => {
   const [openCategory, setOpenCategory] = useState(null);
@@ -187,13 +187,13 @@ const HelpCenterPage = () => {
               Our support team is here to assist you. Get in touch and we'll respond as soon as possible.
             </p>
             <div className="cta-actions">
-              <Link to="/contact-support" className="btn btn-primary">
+              <Link href="/contact-support" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Contact Support
-              </Link>
-              <Link to="/documentation" className="btn btn-outline">
+              </a></Link>
+              <Link href="/documentation" legacyBehavior><a className="btn btn-outline">
                 View Documentation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaShoppingCart, FaMobile, FaLaptop, FaCreditCard, FaShieldAlt, FaRocket,
   FaUsers, FaStar, FaCheckCircle, FaArrowRight, FaHeadset, FaChartBar,
@@ -11,7 +12,6 @@ import {
   SiTypescript, SiNextdotjs, SiDjango, SiLaravel, SiMongodb, SiPostgresql,
   SiRedis, SiElasticsearch, SiKubernetes, SiStripe
 } from 'react-icons/si';
-import './ECommercePage.css';
 
 const ECommercePage = () => {
   const services = [
@@ -304,13 +304,13 @@ const ECommercePage = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaHeadset className="btn-icon" />
               Start Your E-commerce Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               View Portfolio
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -342,10 +342,10 @@ const ECommercePage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -532,13 +532,13 @@ const ECommercePage = () => {
               Let's build an e-commerce solution that drives sales, delights customers, and grows your business.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

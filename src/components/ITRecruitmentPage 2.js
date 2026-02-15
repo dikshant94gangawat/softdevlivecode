@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaUsers, FaCheckCircle, FaArrowRight, FaHeadset, FaSearch,
   FaUserTie, FaBriefcase, FaHandshake, FaChartLine, FaGlobe
 } from 'react-icons/fa';
-import './ITRecruitmentPage.css';
 
 const ITRecruitmentPage = () => {
   const services = [
@@ -72,13 +72,13 @@ const ITRecruitmentPage = () => {
                 Connect with exceptional tech professionals or find your dream job. We specialize in IT recruitment, helping companies build high-performing teams and professionals advance their careers.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Start Hiring
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Services
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const ITRecruitmentPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -140,13 +140,13 @@ const ITRecruitmentPage = () => {
               Let's find the perfect tech talent to drive your business forward.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaFileAlt, FaCheckCircle, FaArrowRight, FaHeadset, FaChartLine,
   FaUsers, FaDollarSign, FaClock, FaRocket
 } from 'react-icons/fa';
-import './CaseStudiesPage.css';
 
 const CaseStudiesPage = () => {
   const caseStudies = [
@@ -188,13 +188,13 @@ const CaseStudiesPage = () => {
               Let's discuss how we can help you achieve similar results.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started
-              </Link>
-              <Link to="/portfolio" className="btn btn-outline">
+              </a></Link>
+              <Link href="/portfolio" legacyBehavior><a className="btn btn-outline">
                 View Portfolio
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

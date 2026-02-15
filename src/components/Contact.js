@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaGithub, FaPaperPlane, FaUsers } from 'react-icons/fa';
-import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +26,7 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Configure EmailJS service
+      // Configure EmailJS service (dynamically import to keep server-side safe)
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -38,8 +36,11 @@ const Contact = () => {
         to_name: 'SoftDevSquad Team'
       };
 
-      // Send email using EmailJS
-      await emailjs.send(
+      // Dynamically import emailjs in client runtime
+      const emailjsModule = await import('emailjs-com');
+      const emailjsClient = emailjsModule.default || emailjsModule;
+
+      await emailjsClient.send(
         'service_rtt3nfn',
         'template_6ksqawr',
         templateParams,

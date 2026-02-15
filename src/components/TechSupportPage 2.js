@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaHeadset, FaCheckCircle, FaArrowRight, FaHeadset as FaSupport, FaClock,
   FaShieldAlt, FaTools, FaServer, FaChartLine, FaBug
 } from 'react-icons/fa';
-import './TechSupportPage.css';
 
 const TechSupportPage = () => {
   const services = [
@@ -72,13 +72,13 @@ const TechSupportPage = () => {
                 Comprehensive technical support and maintenance services to keep your systems running at peak performance. Available 24/7 to resolve issues quickly and efficiently.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaSupport className="btn-icon" />
                   Get Support
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Services
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const TechSupportPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -140,13 +140,13 @@ const TechSupportPage = () => {
               Let's ensure your systems are always running smoothly with our expert support services.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaSupport className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

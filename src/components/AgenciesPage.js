@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaHandshake, FaUsers, FaRocket, FaCogs, FaMobile, FaLaptop,
   FaCode, FaDesktop, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -11,7 +12,6 @@ import {
   SiTypescript, SiNextdotjs, SiFlutter, SiMui, SiGraphql,
   SiFigma
 } from 'react-icons/si';
-import './AgenciesPage.css';
 
 const AgenciesPage = () => {
   const services = [
@@ -221,13 +221,13 @@ const AgenciesPage = () => {
               Partner with us to expand your service offerings, deliver exceptional client projects, and grow your agency with white label development solutions.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Become a Partner
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 View Partnership Models
-              </Link>
+              </a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -275,10 +275,10 @@ const AgenciesPage = () => {
                   </div>
                 </div>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Choose Model
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -312,10 +312,10 @@ const AgenciesPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -434,13 +434,13 @@ const AgenciesPage = () => {
               Join 150+ agencies who trust us to deliver exceptional development services under their brand. Let's grow together.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Start Partnership
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Partnership Call
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

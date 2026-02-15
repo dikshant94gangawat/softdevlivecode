@@ -1,0 +1,8 @@
+/* About Section - Modern Design */
+.about {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+/* ... rest of About.css content ... */
+

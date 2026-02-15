@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaCloud, FaRocket, FaUsers, FaLightbulb, FaCode, FaDesktop,
   FaMobile, FaDatabase, FaShieldAlt, FaChartLine, FaHeadset, FaCogs,
@@ -9,7 +9,6 @@ import {
 import {
   SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiKubernetes, SiStripe
 } from 'react-icons/si';
-import './SaaSDevelopmentPage.css';
 
 const SaaSDevelopmentPage = () => {
   const services = [
@@ -271,13 +270,8 @@ const SaaSDevelopmentPage = () => {
               From MVP to enterprise-scale SaaS platforms, we deliver cloud-native solutions with multi-tenant architecture, robust security, and seamless user experiences.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaRocket className="btn-icon" />
-                Start Your SaaS Journey
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                View SaaS Portfolio
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaRocket className="btn-icon" />Start Your SaaS Journey</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">View SaaS Portfolio</a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -318,10 +312,7 @@ const SaaSDevelopmentPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -472,14 +463,8 @@ const SaaSDevelopmentPage = () => {
               Let's build a scalable SaaS platform that grows with your business and delights your users.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <FaRocket className="btn-icon" />
-                Start Building Now
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                <FaUsers className="btn-icon" />
-                Schedule Discovery Call
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaRocket className="btn-icon" />Start Building Now</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline"><FaUsers className="btn-icon" />Schedule Discovery Call</a></Link>
             </div>
           </div>
         </div>

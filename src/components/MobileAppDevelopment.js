@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import { 
   FaMobile, 
   FaApple, 
@@ -27,7 +28,6 @@ import {
   FaLeaf
 } from 'react-icons/fa';
 import { SiFlutter, SiKotlin, SiTypescript, SiFirebase, SiMongodb, SiPostgresql } from 'react-icons/si';
-import './MobileAppDevelopment.css';
 
 const MobileAppDevelopment = () => {
   // Function to render app screen content
@@ -471,13 +471,13 @@ const MobileAppDevelopment = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaRocket className="btn-icon" />
               Get Started
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               Book a Demo
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -510,10 +510,10 @@ const MobileAppDevelopment = () => {
                         </li>
                       ))}
                     </ul>
-                    <Link to="/contact" className="platform-cta">
+                    <Link href="/contact" legacyBehavior><a className="platform-cta">
                       Learn More
                       <FaArrowRight className="cta-icon" />
-                    </Link>
+                    </a></Link>
                   </div>
                 </div>
                 <div className="platform-visual">
@@ -663,14 +663,14 @@ const MobileAppDevelopment = () => {
               Connect with our mobile app development experts and transform your vision into a successful mobile application.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 <FaUsers className="btn-icon" />
                 Book a Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

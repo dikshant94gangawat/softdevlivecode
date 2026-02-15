@@ -1,0 +1,10 @@
+/* Services Page Styles */
+.services-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  color: var(--text-color);
+  position: relative;
+  overflow-x: hidden;
+}
+/* ... (rest of ServicesPage.css content copied) ... */
+

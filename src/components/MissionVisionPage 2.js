@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaRocket, FaEye, FaBullseye, FaCheckCircle, FaArrowRight, FaHeadset,
   FaLightbulb, FaUsers, FaHeart, FaGlobe
 } from 'react-icons/fa';
-import './MissionVisionPage.css';
 
 const MissionVisionPage = () => {
   const mission = {
@@ -122,13 +122,13 @@ const MissionVisionPage = () => {
               Let's discuss how we can help you achieve your goals.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get in Touch
-              </Link>
-              <Link to="/our-story" className="btn btn-outline">
+              </a></Link>
+              <Link href="/our-story" legacyBehavior><a className="btn btn-outline">
                 Learn More
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

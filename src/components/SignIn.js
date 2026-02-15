@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   FaGoogle, 
   FaArrowLeft, 
@@ -10,7 +10,6 @@ import {
   FaUser,
   FaSignInAlt
 } from 'react-icons/fa';
-import './SignIn.css';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -177,9 +176,11 @@ const SignIn = () => {
       <div className="signin-container">
         {/* Header */}
         <div className="signin-header">
-          <Link to="/" className="back-link">
-            <FaArrowLeft />
-            <span>Back to Home</span>
+          <Link href="/" legacyBehavior>
+            <a className="back-link">
+              <FaArrowLeft />
+              <span>Back to Home</span>
+            </a>
           </Link>
         </div>
 
@@ -216,8 +217,8 @@ const SignIn = () => {
               </div>
               
               <div className="help-section">
-                <p>Need help? <Link to="/contact">Contact our support team</Link></p>
-                <p>Don't have an account? <Link to="/demo">Book a demo</Link></p>
+                <p>Need help? <Link href="/contact" legacyBehavior><a>Contact our support team</a></Link></p>
+                <p>Don't have an account? <Link href="/demo" legacyBehavior><a>Book a demo</a></Link></p>
               </div>
             </div>
           </div>
@@ -286,9 +287,7 @@ const SignIn = () => {
                     <span className="checkmark"></span>
                     Remember me
                   </label>
-                  <Link to="/forgot-password" className="forgot-link">
-                    Forgot Password?
-                  </Link>
+                  <Link href="/forgot-password" legacyBehavior><a className="forgot-link">Forgot Password?</a></Link>
                 </div>
 
                 {/* Submit Button */}

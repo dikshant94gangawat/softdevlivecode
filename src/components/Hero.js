@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './Hero.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
 import { FaRocket, FaArrowRight, FaPlay } from 'react-icons/fa';
-import './Hero.css';
-import './Hero-mobile.css';
+
 
 const Hero = () => {
   const scrollToServices = () => {
@@ -61,9 +62,11 @@ const Hero = () => {
                 <FaArrowRight className="icon-sm" />
               </button>
               
-              <Link to="/demo" className="btn btn-outline btn-lg">
-                <FaPlay className="icon-sm" />
-                Book Demo
+              <Link href="/demo" legacyBehavior>
+                <a className="btn btn-outline btn-lg">
+                  <FaPlay className="icon-sm" />
+                  Book Demo
+                </a>
               </Link>
             </div>
             

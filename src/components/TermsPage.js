@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   FaFileContract,
   FaGavel,
@@ -11,7 +11,6 @@ import {
   FaShieldAlt,
   FaBalanceScale
 } from 'react-icons/fa';
-import './TermsPage.css';
 
 const TermsPage = () => {
   const termsSections = [
@@ -315,13 +314,8 @@ const TermsPage = () => {
               please contact us. We are here to help you understand your rights and obligations.
             </p>
             <div className="contact-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaInfoCircle className="btn-icon" />
-                Contact Us
-              </Link>
-              <Link to="/" className="btn btn-outline">
-                Back to Home
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaInfoCircle className="btn-icon" />Contact Us</a></Link>
+              <Link href="/" legacyBehavior><a className="btn btn-outline">Back to Home</a></Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaBrain, FaRobot, FaCogs, FaChartLine, FaShieldAlt, FaRocket,
   FaLaptopCode, FaMobileAlt, FaCog, FaUsers, FaStar, FaCheckCircle,
@@ -13,7 +13,8 @@ import {
   SiKeras, SiOpencv, SiNumpy, SiPandas, SiMongodb, SiPostgresql,
   SiElasticsearch, SiKubernetes, SiTableau, SiPowerbi
 } from 'react-icons/si';
-import './AIDevelopment.css';
+import styles from './AIDevelopment.module.css';
+import { mapClasses } from '../utils/cssMapper';
 
 const AIDevelopment = () => {
   const services = [
@@ -256,62 +257,62 @@ const AIDevelopment = () => {
   ];
 
   return (
-    <div className="ai-development-page">
+    <div className={mapClasses(styles, 'ai-development-page')}>
       {/* Hero Section */}
-      <div className="ai-hero">
+      <div className={mapClasses(styles, 'ai-hero')}>
         <div className="ai-hero-background">
           <div className="hero-pattern"></div>
           <div className="hero-glow"></div>
         </div>
-        <div className="container">
-          <div className="ai-hero-container">
-            <div className="ai-hero-content">
-              <div className="hero-badge">
-                <FaBrain className="badge-icon" />
+        <div className={mapClasses(styles, 'container')}>
+          <div className={mapClasses(styles, 'ai-hero-container')}>
+            <div className={mapClasses(styles, 'ai-hero-content')}>
+              <div className={mapClasses(styles, 'hero-badge')}>
+                <FaBrain className={mapClasses(styles, 'badge-icon')} />
                 <span>Leading AI ML Development Company</span>
               </div>
-              <h1 className="ai-hero-title">
-                Leading <span className="highlight">AI ML Development</span> Company
+              <h1 className={mapClasses(styles, 'ai-hero-title')}>
+                Leading <span className={mapClasses(styles, 'highlight')}>AI ML Development</span> Company
               </h1>
-              <p className="ai-hero-subtitle">
+              <p className={mapClasses(styles, 'ai-hero-subtitle')}>
                 Revamp your operations with advanced Artificial Intelligence and Machine Learning Development Services. Tap into AI ML solutions that give you an edge over your competitors.
               </p>
             </div>
-            <div className="ai-hero-image">
+            <div className={mapClasses(styles, 'ai-hero-image')}>
               <div className="ai-visualization">
                 <div className="ai-brain-container">
-                  <div className="ai-brain">
+              <div className={mapClasses(styles, 'ai-brain')}>
                     <div className="brain-core">
                       <FaBrain className="brain-icon" />
                     </div>
                     <div className="neural-network">
                       {[...Array(12)].map((_, i) => (
-                        <div key={i} className={`neural-node node-${i + 1}`}>
-                          <div className="node-pulse"></div>
+                        <div key={i} className={mapClasses(styles, `neural-node node-${i + 1}`)}>
+                          <div className={mapClasses(styles, 'node-pulse')}></div>
                         </div>
                       ))}
                     </div>
                     <div className="data-connections">
                       {[...Array(6)].map((_, i) => (
-                        <div key={i} className={`connection connection-${i + 1}`}></div>
+                        <div key={i} className={mapClasses(styles, `connection connection-${i + 1}`)}></div>
                       ))}
                     </div>
                   </div>
-                  <div className="ai-features">
-                    <div className="feature-item feature-ml">
-                      <FaCogs className="feature-icon" />
+                    <div className={mapClasses(styles, 'ai-features')}>
+                    <div className={mapClasses(styles, 'feature-item feature-ml')}>
+                      <FaCogs className={mapClasses(styles, 'feature-icon')} />
                       <span>Machine Learning</span>
                     </div>
-                    <div className="feature-item feature-nlp">
-                      <FaSearch className="feature-icon" />
+                    <div className={mapClasses(styles, 'feature-item feature-nlp')}>
+                      <FaSearch className={mapClasses(styles, 'feature-icon')} />
                       <span>Natural Language</span>
                     </div>
-                    <div className="feature-item feature-vision">
-                      <FaEye className="feature-icon" />
+                    <div className={mapClasses(styles, 'feature-item feature-vision')}>
+                      <FaEye className={mapClasses(styles, 'feature-icon')} />
                       <span>Computer Vision</span>
                     </div>
-                    <div className="feature-item feature-analytics">
-                      <FaChartLine className="feature-icon" />
+                    <div className={mapClasses(styles, 'feature-item feature-analytics')}>
+                      <FaChartLine className={mapClasses(styles, 'feature-icon')} />
                       <span>Predictive Analytics</span>
                     </div>
                   </div>
@@ -351,13 +352,8 @@ const AIDevelopment = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
-              <FaHeadset className="btn-icon" />
-              Let's Connect
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
-              Got Questions? We're Here to Answer
-            </Link>
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Let's Connect</a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">Got Questions? We're Here to Answer</a></Link>
           </div>
         </div>
       </div>
@@ -389,9 +385,11 @@ const AIDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
+                <Link href="/contact" legacyBehavior>
+                  <a className="service-cta">
+                    Get Started
+                    <FaArrowRight className="cta-icon" />
+                  </a>
                 </Link>
               </div>
             ))}
@@ -426,9 +424,11 @@ const AIDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
+                <Link href="/contact" legacyBehavior>
+                  <a className="service-cta">
+                    Get Started
+                    <FaArrowRight className="cta-icon" />
+                  </a>
                 </Link>
               </div>
             ))}
@@ -463,9 +463,11 @@ const AIDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
+                <Link href="/contact" legacyBehavior>
+                  <a className="service-cta">
+                    Get Started
+                    <FaArrowRight className="cta-icon" />
+                  </a>
                 </Link>
               </div>
             ))}
@@ -574,13 +576,8 @@ const AIDevelopment = () => {
               Ready to transform your business with AI and ML? Let's discuss your requirements and create intelligent solutions that drive growth and innovation.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Let's Talk
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Get a Free Consultation
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Let's Talk</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Get a Free Consultation</a></Link>
             </div>
           </div>
         </div>

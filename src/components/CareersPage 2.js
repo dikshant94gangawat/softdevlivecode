@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaBriefcase, FaCheckCircle, FaArrowRight, FaHeadset, FaMapMarkerAlt,
   FaClock, FaUsers, FaCode, FaRocket, FaHeart
 } from 'react-icons/fa';
-import './CareersPage.css';
 
 const CareersPage = () => {
   const openPositions = [
@@ -129,10 +129,10 @@ const CareersPage = () => {
                     ))}
                   </ul>
                 </div>
-                <Link to="/contact" className="position-apply">
+                <Link href="/contact" legacyBehavior><a className="position-apply">
                   Apply Now
                   <FaArrowRight className="arrow-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -169,10 +169,10 @@ const CareersPage = () => {
               We're always interested in connecting with talented individuals. Send us your resume!
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Send Your Resume
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

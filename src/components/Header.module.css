@@ -1,0 +1,18 @@
+/* Header Styles - Black Theme */
+.header {
+  --header-height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(26, 26, 26, 0.9));
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  height: var(--header-height);
+  box-sizing: border-box;
+}
+/* ... copied content from Header.css ... */
+

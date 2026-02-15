@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './FinTechPage.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import {
   FaCreditCard, FaShieldAlt, FaChartLine, FaMobile, FaRobot, FaDatabase,
   FaLock, FaGlobe, FaUsers, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -12,7 +15,6 @@ import {
   SiScikitlearn, SiPostgresql, SiMongodb, SiRedis, SiElasticsearch,
   SiKubernetes, SiJenkins, SiGraphql
 } from 'react-icons/si';
-import './FinTechPage.css';
 
 const FinTechPage = () => {
   const services = [
@@ -361,13 +363,13 @@ const FinTechPage = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaHeadset className="btn-icon" />
               Start Your FinTech Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               View Portfolio
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -399,10 +401,10 @@ const FinTechPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -539,13 +541,13 @@ const FinTechPage = () => {
               Let's build innovative fintech solutions that drive growth, enhance security, and deliver exceptional user experiences.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

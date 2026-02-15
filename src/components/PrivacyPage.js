@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   FaShieldAlt,
   FaLock,
@@ -10,7 +10,6 @@ import {
   FaCheckCircle,
   FaInfoCircle
 } from 'react-icons/fa';
-import './PrivacyPage.css';
 
 const PrivacyPage = () => {
   const privacyFeatures = [
@@ -307,13 +306,8 @@ const PrivacyPage = () => {
               practices, please contact us. We are committed to addressing your privacy concerns promptly.
             </p>
             <div className="contact-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaInfoCircle className="btn-icon" />
-                Contact Us
-              </Link>
-              <Link to="/" className="btn btn-outline">
-                Back to Home
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaInfoCircle className="btn-icon" />Contact Us</a></Link>
+              <Link href="/" legacyBehavior><a className="btn btn-outline">Back to Home</a></Link>
             </div>
           </div>
         </div>

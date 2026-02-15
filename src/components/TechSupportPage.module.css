@@ -1,0 +1,417 @@
+/* inlined from TechSupportPage.css */
+.tech-support-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.tech-support-page .page-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  overflow: hidden;
+}
+
+.tech-support-page .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tech-support-page .hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 111, 0, 0.1) 0%, transparent 50%);
+}
+
+.tech-support-page .hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.tech-support-page .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 50px;
+  padding: 12px 24px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ef4444;
+  backdrop-filter: blur(10px);
+}
+
+.tech-support-page .badge-icon {
+  font-size: 16px;
+}
+
+.tech-support-page .hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-support-page .highlight {
+  background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-support-page .hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-support-page .hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-support-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tech-support-page .btn-primary {
+  background: linear-gradient(135deg, #ef4444, #3b82f6);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+}
+
+.tech-support-page .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.5);
+}
+
+.tech-support-page .btn-outline {
+  background: transparent;
+  color: #ef4444;
+  border: 2px solid #ef4444;
+  backdrop-filter: blur(10px);
+}
+
+.tech-support-page .btn-outline:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+}
+
+.tech-support-page .btn-icon {
+  font-size: 18px;
+}
+
+.tech-support-page .hero-stats-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(22, 33, 62, 0.95) 0%, rgba(15, 15, 35, 0.98) 100%);
+}
+
+.tech-support-page .hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-support-page .stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.tech-support-page .stat-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.2);
+}
+
+.tech-support-page .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ef4444;
+  margin-bottom: 8px;
+}
+
+.tech-support-page .stat-label {
+  font-size: 14px;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+.tech-support-page .services-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0a0a0a 100%);
+}
+
+.tech-support-page .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tech-support-page .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-support-page .section-subtitle {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tech-support-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.tech-support-page .service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tech-support-page .service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.2);
+}
+
+.tech-support-page .service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.tech-support-page .service-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ef4444;
+}
+
+.tech-support-page .service-description {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tech-support-page .service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.tech-support-page .service-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.tech-support-page .feature-icon {
+  color: #ef4444;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.tech-support-page .service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ef4444;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tech-support-page .service-cta:hover {
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+
+.tech-support-page .cta-icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.tech-support-page .service-cta:hover .cta-icon {
+  transform: translateX(3px);
+}
+
+.tech-support-page .cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0a0a0a 100%);
+  text-align: center;
+}
+
+.tech-support-page .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tech-support-page .cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-support-page .cta-subtitle {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.tech-support-page .cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-support-page .container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .tech-support-page .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .tech-support-page .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .tech-support-page .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tech-support-page .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .tech-support-page .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .tech-support-page .section-title {
+    font-size: 2rem;
+  }
+  
+  .tech-support-page .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-support-page .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tech-support-page .cta-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-support-page .page-hero {
+    padding: 100px 0 60px;
+  }
+  
+  .tech-support-page .hero-title {
+    font-size: 2rem;
+  }
+  
+  .tech-support-page .hero-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-support-page .stat-number {
+    font-size: 2rem;
+  }
+  
+  .tech-support-page .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .tech-support-page .service-card {
+    padding: 20px;
+  }
+}
+
+.tech-support-page .cta-section .cta-content {
+    display: block;
+}
+
+.tech-support-page .cta-section .cta-content .cta-actions {
+    flex-direction: row;
+}
+

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import styles from './BookDemo.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import emailjs from '@emailjs/browser';
 import { 
   FaPlay, 
@@ -19,7 +22,6 @@ import {
   FaBriefcase,
   FaBuilding
 } from 'react-icons/fa';
-import './BookDemo.css';
 
 const BookDemo = () => {
   const [bookingData, setBookingData] = useState({
@@ -178,10 +180,10 @@ const BookDemo = () => {
               </div>
               
               <div className="booking-success-actions">
-                <Link to="/" className="booking-btn booking-btn-primary">
+                <Link href="/" legacyBehavior><a className="booking-btn booking-btn-primary">
                   <FaArrowLeft />
                   Back to Home
-                </Link>
+                </a></Link>
                 <button 
                   onClick={() => setIsBookingSubmitted(false)}
                   className="booking-btn booking-btn-secondary"
@@ -214,10 +216,10 @@ const BookDemo = () => {
       <div className="booking-wrapper">
         {/* Header Section */}
         <div className="booking-header">
-          <Link to="/" className="booking-back-button">
+          <Link href="/" legacyBehavior><a className="booking-back-button">
             <FaArrowLeft />
             Back to Home
-          </Link>
+          </a></Link>
           
           <div className="booking-hero-content">
             <div className="booking-hero-badge">

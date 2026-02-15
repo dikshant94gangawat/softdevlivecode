@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaHeartbeat, FaUserMd, FaPrescriptionBottleAlt, FaMobile, FaRobot, FaDatabase,
   FaLock, FaGlobe, FaUsers, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -11,7 +12,6 @@ import {
   SiTypescript, SiFlutter, SiDotnet, SiSpringboot, SiTensorflow, SiPytorch,
   SiOpencv, SiMongodb, SiPostgresql, SiRedis, SiElasticsearch
 } from 'react-icons/si';
-import './HealthTechPage.css';
 
 const HealthTechPage = () => {
   const services = [
@@ -373,13 +373,13 @@ const HealthTechPage = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaHeadset className="btn-icon" />
               Start Your HealthTech Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               View Healthcare Portfolio
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -411,10 +411,10 @@ const HealthTechPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -551,13 +551,13 @@ const HealthTechPage = () => {
               Let's build innovative healthcare solutions that improve patient outcomes, enhance operational efficiency, and ensure regulatory compliance.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Healthcare Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

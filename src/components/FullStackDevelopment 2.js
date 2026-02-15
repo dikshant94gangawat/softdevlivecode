@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaCode,
   FaServer,
@@ -55,7 +56,6 @@ import {
   SiFirebase,
   SiOracle,
 } from 'react-icons/si';
-import './FullStackDevelopment.css';
 
 const FullStackDevelopment = () => {
   // Function to render tech stack visualization
@@ -486,13 +486,13 @@ const FullStackDevelopment = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaRocket className="btn-icon" />
               Start Your Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               Book a Free Consultation
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -545,10 +545,10 @@ const FullStackDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -648,13 +648,13 @@ const FullStackDevelopment = () => {
               Ready to Build a Scalable Full Stack Solution? Let's discuss your project requirements and create a comprehensive full stack solution that drives your business success.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get in Touch
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Request a Quote
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import { 
   FaCreditCard, 
   FaHeartbeat, 
@@ -14,7 +15,6 @@ import {
   FaStar,
   FaIndustry
 } from 'react-icons/fa';
-import './IndustriesPage.css';
 
 const IndustriesPage = () => {
   const industries = [
@@ -309,13 +309,13 @@ const IndustriesPage = () => {
               Let's discuss how our industry-specific solutions can help your business grow
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Get Started
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Book a Demo
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

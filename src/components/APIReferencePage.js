@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import styles from './APIReferencePage.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import {
   FaCode, FaKey, FaServer, FaArrowRight, FaHeadset, FaCopy
 } from 'react-icons/fa';
-import './APIReferencePage.css';
 
 const APIReferencePage = () => {
   const [selectedEndpoint, setSelectedEndpoint] = useState(0);
@@ -219,13 +221,13 @@ const APIReferencePage = () => {
               Get help with API integration and troubleshooting.
             </p>
             <div className="cta-actions">
-              <Link to="/contact-support" className="btn btn-primary">
+              <Link href="/contact-support" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Contact Support
-              </Link>
-              <Link to="/documentation" className="btn btn-outline">
+              </a></Link>
+              <Link href="/documentation" legacyBehavior><a className="btn btn-outline">
                 View Full Documentation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

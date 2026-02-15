@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaBuilding, FaIndustry, FaNetworkWired, FaShieldAlt, FaCloud, FaDatabase,
   FaCogs, FaChartLine, FaUsers, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -10,7 +11,6 @@ import {
   SiSpringboot, SiDotnet, SiKubernetes, SiElasticsearch, SiMongodb, 
   SiPostgresql, SiRedis, SiOracle, SiJenkins
 } from 'react-icons/si';
-import './EnterprisesPage.css';
 
 const EnterprisesPage = () => {
   const services = [
@@ -220,13 +220,13 @@ const EnterprisesPage = () => {
               Transform your large-scale operations with enterprise-grade solutions that deliver performance, security, and scalability for global organizations.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Start Enterprise Consultation
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 View Enterprise Portfolio
-              </Link>
+              </a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -268,10 +268,10 @@ const EnterprisesPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Learn More
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -305,10 +305,10 @@ const EnterprisesPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -427,13 +427,13 @@ const EnterprisesPage = () => {
               Let's build enterprise-grade solutions that scale with your organization and drive measurable business outcomes.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Start Enterprise Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Executive Briefing
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

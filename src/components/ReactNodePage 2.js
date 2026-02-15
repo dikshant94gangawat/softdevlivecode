@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaReact, FaNodeJs, FaCode, FaServer, FaDatabase, FaCloud,
   FaCheckCircle, FaArrowRight, FaHeadset, FaStar, FaUsers,
   FaMobile, FaGlobe, FaShieldAlt, FaRocket
 } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiExpress, SiMongodb, SiPostgresql } from 'react-icons/si';
-import './ReactNodePage.css';
 
 const ReactNodePage = () => {
   const services = [
@@ -92,13 +92,13 @@ const ReactNodePage = () => {
                 Build modern, scalable web applications with React and Node.js. From frontend interfaces to backend APIs, we deliver full-stack solutions that drive business growth.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Start Your Project
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Portfolio
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -142,10 +142,10 @@ const ReactNodePage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -179,13 +179,13 @@ const ReactNodePage = () => {
               Let's create powerful, scalable web applications that drive your business forward.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

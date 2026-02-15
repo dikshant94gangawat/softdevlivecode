@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FaBars, FaTimes, FaCode } from 'react-icons/fa';
-import './Header.css';
+import styles from './Header.module.css';
+import { mapClasses } from '../utils/cssMapper';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,144 +36,134 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
-      <div className="container">
-        <div className="header-content">
+    <header className={mapClasses(styles, `header ${isScrolled ? 'header-scrolled' : ''}`)}>
+      <div className={mapClasses(styles, 'container')}>
+        <div className={mapClasses(styles, 'header-content')}>
           {/* Logo */}
-          <Link to="/" className="logo" onClick={closeMenu}>
-            <FaCode className="logo-icon" />
-            <span className="logo-text">SoftDevSquad</span>
+          <Link href="/" legacyBehavior>
+            <a className={mapClasses(styles, 'logo')} onClick={closeMenu}>
+              <FaCode className={mapClasses(styles, 'logo-icon')} />
+              <span className={mapClasses(styles, 'logo-text')}>SoftDevSquad</span>
+            </a>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="nav-desktop">
-            <ul className="nav-list">
-                          <li className="nav-item">
-              <Link 
-                to="/"
-                className="nav-link"
-              >
-                Home
+          <nav className={mapClasses(styles, 'nav-desktop')}>
+            <ul className={mapClasses(styles, 'nav-list')}>
+                          <li className={mapClasses(styles, 'nav-item')}>
+              <Link href="/" legacyBehavior>
+                <a className={mapClasses(styles, 'nav-link')}>
+                  Home
+                </a>
               </Link>
             </li>
-              <li className="nav-item dropdown">
-                <Link to="/services" className="nav-link dropdown-toggle">
-                  Services
-                  <span className="dropdown-arrow">▼</span>
+              <li className={mapClasses(styles, 'nav-item dropdown')}>
+                <Link href="/services" legacyBehavior>
+                  <a className={mapClasses(styles, 'nav-link dropdown-toggle')}>
+                    Services
+                    <span className={mapClasses(styles, 'dropdown-arrow')}>▼</span>
+                  </a>
                 </Link>
-                <div className="dropdown-menu">
-                  <div className="dropdown-menu-container">
-                    <div className="dropdown-section">
-                      <h4 className="dropdown-title">Development</h4>
-                      <Link to="/mobile-app-development" className="dropdown-link">Mobile App Development</Link>
-                      <Link to="/full-stack-development" className="dropdown-link">Full Stack Development</Link>
-                      <Link to="/ai-development" className="dropdown-link">AI Development</Link>
-                      <Link to="/blockchain-development" className="dropdown-link">Blockchain Development</Link>
-                      <Link to="/software-product-development" className="dropdown-link">Software Product Development</Link>
-                      <Link to="/uiux-design" className="dropdown-link">UI/UX Design</Link>
+                <div className={mapClasses(styles, 'dropdown-menu')}>
+                  <div className={mapClasses(styles, 'dropdown-menu-container')}>
+                    <div className={mapClasses(styles, 'dropdown-section')}>
+                      <h4 className={mapClasses(styles, 'dropdown-title')}>Development</h4>
+                      <Link href="/mobile-app-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Mobile App Development</a></Link>
+                      <Link href="/full-stack-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Full Stack Development</a></Link>
+                      <Link href="/ai-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>AI Development</a></Link>
+                      <Link href="/blockchain-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Blockchain Development</a></Link>
+                      <Link href="/software-product-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Software Product Development</a></Link>
+                      <Link href="/uiux-design" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>UI/UX Design</a></Link>
                     </div>
-                    <div className="dropdown-section">
-                      <h4 className="dropdown-title">Technologies</h4>
-                      <Link to="/react-nodejs" className="dropdown-link">React & Node.js</Link>
-                      <Link to="/react-native" className="dropdown-link">React Native</Link>
-                      <Link to="/javascript-typescript" className="dropdown-link">JavaScript & TypeScript</Link>
-                      <Link to="/python-development" className="dropdown-link">Python Development</Link>
-                      <Link to="/cloud-solutions" className="dropdown-link">Cloud Solutions</Link>
+                    <div className={mapClasses(styles, 'dropdown-section')}>
+                      <h4 className={mapClasses(styles, 'dropdown-title')}>Technologies</h4>
+                      <Link href="/react-nodejs" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>React & Node.js</a></Link>
+                      <Link href="/react-native" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>React Native</a></Link>
+                      <Link href="/javascript-typescript" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>JavaScript & TypeScript</a></Link>
+                      <Link href="/python-development" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Python Development</a></Link>
+                      <Link href="/cloud-solutions" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Cloud Solutions</a></Link>
                     </div>
-                    <div className="dropdown-section">
-                      <h4 className="dropdown-title">Business Services</h4>
-                      <Link to="/it-recruitment" className="dropdown-link">IT Recruitment</Link>
-                      <Link to="/it-consultation" className="dropdown-link">IT Consultation</Link>
-                      <Link to="/tech-support" className="dropdown-link">Tech Support</Link>
-                      <Link to="/digital-transformation" className="dropdown-link">Digital Transformation</Link>
-                      <Link to="/maintenance-support" className="dropdown-link">Maintenance & Support</Link>
+                    <div className={mapClasses(styles, 'dropdown-section')}>
+                      <h4 className={mapClasses(styles, 'dropdown-title')}>Business Services</h4>
+                      <Link href="/it-recruitment" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>IT Recruitment</a></Link>
+                      <Link href="/it-consultation" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>IT Consultation</a></Link>
+                      <Link href="/tech-support" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Tech Support</a></Link>
+                      <Link href="/digital-transformation" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Digital Transformation</a></Link>
+                      <Link href="/maintenance-support" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Maintenance & Support</a></Link>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="nav-item dropdown">
-                <Link to="/industries" className="nav-link dropdown-toggle">
-                  Industries
-                  <span className="dropdown-arrow">▼</span>
-                </Link>
+                <Link href="/industries" legacyBehavior><a className="nav-link dropdown-toggle">Industries <span className="dropdown-arrow">▼</span></a></Link>
                 <div className="dropdown-menu">
                   <div className="dropdown-menu-container">
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">Technology</h4>
-                      <Link to="/fintech" className="dropdown-link">FinTech</Link>
-                      <Link to="/healthtech" className="dropdown-link">HealthTech</Link>
-                      <Link to="/edtech" className="dropdown-link">EdTech</Link>
-                      <Link to="/ecommerce" className="dropdown-link">E-commerce</Link>
+                      <Link href="/fintech" legacyBehavior><a className="dropdown-link">FinTech</a></Link>
+                      <Link href="/healthtech" legacyBehavior><a className="dropdown-link">HealthTech</a></Link>
+                      <Link href="/edtech" legacyBehavior><a className="dropdown-link">EdTech</a></Link>
+                      <Link href="/ecommerce" legacyBehavior><a className="dropdown-link">E-commerce</a></Link>
                     </div>
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">Business</h4>
-                      <Link to="/startups" className="dropdown-link">Startups</Link>
-                      <Link to="/smes" className="dropdown-link">SMEs</Link>
-                      <Link to="/enterprises" className="dropdown-link">Enterprises</Link>
-                      <Link to="/agencies" className="dropdown-link">Agencies</Link>
+                      <Link href="/startups" legacyBehavior><a className="dropdown-link">Startups</a></Link>
+                      <Link href="/smes" legacyBehavior><a className="dropdown-link">SMEs</a></Link>
+                      <Link href="/enterprises" legacyBehavior><a className="dropdown-link">Enterprises</a></Link>
+                      <Link href="/agencies" legacyBehavior><a className="dropdown-link">Agencies</a></Link>
                     </div>
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">Solutions</h4>
-                      <Link to="/custom-solutions" className="dropdown-link">Custom Solutions</Link>
-                      <Link to="/saas-development" className="dropdown-link">SaaS Development</Link>
-                      <Link to="/digital-platforms" className="dropdown-link">Digital Platforms</Link>
-                      <Link to="/integration-services" className="dropdown-link">Integration Services</Link>
+                      <Link href="/custom-solutions" legacyBehavior><a className="dropdown-link">Custom Solutions</a></Link>
+                      <Link href="/saas-development" legacyBehavior><a className="dropdown-link">SaaS Development</a></Link>
+                      <Link href="/digital-platforms" legacyBehavior><a className="dropdown-link">Digital Platforms</a></Link>
+                      <Link href="/integration-services" legacyBehavior><a className="dropdown-link">Integration Services</a></Link>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="nav-item dropdown">
-                <Link to="/about" className="nav-link dropdown-toggle">
-                  Company
-                  <span className="dropdown-arrow">▼</span>
-                </Link>
+                <Link href="/about" legacyBehavior><a className="nav-link dropdown-toggle">Company <span className="dropdown-arrow">▼</span></a></Link>
                 <div className="dropdown-menu">
                   <div className="dropdown-menu-container">
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">About Us</h4>
-                      <Link to="/our-story" className="dropdown-link">Our Story</Link>
-                      <Link to="/our-team" className="dropdown-link">Our Team</Link>
-                      <Link to="/mission-vision" className="dropdown-link">Mission & Vision</Link>
-                      <Link to="/careers" className="dropdown-link">Careers</Link>
+                      <Link href="/our-story" legacyBehavior><a className="dropdown-link">Our Story</a></Link>
+                      <Link href="/our-team" legacyBehavior><a className="dropdown-link">Our Team</a></Link>
+                      <Link href="/mission-vision" legacyBehavior><a className="dropdown-link">Mission & Vision</a></Link>
+                      <Link href="/careers" legacyBehavior><a className="dropdown-link">Careers</a></Link>
                     </div>
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">Resources</h4>
-                      <Link to="/portfolio" className="dropdown-link">Portfolio</Link>
-                      <Link to="/case-studies" className="dropdown-link">Case Studies</Link>
-                      <Link to="/blog" className="dropdown-link">Blog</Link>
-                      <Link to="/pricing" className="dropdown-link">Pricing</Link>
+                      <Link href="/portfolio" legacyBehavior><a className="dropdown-link">Portfolio</a></Link>
+                      <Link href="/case-studies" legacyBehavior><a className="dropdown-link">Case Studies</a></Link>
+                      <Link href="/blog" legacyBehavior><a className="dropdown-link">Blog</a></Link>
+                      <Link href="/pricing" legacyBehavior><a className="dropdown-link">Pricing</a></Link>
                     </div>
                     <div className="dropdown-section">
                       <h4 className="dropdown-title">Support</h4>
-                      <Link to="/help-center" className="dropdown-link">Help Center</Link>
-                      <Link to="/documentation" className="dropdown-link">Documentation</Link>
-                      <Link to="/api-reference" className="dropdown-link">API Reference</Link>
-                      <Link to="/contact-support" className="dropdown-link">Contact Support</Link>
+                      <Link href="/help-center" legacyBehavior><a className="dropdown-link">Help Center</a></Link>
+                      <Link href="/documentation" legacyBehavior><a className="dropdown-link">Documentation</a></Link>
+                      <Link href="/api-reference" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>API Reference</a></Link>
+                      <Link href="/contact-support" legacyBehavior><a className={mapClasses(styles, 'dropdown-link')}>Contact Support</a></Link>
                     </div>
                   </div>
                 </div>
               </li>
                           <li className="nav-item">
-              <Link 
-                to="/contact"
-                className="nav-link"
-              >
-                Contact
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="nav-link">Contact</a></Link>
             </li>
             </ul>
           </nav>
 
           {/* Action Buttons */}
-          <div className="header-actions">
-            <Link to="/demo" className="btn btn-primary btn-sm">
-              Book Demo
-            </Link>
+          <div className={mapClasses(styles, 'header-actions')}>
+            <Link href="/demo" legacyBehavior><a className={mapClasses(styles, 'btn btn-primary btn-sm')}>Book Demo</a></Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="menu-toggle"
+            className={mapClasses(styles, 'menu-toggle')}
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -180,97 +172,83 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className={`nav-mobile ${isMenuOpen ? 'nav-mobile-open' : ''}`}>
-          <ul className="nav-mobile-list">
+        <nav className={mapClasses(styles, `nav-mobile ${isMenuOpen ? 'nav-mobile-open' : ''}`)}>
+          <ul className={mapClasses(styles, 'nav-mobile-list')}>
             <li>
-              <Link 
-                to="/"
-                className="nav-mobile-link"
-                onClick={closeMenu}
-              >
-                🏠 Home
-              </Link>
+              <Link href="/" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-link')} onClick={closeMenu}>🏠 Home</a></Link>
             </li>
-            <li className="mobile-section">
-              <div className="mobile-section-title">🛠️ Development Services</div>
-              <Link to="/mobile-app-development" className="nav-mobile-sublink" onClick={closeMenu}>Mobile App Development</Link>
-              <Link to="/full-stack-development" className="nav-mobile-sublink" onClick={closeMenu}>Full Stack Development</Link>
-              <Link to="/ai-development" className="nav-mobile-sublink" onClick={closeMenu}>AI Development</Link>
-              <Link to="/blockchain-development" className="nav-mobile-sublink" onClick={closeMenu}>Blockchain Development</Link>
-              <Link to="/software-product-development" className="nav-mobile-sublink" onClick={closeMenu}>Software Product Development</Link>
-              <Link to="/uiux-design" className="nav-mobile-sublink" onClick={closeMenu}>UI/UX Design</Link>
+            <li className={mapClasses(styles, 'mobile-section')}>
+              <div className={mapClasses(styles, 'mobile-section-title')}>🛠️ Development Services</div>
+              <Link href="/mobile-app-development" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>Mobile App Development</a></Link>
+              <Link href="/full-stack-development" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>Full Stack Development</a></Link>
+              <Link href="/ai-development" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>AI Development</a></Link>
+              <Link href="/blockchain-development" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>Blockchain Development</a></Link>
+              <Link href="/software-product-development" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>Software Product Development</a></Link>
+              <Link href="/uiux-design" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-sublink')} onClick={closeMenu}>UI/UX Design</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">💻 Technologies</div>
-              <Link to="/react-nodejs" className="nav-mobile-sublink" onClick={closeMenu}>React & Node.js</Link>
-              <Link to="/react-native" className="nav-mobile-sublink" onClick={closeMenu}>React Native</Link>
-              <Link to="/javascript-typescript" className="nav-mobile-sublink" onClick={closeMenu}>JavaScript & TypeScript</Link>
-              <Link to="/python-development" className="nav-mobile-sublink" onClick={closeMenu}>Python Development</Link>
-              <Link to="/cloud-solutions" className="nav-mobile-sublink" onClick={closeMenu}>Cloud Solutions</Link>
+              <Link href="/react-nodejs" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>React & Node.js</a></Link>
+              <Link href="/react-native" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>React Native</a></Link>
+              <Link href="/javascript-typescript" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>JavaScript & TypeScript</a></Link>
+              <Link href="/python-development" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Python Development</a></Link>
+              <Link href="/cloud-solutions" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Cloud Solutions</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">🎯 Business Services</div>
-              <Link to="/it-recruitment" className="nav-mobile-sublink" onClick={closeMenu}>IT Recruitment</Link>
-              <Link to="/it-consultation" className="nav-mobile-sublink" onClick={closeMenu}>IT Consultation</Link>
-              <Link to="/tech-support" className="nav-mobile-sublink" onClick={closeMenu}>Tech Support</Link>
-              <Link to="/digital-transformation" className="nav-mobile-sublink" onClick={closeMenu}>Digital Transformation</Link>
-              <Link to="/maintenance-support" className="nav-mobile-sublink" onClick={closeMenu}>Maintenance & Support</Link>
+              <Link href="/it-recruitment" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>IT Recruitment</a></Link>
+              <Link href="/it-consultation" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>IT Consultation</a></Link>
+              <Link href="/tech-support" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Tech Support</a></Link>
+              <Link href="/digital-transformation" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Digital Transformation</a></Link>
+              <Link href="/maintenance-support" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Maintenance & Support</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">🏭 Industries</div>
-              <Link to="/fintech" className="nav-mobile-sublink" onClick={closeMenu}>FinTech</Link>
-              <Link to="/healthtech" className="nav-mobile-sublink" onClick={closeMenu}>HealthTech</Link>
-              <Link to="/edtech" className="nav-mobile-sublink" onClick={closeMenu}>EdTech</Link>
-              <Link to="/ecommerce" className="nav-mobile-sublink" onClick={closeMenu}>E-commerce</Link>
+              <Link href="/fintech" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>FinTech</a></Link>
+              <Link href="/healthtech" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>HealthTech</a></Link>
+              <Link href="/edtech" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>EdTech</a></Link>
+              <Link href="/ecommerce" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>E-commerce</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">🏢 Business</div>
-              <Link to="/startups" className="nav-mobile-sublink" onClick={closeMenu}>Startups</Link>
-              <Link to="/smes" className="nav-mobile-sublink" onClick={closeMenu}>SMEs</Link>
-              <Link to="/enterprises" className="nav-mobile-sublink" onClick={closeMenu}>Enterprises</Link>
-              <Link to="/agencies" className="nav-mobile-sublink" onClick={closeMenu}>Agencies</Link>
+              <Link href="/startups" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Startups</a></Link>
+              <Link href="/smes" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>SMEs</a></Link>
+              <Link href="/enterprises" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Enterprises</a></Link>
+              <Link href="/agencies" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Agencies</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">⚙️ Solutions</div>
-              <Link to="/custom-solutions" className="nav-mobile-sublink" onClick={closeMenu}>Custom Solutions</Link>
-              <Link to="/saas-development" className="nav-mobile-sublink" onClick={closeMenu}>SaaS Development</Link>
-              <Link to="/digital-platforms" className="nav-mobile-sublink" onClick={closeMenu}>Digital Platforms</Link>
-              <Link to="/integration-services" className="nav-mobile-sublink" onClick={closeMenu}>Integration Services</Link>
+              <Link href="/custom-solutions" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Custom Solutions</a></Link>
+              <Link href="/saas-development" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>SaaS Development</a></Link>
+              <Link href="/digital-platforms" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Digital Platforms</a></Link>
+              <Link href="/integration-services" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Integration Services</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">🏢 About Us</div>
-              <Link to="/our-story" className="nav-mobile-sublink" onClick={closeMenu}>Our Story</Link>
-              <Link to="/our-team" className="nav-mobile-sublink" onClick={closeMenu}>Our Team</Link>
-              <Link to="/mission-vision" className="nav-mobile-sublink" onClick={closeMenu}>Mission & Vision</Link>
-              <Link to="/careers" className="nav-mobile-sublink" onClick={closeMenu}>Careers</Link>
+              <Link href="/our-story" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Our Story</a></Link>
+              <Link href="/our-team" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Our Team</a></Link>
+              <Link href="/mission-vision" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Mission & Vision</a></Link>
+              <Link href="/careers" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Careers</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">📚 Resources</div>
-              <Link to="/portfolio" className="nav-mobile-sublink" onClick={closeMenu}>Portfolio</Link>
-              <Link to="/case-studies" className="nav-mobile-sublink" onClick={closeMenu}>Case Studies</Link>
-              <Link to="/blog" className="nav-mobile-sublink" onClick={closeMenu}>Blog</Link>
-              <Link to="/pricing" className="nav-mobile-sublink" onClick={closeMenu}>Pricing</Link>
+              <Link href="/portfolio" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Portfolio</a></Link>
+              <Link href="/case-studies" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Case Studies</a></Link>
+              <Link href="/blog" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Blog</a></Link>
+              <Link href="/pricing" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Pricing</a></Link>
             </li>
             <li className="mobile-section">
               <div className="mobile-section-title">🛟 Support</div>
-              <Link to="/help-center" className="nav-mobile-sublink" onClick={closeMenu}>Help Center</Link>
-              <Link to="/documentation" className="nav-mobile-sublink" onClick={closeMenu}>Documentation</Link>
-              <Link to="/api-reference" className="nav-mobile-sublink" onClick={closeMenu}>API Reference</Link>
-              <Link to="/contact-support" className="nav-mobile-sublink" onClick={closeMenu}>Contact Support</Link>
+              <Link href="/help-center" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Help Center</a></Link>
+              <Link href="/documentation" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Documentation</a></Link>
+              <Link href="/api-reference" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>API Reference</a></Link>
+              <Link href="/contact-support" legacyBehavior><a className="nav-mobile-sublink" onClick={closeMenu}>Contact Support</a></Link>
             </li>
             <li>
-              <Link 
-                to="/contact"
-                className="nav-mobile-link"
-                onClick={closeMenu}
-              >
-                📞 Contact
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="nav-mobile-link" onClick={closeMenu}>📞 Contact</a></Link>
             </li>
-            <li className="mobile-cta-section">
-              <Link to="/demo" className="nav-mobile-cta primary" onClick={closeMenu}>
-                📋 Book Demo
-              </Link>
+            <li className={mapClasses(styles, 'mobile-cta-section')}>
+              <Link href="/demo" legacyBehavior><a className={mapClasses(styles, 'nav-mobile-cta primary')} onClick={closeMenu}>📋 Book Demo</a></Link>
             </li>
           </ul>
         </nav>

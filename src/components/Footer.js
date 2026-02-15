@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { FaCode, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaFacebook, FaInstagram, FaArrowUp, FaUsers } from 'react-icons/fa';
-import './Footer.css';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -72,9 +71,11 @@ const Footer = () => {
       <div className="container">
         <div className="footer-main">
           <div className="footer-brand">
-            <Link to="/" className="footer-logo">
-              <FaCode className="logo-icon" />
-              <span className="logo-text">SoftDevSquad</span>
+            <Link href="/" legacyBehavior>
+              <a className="footer-logo">
+                <FaCode className="logo-icon" />
+                <span className="logo-text">SoftDevSquad</span>
+              </a>
             </Link>
             <div className="footer-description">
               <p>Transforming ideas into powerful digital solutions. We're your trusted partner for a full spectrum of IT services, including:</p>
@@ -145,13 +146,13 @@ const Footer = () => {
               <ul className="footer-list">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <Link to={link.path} className="footer-link">
-                      {link.label}
+                    <Link href={link.path} legacyBehavior>
+                      <a className="footer-link">{link.label}</a>
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link to="/demo" className="footer-link">Book Demo</Link>
+                  <Link href="/demo" legacyBehavior><a className="footer-link">Book Demo</a></Link>
                 </li>
               </ul>
             </div>
@@ -170,12 +171,12 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="section-title">Company</h3>
               <ul className="footer-list">
-                <li><Link to="/about" className="footer-link">About Us</Link></li>
+                <li><Link href="/about" legacyBehavior><a className="footer-link">About Us</a></Link></li>
                                               <li><a href="#" className="footer-link" onClick={(e) => e.preventDefault()}>Careers</a></li>
                   <li><a href="#" className="footer-link" onClick={(e) => e.preventDefault()}>Blog</a></li>
                   <li><a href="#" className="footer-link" onClick={(e) => e.preventDefault()}>Case Studies</a></li>
-                  <li><Link to="/privacy" className="footer-link">Privacy Policy</Link></li>
-                  <li><Link to="/terms" className="footer-link">Terms of Service</Link></li>
+                  <li><Link href="/privacy" legacyBehavior><a className="footer-link">Privacy Policy</a></Link></li>
+                  <li><Link href="/terms" legacyBehavior><a className="footer-link">Terms of Service</a></Link></li>
               </ul>
             </div>
 
@@ -185,15 +186,8 @@ const Footer = () => {
                 Ready to start your project? Let's discuss how we can help you achieve your goals.
               </p>
               <div className="footer-cta">
-                <Link 
-                  to="/contact"
-                  className="btn btn-primary"
-                >
-                  Start Your Project
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
-                  Book Demo
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">Start Your Project</a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">Book Demo</a></Link>
               </div>
               <div className="footer-social">
                 <h4>Follow Us</h4>
@@ -225,8 +219,8 @@ const Footer = () => {
             </div>
             
             <div className="footer-bottom-links">
-                        <Link to="/privacy" className="footer-bottom-link">Privacy</Link>
-          <Link to="/terms" className="footer-bottom-link">Terms</Link>
+                        <Link href="/privacy" legacyBehavior><a className="footer-bottom-link">Privacy</a></Link>
+          <Link href="/terms" legacyBehavior><a className="footer-bottom-link">Terms</a></Link>
           <a href="#" className="footer-bottom-link" onClick={(e) => e.preventDefault()}>Cookies</a>
             </div>
             

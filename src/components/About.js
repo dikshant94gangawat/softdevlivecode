@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCheckCircle, FaRocket, FaUsers, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
-import './About.css';
-import './Mobile-Cards-Enhancement.css';
+import styles from './About.module.css';
+import { mapClasses } from '../utils/cssMapper';
 
 const About = () => {
   const values = [
@@ -37,15 +37,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="about section bg-pattern">
-      <div className="container">
-        <div className="about-content">
-          <div className="about-text">
-            <h2 className="section-title fade-in">
-              About <span className="gradient-text">SoftDevSquad</span>
+    <section id="about" className={mapClasses(styles, 'about section bg-pattern')}>
+      <div className={mapClasses(styles, 'container')}>
+        <div className={mapClasses(styles, 'about-content')}>
+          <div className={mapClasses(styles, 'about-text')}>
+            <h2 className={mapClasses(styles, 'section-title fade-in')}>
+              About <span className={mapClasses(styles, 'gradient-text')}>SoftDevSquad</span>
             </h2>
             
-            <div className="about-description slide-up">
+            <div className={mapClasses(styles, 'about-description slide-up')}>
               <p>
                 Founded with a vision to bridge the gap between innovative technology and business success, 
                 SoftDevSquad has emerged as a trusted partner for companies seeking digital transformation. 
@@ -67,12 +67,12 @@ const About = () => {
               </p>
             </div>
 
-            <div className="about-achievements slide-up">
+            <div className={mapClasses(styles, 'about-achievements slide-up')}>
               <h3>Why Choose Us?</h3>
-              <div className="achievements-grid">
+              <div className={mapClasses(styles, 'achievements-grid')}>
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="achievement-item">
-                    <FaCheckCircle className="achievement-icon" />
+                  <div key={index} className={mapClasses(styles, 'achievement-item')}>
+                    <FaCheckCircle className={mapClasses(styles, 'achievement-icon')} />
                     <span>{achievement}</span>
                   </div>
                 ))}
@@ -80,12 +80,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="about-visual">
-            <div className="about-card slide-up">
-              <div className="card-header">
-                <h3><span className="our-text">Our</span> Mission</h3>
+          <div className={mapClasses(styles, 'about-visual')}>
+            <div className={mapClasses(styles, 'about-card slide-up')}>
+              <div className={mapClasses(styles, 'card-header')}>
+                <h3><span className={mapClasses(styles, 'our-text')}>Our</span> Mission</h3>
               </div>
-              <div className="card-content">
+              <div className={mapClasses(styles, 'card-content')}>
                 <p>
                   To empower businesses with innovative technology solutions that drive growth, 
                   efficiency, and success in the digital age.
@@ -93,11 +93,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="about-card slide-up">
-              <div className="card-header">
-                <h3><span className="our-text">Our</span> Vision</h3>
+            <div className={mapClasses(styles, 'about-card slide-up')}>
+              <div className={mapClasses(styles, 'card-header')}>
+                <h3><span className={mapClasses(styles, 'our-text')}>Our</span> Vision</h3>
               </div>
-              <div className="card-content">
+              <div className={mapClasses(styles, 'card-content')}>
                 <p>
                   To be the leading technology partner that transforms ideas into digital realities, 
                   creating lasting impact for businesses worldwide.
@@ -107,50 +107,50 @@ const About = () => {
           </div>
         </div>
 
-        <div className="values-section">
-          <h3 className="values-title text-center fade-in"><span className="our-text">Our</span> Core Values</h3>
-          <div className="values-grid grid grid-4 slide-up">
+        <div className={mapClasses(styles, 'values-section')}>
+          <h3 className={mapClasses(styles, 'values-title text-center fade-in')}><span className={mapClasses(styles, 'our-text')}>Our</span> Core Values</h3>
+          <div className={mapClasses(styles, 'values-grid grid grid-4 slide-up')}>
             {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">
+              <div key={index} className={mapClasses(styles, 'value-card')}>
+                <div className={mapClasses(styles, 'value-icon')}>
                   {value.icon}
                 </div>
-                <h4 className="value-title">{value.title}</h4>
-                <p className="value-description">{value.description}</p>
+                <h4 className={mapClasses(styles, 'value-title')}>{value.title}</h4>
+                <p className={mapClasses(styles, 'value-description')}>{value.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="projects-showcase">
-          <h3 className="projects-title text-center fade-in">
-            Featured <span className="gradient-text">Projects</span>
+        <div className={mapClasses(styles, 'projects-showcase')}>
+          <h3 className={mapClasses(styles, 'projects-title text-center fade-in')}>
+            Featured <span className={mapClasses(styles, 'gradient-text')}>Projects</span>
           </h3>
-          <p className="projects-subtitle text-center slide-up">
+          <p className={mapClasses(styles, 'projects-subtitle text-center slide-up')}>
             Discover some of our most innovative and successful projects that showcase our technical expertise
           </p>
           
-          <div className="projects-grid slide-up">
-            <div className="project-card" data-category="mobile">
-              <div className="project-image mobile-app-bg">
-                <div className="project-overlay">
-                  <div className="project-icons">
-                    <span className="tech-icon">📱</span>
-                    <span className="tech-icon">⚛️</span>
-                    <span className="tech-icon">🔥</span>
+          <div className={mapClasses(styles, 'projects-grid slide-up')}>
+            <div className={mapClasses(styles, 'project-card')} data-category="mobile">
+              <div className={mapClasses(styles, 'project-image mobile-app-bg')}>
+                <div className={mapClasses(styles, 'project-overlay')}>
+                  <div className={mapClasses(styles, 'project-icons')}>
+                    <span className={mapClasses(styles, 'tech-icon')}>📱</span>
+                    <span className={mapClasses(styles, 'tech-icon')}>⚛️</span>
+                    <span className={mapClasses(styles, 'tech-icon')}>🔥</span>
                   </div>
                 </div>
               </div>
-              <div className="project-content">
-                <div className="project-category">Mobile App</div>
-                <h4 className="project-name">EcoTracker Pro</h4>
-                <p className="project-description">
+              <div className={mapClasses(styles, 'project-content')}>
+                <div className={mapClasses(styles, 'project-category')}>Mobile App</div>
+                <h4 className={mapClasses(styles, 'project-name')}>EcoTracker Pro</h4>
+                <p className={mapClasses(styles, 'project-description')}>
                   A comprehensive sustainability tracking app with AI-powered recommendations and real-time analytics.
                 </p>
-                <div className="project-technologies">
-                  <span className="tech-tag">React Native</span>
-                  <span className="tech-tag">Node.js</span>
-                  <span className="tech-tag">MongoDB</span>
+                <div className={mapClasses(styles, 'project-technologies')}>
+                  <span className={mapClasses(styles, 'tech-tag')}>React Native</span>
+                  <span className={mapClasses(styles, 'tech-tag')}>Node.js</span>
+                  <span className={mapClasses(styles, 'tech-tag')}>MongoDB</span>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaGraduationCap, FaBook, FaLaptopCode, FaMobile, FaRobot, FaDatabase,
   FaChalkboardTeacher, FaUsers, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -11,7 +12,6 @@ import {
   SiTypescript, SiFlutter, SiDjango, SiTensorflow, SiPytorch, SiMongodb,
   SiPostgresql, SiRedis, SiElasticsearch
 } from 'react-icons/si';
-import './EdTechPage.css';
 
 const EdTechPage = () => {
   const services = [
@@ -365,13 +365,13 @@ const EdTechPage = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaHeadset className="btn-icon" />
               Start Your EdTech Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               View Educational Portfolio
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -403,10 +403,10 @@ const EdTechPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -543,13 +543,13 @@ const EdTechPage = () => {
               Let's build innovative educational solutions that enhance learning experiences, improve outcomes, and prepare students for the future.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Educational Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

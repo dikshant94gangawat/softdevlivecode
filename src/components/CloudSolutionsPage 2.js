@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaCloud, FaCheckCircle, FaArrowRight, FaHeadset, FaAws,
   FaServer, FaShieldAlt, FaDatabase, FaChartLine
 } from 'react-icons/fa';
 import { SiMicrosoftazure, SiGooglecloud, SiDocker, SiKubernetes } from 'react-icons/si';
-import './CloudSolutionsPage.css';
 
 const CloudSolutionsPage = () => {
   const services = [
@@ -73,13 +73,13 @@ const CloudSolutionsPage = () => {
                 Migrate to the cloud, optimize infrastructure, and scale your applications with AWS, Azure, and GCP solutions.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Start Your Project
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Portfolio
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ const CloudSolutionsPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -141,13 +141,13 @@ const CloudSolutionsPage = () => {
               Let's migrate your infrastructure and scale your applications in the cloud.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

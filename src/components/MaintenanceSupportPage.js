@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaTools, FaCheckCircle, FaArrowRight, FaHeadset, FaWrench,
   FaServer, FaShieldAlt, FaSync, FaChartLine, FaClock
 } from 'react-icons/fa';
-import './MaintenanceSupportPage.css';
 
 const MaintenanceSupportPage = () => {
   const services = [
@@ -72,13 +72,13 @@ const MaintenanceSupportPage = () => {
                 Keep your systems running smoothly with our comprehensive maintenance and support services. Proactive monitoring, regular updates, and expert support ensure optimal performance.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Get Support
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Services
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const MaintenanceSupportPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -140,13 +140,13 @@ const MaintenanceSupportPage = () => {
               Let's ensure your systems are always running smoothly with our expert maintenance services.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

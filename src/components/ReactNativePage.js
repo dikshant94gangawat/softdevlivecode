@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaMobile, FaCode, FaCheckCircle, FaArrowRight, FaHeadset,
   FaReact, FaApple, FaAndroid, FaCloud, FaShieldAlt
 } from 'react-icons/fa';
 import { SiReact, SiFlutter } from 'react-icons/si';
-import './ReactNativePage.css';
 
 const ReactNativePage = () => {
   const services = [
@@ -73,13 +72,8 @@ const ReactNativePage = () => {
                 Create powerful, cross-platform mobile applications with React Native. One codebase for iOS and Android, delivering native performance and user experience.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
-                  <FaHeadset className="btn-icon" />
-                  Start Your Project
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
-                  View Portfolio
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
               </div>
             </div>
           </div>
@@ -123,10 +117,7 @@ const ReactNativePage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -141,13 +132,8 @@ const ReactNativePage = () => {
               Let's create a powerful React Native application that works seamlessly on iOS and Android.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Schedule Consultation
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Get Started Today</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

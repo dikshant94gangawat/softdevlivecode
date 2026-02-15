@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaPalette, FaMobile, FaDesktop, FaUsers, FaStar, FaCheckCircle, 
   FaArrowRight, FaHeadset, FaChartBar, FaLightbulb, FaEye, FaHeart,
@@ -10,7 +10,6 @@ import {
   SiFigma, SiAdobexd, SiSketch, SiAdobeillustrator, SiAdobephotoshop,
   SiInvision, SiFramer, SiMiro, SiNotion
 } from 'react-icons/si';
-import './UIUXDesign.css';
 
 const UIUXDesign = () => {
   const services = [
@@ -364,13 +363,8 @@ const UIUXDesign = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
-              <FaHeadset className="btn-icon" />
-              Start Your Design Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
-              View Portfolio
-            </Link>
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Design Project</a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
           </div>
         </div>
       </div>
@@ -403,10 +397,7 @@ const UIUXDesign = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Learn More
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Learn More<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -440,10 +431,7 @@ const UIUXDesign = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>

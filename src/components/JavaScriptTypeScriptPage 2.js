@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaCode, FaCheckCircle, FaArrowRight, FaHeadset, FaJs, FaServer,
   FaMobile, FaGlobe, FaDatabase, FaShieldAlt
 } from 'react-icons/fa';
 import { SiTypescript, SiJavascript, SiNodedotjs, SiReact } from 'react-icons/si';
-import './JavaScriptTypeScriptPage.css';
 
 const JavaScriptTypeScriptPage = () => {
   const services = [
@@ -73,13 +73,13 @@ const JavaScriptTypeScriptPage = () => {
                 Build scalable, type-safe applications with JavaScript and TypeScript. From frontend to backend, we deliver modern solutions that drive business growth.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Start Your Project
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Portfolio
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -123,10 +123,10 @@ const JavaScriptTypeScriptPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -141,13 +141,13 @@ const JavaScriptTypeScriptPage = () => {
               Let's create powerful, scalable applications that drive your business forward.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

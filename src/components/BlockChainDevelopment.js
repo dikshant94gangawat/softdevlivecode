@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './BlockChainDevelopment.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import {
   FaBitcoin, FaEthereum, FaShieldAlt, FaCode, FaUsers, FaStar, FaCheckCircle, 
   FaArrowRight, FaHeadset, FaChartBar, FaLock, FaGlobe, FaRocket, FaDatabase,
@@ -10,7 +13,6 @@ import {
   SiSolidity, SiWeb3Dotjs, SiNodedotjs, SiPython, SiReact, SiMongodb,
   SiPostgresql, SiDocker, SiKubernetes, SiAmazonaws
 } from 'react-icons/si';
-import './BlockChainDevelopment.css';
 
 const BlockChainDevelopment = () => {
   const services = [
@@ -340,13 +342,13 @@ const BlockChainDevelopment = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary">
               <FaHeadset className="btn-icon" />
               Start Your Blockchain Project
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
+            </a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">
               View Portfolio
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>
@@ -379,10 +381,10 @@ const BlockChainDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Learn More
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -416,10 +418,10 @@ const BlockChainDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -606,13 +608,13 @@ const BlockChainDevelopment = () => {
               Let's create innovative blockchain solutions that transform your business and unlock new opportunities in the decentralized economy.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

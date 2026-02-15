@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaUsers, FaCheckCircle, FaArrowRight, FaHeadset, FaLinkedin,
   FaGithub, FaTwitter, FaEnvelope, FaCode, FaRocket, FaLightbulb
 } from 'react-icons/fa';
-import './OurTeamPage.css';
 
 const OurTeamPage = () => {
   const team = [
@@ -201,13 +201,13 @@ const OurTeamPage = () => {
               We're always looking for talented individuals to join our growing team.
             </p>
             <div className="cta-actions">
-              <Link to="/careers" className="btn btn-primary">
+              <Link href="/careers" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 View Open Positions
-              </Link>
-              <Link to="/contact" className="btn btn-outline">
+              </a></Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-outline">
                 Get in Touch
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

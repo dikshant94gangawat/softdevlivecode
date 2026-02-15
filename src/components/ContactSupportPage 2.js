@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaHeadset, FaEnvelope, FaPhone, FaClock, FaCheckCircle, FaArrowRight,
   FaTicketAlt, FaQuestionCircle, FaBug, FaCog
 } from 'react-icons/fa';
-import './ContactSupportPage.css';
 
 const ContactSupportPage = () => {
   const [formData, setFormData] = useState({
@@ -220,18 +220,18 @@ const ContactSupportPage = () => {
       <div className="help-links-section">
         <div className="container">
           <div className="help-links">
-            <Link to="/help-center" className="help-link">
+            <Link href="/help-center" legacyBehavior><a className="help-link">
               <FaQuestionCircle />
               <span>Help Center</span>
-            </Link>
-            <Link to="/documentation" className="help-link">
+            </a></Link>
+            <Link href="/documentation" legacyBehavior><a className="help-link">
               <FaCheckCircle />
               <span>Documentation</span>
-            </Link>
-            <Link to="/api-reference" className="help-link">
+            </a></Link>
+            <Link href="/api-reference" legacyBehavior><a className="help-link">
               <FaCog />
               <span>API Reference</span>
-            </Link>
+            </a></Link>
           </div>
         </div>
       </div>

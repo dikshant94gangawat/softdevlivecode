@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaCogs, FaRocket, FaUsers, FaLightbulb, FaCode, FaDesktop,
   FaMobile, FaDatabase, FaCloud, FaShieldAlt, FaChartLine, FaHeadset,
@@ -9,7 +10,6 @@ import {
 import {
   SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiKubernetes
 } from 'react-icons/si';
-import './CustomSolutionsPage.css';
 
 const CustomSolutionsPage = () => {
   const services = [
@@ -271,13 +271,13 @@ const CustomSolutionsPage = () => {
               From concept to deployment, we create tailored software solutions that address your unique challenges and drive business growth with precision and innovation.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Start Your Custom Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 View Our Portfolio
-              </Link>
+              </a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -318,10 +318,10 @@ const CustomSolutionsPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -472,14 +472,14 @@ const CustomSolutionsPage = () => {
               Let's discuss your unique requirements and create a solution that drives your business forward.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 <FaUsers className="btn-icon" />
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

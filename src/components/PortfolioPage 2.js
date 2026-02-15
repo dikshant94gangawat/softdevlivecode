@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaRocket, FaCheckCircle, FaArrowRight, FaHeadset, FaFilter,
   FaCode, FaMobile, FaCloud, FaCreditCard, FaHeartbeat, FaGraduationCap
 } from 'react-icons/fa';
-import './PortfolioPage.css';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -214,13 +214,13 @@ const PortfolioPage = () => {
               Let's discuss how we can help bring your vision to life.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started
-              </Link>
-              <Link to="/case-studies" className="btn btn-outline">
+              </a></Link>
+              <Link href="/case-studies" legacyBehavior><a className="btn btn-outline">
                 View Case Studies
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaBuilding, FaChartLine, FaUsers, FaCogs, FaMobile, FaCloud,
   FaShieldAlt, FaDatabase, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -11,7 +11,6 @@ import {
   SiTypescript, SiNextdotjs, SiDotnet, SiMongodb, SiPostgresql, 
   SiRedis, SiKubernetes
 } from 'react-icons/si';
-import './SMEsPage.css';
 
 const SMEsPage = () => {
   const services = [
@@ -221,13 +220,8 @@ const SMEsPage = () => {
               Transform your small to medium enterprise with tailored technology solutions that streamline operations, boost productivity, and drive sustainable growth.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Start Your Transformation
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                View Case Studies
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Transformation</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Case Studies</a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -269,10 +263,7 @@ const SMEsPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -428,13 +419,8 @@ const SMEsPage = () => {
               Let's build technology solutions that streamline your operations, reduce costs, and accelerate your business growth.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Schedule Consultation
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaBook, FaCode, FaServer, FaMobile, FaCloud, FaArrowRight, FaHeadset
 } from 'react-icons/fa';
-import './DocumentationPage.css';
 
 const DocumentationPage = () => {
   const docSections = [
@@ -118,10 +118,10 @@ const DocumentationPage = () => {
                 <ul className="doc-articles">
                   {section.articles.map((article, idx) => (
                     <li key={idx} className="doc-article-item">
-                      <Link to="#" className="doc-article-link">
+                      <Link href="#" legacyBehavior><a className="doc-article-link">
                         {article}
                         <FaArrowRight className="article-arrow" />
-                      </Link>
+                      </a></Link>
                     </li>
                   ))}
                 </ul>
@@ -139,13 +139,13 @@ const DocumentationPage = () => {
               Can't find what you're looking for? Contact our technical support team.
             </p>
             <div className="cta-actions">
-              <Link to="/contact-support" className="btn btn-primary">
+              <Link href="/contact-support" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Contact Support
-              </Link>
-              <Link to="/api-reference" className="btn btn-outline">
+              </a></Link>
+              <Link href="/api-reference" legacyBehavior><a className="btn btn-outline">
                 View API Reference
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

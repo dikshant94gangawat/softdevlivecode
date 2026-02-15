@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaLightbulb, FaCheckCircle, FaArrowRight, FaHeadset, FaChartLine,
   FaCogs, FaShieldAlt, FaCloud, FaRocket, FaCode
 } from 'react-icons/fa';
-import './ITConsultationPage.css';
 
 const ITConsultationPage = () => {
   const services = [
@@ -72,13 +72,13 @@ const ITConsultationPage = () => {
                 Get expert technology guidance to make informed decisions, optimize your IT infrastructure, and accelerate your digital transformation journey.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Get Consultation
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Services
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const ITConsultationPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -140,13 +140,13 @@ const ITConsultationPage = () => {
               Let's discuss how we can help optimize your technology strategy and infrastructure.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

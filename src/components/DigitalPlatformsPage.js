@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaGlobe, FaRocket, FaUsers, FaLightbulb, FaCode, FaDesktop,
   FaMobile, FaDatabase, FaShieldAlt, FaChartLine, FaHeadset, FaCogs,
@@ -9,7 +10,6 @@ import {
 import {
   SiTypescript, SiNextdotjs, SiMongodb, SiPostgresql, SiKubernetes
 } from 'react-icons/si';
-import './DigitalPlatformsPage.css';
 
 const DigitalPlatformsPage = () => {
   const services = [
@@ -271,13 +271,13 @@ const DigitalPlatformsPage = () => {
               From enterprise platforms to customer experience hubs, we create comprehensive digital ecosystems that unify your business operations and drive growth.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Start Your Platform
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Explore Platforms
-              </Link>
+              </a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -318,10 +318,10 @@ const DigitalPlatformsPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -472,14 +472,14 @@ const DigitalPlatformsPage = () => {
               Transform your business with a powerful digital platform that scales with your growth.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaRocket className="btn-icon" />
                 Start Platform Development
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 <FaUsers className="btn-icon" />
                 Schedule Strategy Call
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

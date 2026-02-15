@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './BlogPage.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
+
 import {
   FaBlog, FaCalendar, FaUser, FaArrowRight, FaHeadset, FaTag
 } from 'react-icons/fa';
-import './BlogPage.css';
 
 const BlogPage = () => {
   const blogPosts = [
@@ -120,9 +122,9 @@ const BlogPage = () => {
                   </div>
                   <h3 className="blog-title">{post.title}</h3>
                   <p className="blog-excerpt">{post.excerpt}</p>
-                  <Link to="#" className="blog-read-more">
+                  <Link href="#" legacyBehavior><a className="blog-read-more">
                     Read More <FaArrowRight />
-                  </Link>
+                  </a></Link>
                 </div>
               </article>
             ))}
@@ -138,10 +140,10 @@ const BlogPage = () => {
               Subscribe to our newsletter for the latest articles and insights.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Subscribe
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

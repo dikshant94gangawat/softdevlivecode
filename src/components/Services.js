@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import styles from './Services.module.css';
+import { mapClasses } from '../utils/cssMapper';
 import { 
   FaMobile, 
   FaGlobe, 
@@ -13,16 +15,16 @@ import {
   FaChartLine,
   FaHeadset
 } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
-import './Services.css';
-import './Mobile-Cards-Enhancement.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 const Services = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [animatedStats, setAnimatedStats] = useState({});
   const sectionRef = useRef(null);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const services = [
     {
@@ -296,9 +298,11 @@ const Services = () => {
                 </div>
 
                 <div className="service-footer">
-                  <Link to="/services" className="service-cta">
-                    <span>Learn More</span>
-                    <FaArrowRight className="cta-icon" />
+                  <Link href="/services" legacyBehavior>
+                    <a className="service-cta">
+                      <span>Learn More</span>
+                      <FaArrowRight className="cta-icon" />
+                    </a>
                   </Link>
                   <button 
                     onClick={handleStartProject}
@@ -361,9 +365,11 @@ const Services = () => {
                 <span>Start Your Project</span>
                 <FaRocket className="cta-icon" />
               </button>
-              <Link to="/services" className="cta-button secondary">
-                <span>View All Services</span>
-                <FaArrowRight className="cta-icon" />
+              <Link href="/services" legacyBehavior>
+                <a className="cta-button secondary">
+                  <span>View All Services</span>
+                  <FaArrowRight className="cta-icon" />
+                </a>
               </Link>
             </div>
           </div>

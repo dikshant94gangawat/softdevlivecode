@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaRocket, FaUsers, FaAward, FaChartLine, FaCheckCircle, FaArrowRight, FaHeadset,
   FaLightbulb, FaHeart, FaGlobe, FaCode
 } from 'react-icons/fa';
-import './OurStoryPage.css';
 
 const OurStoryPage = () => {
   const milestones = [
@@ -154,13 +154,13 @@ const OurStoryPage = () => {
               Join us on our journey and let's create something amazing together.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get in Touch
-              </Link>
-              <Link to="/careers" className="btn btn-outline">
+              </a></Link>
+              <Link href="/careers" legacyBehavior><a className="btn btn-outline">
                 View Careers
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaCheckCircle, FaArrowRight, FaHeadset, FaRocket, FaCode, FaCloud, FaBuilding
 } from 'react-icons/fa';
-import './PricingPage.css';
 
 const PricingPage = () => {
   const pricingPlans = [
@@ -143,10 +143,10 @@ const PricingPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="pricing-cta">
+                <Link href="/contact" legacyBehavior><a className="pricing-cta">
                   Get Quote
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -167,9 +167,9 @@ const PricingPage = () => {
                 <h3 className="service-name">{service.name}</h3>
                 <div className="service-price">{service.price}</div>
                 <p className="service-description">{service.description}</p>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Contact Us
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -184,13 +184,13 @@ const PricingPage = () => {
               Every project is unique. Contact us for a personalized quote based on your specific requirements.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Custom Quote
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Demo
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

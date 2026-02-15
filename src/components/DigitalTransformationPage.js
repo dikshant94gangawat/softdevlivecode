@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 import {
   FaRocket, FaCheckCircle, FaArrowRight, FaHeadset, FaChartLine,
   FaCloud, FaMobile, FaCogs, FaUsers, FaLightbulb
 } from 'react-icons/fa';
-import './DigitalTransformationPage.css';
 
 const DigitalTransformationPage = () => {
   const services = [
@@ -72,13 +72,13 @@ const DigitalTransformationPage = () => {
                 Accelerate your digital transformation journey with comprehensive solutions that modernize your operations, improve efficiency, and drive business growth.
               </p>
               <div className="hero-actions">
-                <Link to="/contact" className="btn btn-primary">
+                <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                   <FaHeadset className="btn-icon" />
                   Start Transformation
-                </Link>
-                <Link to="/demo" className="btn btn-outline">
+                </a></Link>
+                <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                   View Services
-                </Link>
+                </a></Link>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const DigitalTransformationPage = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="service-cta">
+                <Link href="/contact" legacyBehavior><a className="service-cta">
                   Get Started
                   <FaArrowRight className="cta-icon" />
-                </Link>
+                </a></Link>
               </div>
             ))}
           </div>
@@ -140,13 +140,13 @@ const DigitalTransformationPage = () => {
               Let's discuss how digital transformation can drive your business forward.
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary">
                 <FaHeadset className="btn-icon" />
                 Get Started Today
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
+              </a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">
                 Schedule Consultation
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>

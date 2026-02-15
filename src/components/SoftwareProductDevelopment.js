@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './SoftwareProductDevelopment.module.css';
+import { mapClasses } from '../utils/cssMapper';
+import Link from 'next/link';
 import {
   FaRocket, FaCode, FaCogs, FaUsers, FaStar, FaCheckCircle, 
   FaArrowRight, FaHeadset, FaChartBar, FaLightbulb, FaShieldAlt,
@@ -10,7 +12,6 @@ import {
   SiReact, SiNodedotjs, SiPython, SiJavascript, SiTypescript, SiDocker,
   SiKubernetes, SiAmazonaws, SiMongodb, SiPostgresql, SiRedis, SiGit
 } from 'react-icons/si';
-import './SoftwareProductDevelopment.css';
 
 const SoftwareProductDevelopment = () => {
   const services = [
@@ -392,13 +393,8 @@ const SoftwareProductDevelopment = () => {
       <div className="hero-actions-section">
         <div className="container">
           <div className="hero-actions">
-            <Link to="/contact" className="btn btn-primary">
-              <FaHeadset className="btn-icon" />
-              Start Your Product Development
-            </Link>
-            <Link to="/demo" className="btn btn-outline">
-              View Portfolio
-            </Link>
+            <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Product Development</a></Link>
+            <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Portfolio</a></Link>
           </div>
         </div>
       </div>
@@ -431,10 +427,7 @@ const SoftwareProductDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Learn More
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Learn More<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -468,10 +461,7 @@ const SoftwareProductDevelopment = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -658,13 +648,8 @@ const SoftwareProductDevelopment = () => {
               Let's create innovative software products that drive business growth and deliver exceptional user experiences.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Schedule Consultation
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

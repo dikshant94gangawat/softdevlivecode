@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   FaRocket, FaLightbulb, FaUsers, FaChartLine, FaMobile, FaLaptop,
   FaDatabase, FaCloud, FaStar, FaCheckCircle, FaArrowRight, FaHeadset,
@@ -11,7 +11,6 @@ import {
   SiTypescript, SiNextdotjs, SiDjango, SiExpress, SiFlutter, SiMongodb,
   SiPostgresql, SiRedis, SiKubernetes
 } from 'react-icons/si';
-import './StartupsPage.css';
 
 const StartupsPage = () => {
   const services = [
@@ -221,13 +220,8 @@ const StartupsPage = () => {
               From idea to market-ready product, we help startups build, launch, and scale with cutting-edge technology, agile development, and strategic guidance.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Start Your Startup Journey
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                View Success Stories
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Startup Journey</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">View Success Stories</a></Link>
             </div>
             <div className="hero-stats">
               {stats.map((stat, index) => (
@@ -294,10 +288,7 @@ const StartupsPage = () => {
                   ))}
                 </ul>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
-                </Link>
+                <Link href="/contact" legacyBehavior><a className="service-cta">Get Started<FaArrowRight className="cta-icon" /></a></Link>
               </div>
             ))}
           </div>
@@ -416,13 +407,8 @@ const StartupsPage = () => {
               Let's turn your innovative idea into a market-ready product that users love and investors fund.
             </p>
             <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <FaHeadset className="btn-icon" />
-                Start Your Project
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Schedule Consultation
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaHeadset className="btn-icon" />Start Your Project</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Schedule Consultation</a></Link>
             </div>
           </div>
         </div>

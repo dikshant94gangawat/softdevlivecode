@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   FaMobile, 
   FaLaptopCode, 
@@ -12,7 +12,8 @@ import {
   FaArrowRight,
   FaStar
 } from 'react-icons/fa';
-import './ServicesPage.css';
+import styles from './ServicesPage.module.css';
+import { mapClasses } from '../utils/cssMapper';
 
 const ServicesPage = () => {
   const services = [
@@ -111,7 +112,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="services-page">
+    <div className={mapClasses(styles, 'services-page')}>
       {/* Hero Section */}
       <div className="services-hero">
         <div className="services-hero-background">
@@ -151,40 +152,42 @@ const ServicesPage = () => {
 
       {/* Services Grid */}
       <div className="services-main">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What We Offer</h2>
-            <p className="section-subtitle">
+        <div className={mapClasses(styles, 'container')}>
+          <div className={mapClasses(styles, 'section-header')}>
+            <h2 className={mapClasses(styles, 'section-title')}>What We Offer</h2>
+            <p className={mapClasses(styles, 'section-subtitle')}>
               End-to-end technology services tailored to your business needs
             </p>
           </div>
 
-          <div className="services-grid">
+          <div className={mapClasses(styles, 'services-grid')}>
             {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon">
+              <div key={index} className={mapClasses(styles, 'service-card')}>
+                <div className={mapClasses(styles, 'service-icon')}>
                   <service.icon />
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
+                <h3 className={mapClasses(styles, 'service-title')}>{service.title}</h3>
+                <p className={mapClasses(styles, 'service-description')}>{service.description}</p>
                 
-                <ul className="service-features">
+                <ul className={mapClasses(styles, 'service-features')}>
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="service-feature">
-                      <FaCheckCircle className="feature-icon" />
+                    <li key={idx} className={mapClasses(styles, 'service-feature')}>
+                      <FaCheckCircle className={mapClasses(styles, 'feature-icon')} />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <div className="service-meta">
-                  <div className="service-price">{service.price}</div>
-                  <div className="service-duration">{service.duration}</div>
+                <div className={mapClasses(styles, 'service-meta')}>
+                  <div className={mapClasses(styles, 'service-price')}>{service.price}</div>
+                  <div className={mapClasses(styles, 'service-duration')}>{service.duration}</div>
                 </div>
 
-                <Link to="/contact" className="service-cta">
-                  Get Started
-                  <FaArrowRight className="cta-icon" />
+                <Link href="/contact" legacyBehavior>
+                  <a className={mapClasses(styles, 'service-cta')}>
+                    Get Started
+                    <FaArrowRight className={mapClasses(styles, 'cta-icon')} />
+                  </a>
                 </Link>
               </div>
             ))}
@@ -257,13 +260,8 @@ const ServicesPage = () => {
               Let's discuss how our services can help grow your business
             </p>
             <div className="cta-actions">
-              <Link to="/contact" className="btn btn-primary">
-                <FaRocket className="btn-icon" />
-                Get Started
-              </Link>
-              <Link to="/demo" className="btn btn-outline">
-                Book a Demo
-              </Link>
+              <Link href="/contact" legacyBehavior><a className="btn btn-primary"><FaRocket className="btn-icon" />Get Started</a></Link>
+              <Link href="/demo" legacyBehavior><a className="btn btn-outline">Book a Demo</a></Link>
             </div>
           </div>
         </div>

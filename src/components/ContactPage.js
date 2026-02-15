@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
+import Link from 'next/link';
+
 import { 
   FaMapMarkerAlt, 
   FaPhone, 
@@ -16,7 +16,6 @@ import {
   FaHeadset,
   FaStar
 } from 'react-icons/fa';
-import './ContactPage.css';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -74,7 +73,6 @@ const ContactPage = () => {
     const PUBLIC_KEY = '0drflmj55utEx9sEX';
 
     try {
-
       // Prepare email data
       const emailData = {
         user_name: formData.name,
@@ -89,8 +87,12 @@ const ContactPage = () => {
         company_email: 'softdevsquad@gmail.com'
       };
 
+      // Dynamically import EmailJS in client runtime
+      const emailjsModule = await import('@emailjs/browser');
+      const emailjsClient = emailjsModule.default || emailjsModule;
+
       // Send confirmation email to user
-      await emailjs.send(
+      await emailjsClient.send(
         SERVICE_ID,
         CONTACT_USER_TEMPLATE_ID,
         {
@@ -102,7 +104,7 @@ const ContactPage = () => {
       );
 
       // Send notification email to company
-      await emailjs.send(
+      await emailjsClient.send(
         SERVICE_ID,
         CONTACT_COMPANY_TEMPLATE_ID,
         {
@@ -126,12 +128,12 @@ const ContactPage = () => {
         preferredTime: '',
         serviceInterests: []
       });
-      
+
     } catch (error) {
       console.error('Error sending contact emails:', error);
-      
+
       const errorMessage = error && error.message ? error.message : String(error);
-      
+
       // Email sending error - show success but notify user
       setSubmitStatus('success');
       alert('Message submitted! There was an issue sending the confirmation email, but our team will contact you directly.');
@@ -460,15 +462,15 @@ const ContactPage = () => {
               <div className="quick-actions">
                 <h3 className="quick-actions-title">Quick Actions</h3>
                 <div className="quick-actions-grid">
-                  <Link to="/demo" className="quick-action-btn">
+                  <Link href="/demo" legacyBehavior><a className="quick-action-btn">
                     📋 Book a Demo
-                  </Link>
+                  </a></Link>
                   <a href="mailto:softdevsquad@gmail.com" className="quick-action-btn">
                     ✉️ Email Us
                   </a>
-                  <Link to="/services" className="quick-action-btn">
+                  <Link href="/services" legacyBehavior><a className="quick-action-btn">
                     🛠️ Our Services
-                  </Link>
+                  </a></Link>
                 </div>
               </div>
 
@@ -509,9 +511,9 @@ const ContactPage = () => {
               <a href="tel:+917760554526" className="btn btn-primary">
                 📞 Call Now
               </a>
-              <Link to="/services" className="btn btn-outline">
+              <Link href="/services" legacyBehavior><a className="btn btn-outline">
                 View Services
-              </Link>
+              </a></Link>
             </div>
           </div>
         </div>
